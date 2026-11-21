@@ -1,0 +1,14 @@
+# Dart / Flutter tool state
+**/.dart_tool/
+build/
+.flutter-plugins-dependencies
+# golden-test failure dumps (flutter test writes them next to the goldens)
+**/test/**/failures/
+# local scratch
+.superpowers/
+.DS_Store
+.idea/
+tmp-screenshots/
+# Python bytecode
+**/__pycache__/
+*.pyc
