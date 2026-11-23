@@ -8,5 +8,6 @@
   "managedUnavailable": "This computer offers no Agents. Update the Xagent plugin and enable managed Agents.",
   "managedWorkspaceLoading": "Workspaces are not ready. Check the connection or open workspace management.",
   "managedNoWorkspace": "This computer has no workspaces. Add a workspace first.",
-  "managedManageWorkspaces": "Manage workspaces"
+  "managedManageWorkspaces": "Manage workspaces",
+  "managedDraftAttachments": "This Agent does not support the draft attachments. Remove them before sending, or switch back to DSH."
 }

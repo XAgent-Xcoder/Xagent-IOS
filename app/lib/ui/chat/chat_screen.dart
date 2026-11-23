@@ -483,8 +483,16 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
     if (_creating != null) return null;
     final host = ref.read(activeHostProvider);
     final pendingFolder = ref.read(pendingSessionFolderProvider);
+    final pendingAgent = ref.read(pendingManagedAgentProvider);
+    final workspace = ref.read(selectedWorkspaceProvider) ?? ref.read(recentWorkspaceForNewChatProvider);
     final attempt = Object();
-    bool ownsCreation() => identical(_creating, attempt) && isCurrent();
+    bool ownsCreation() =>
+        identical(_creating, attempt) &&
+        isCurrent() &&
+        identical(ref.read(pendingManagedAgentProvider), pendingAgent) &&
+        (pendingAgent == null ||
+            (ref.read(selectedWorkspaceProvider) ?? ref.read(recentWorkspaceForNewChatProvider))?.workspaceId ==
+                workspace?.workspaceId);
     setState(() {
       _creating = attempt;
       _localError = null;
@@ -492,7 +500,14 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
     try {
       final String sessionId;
       try {
-        sessionId = await ref.read(sessionsProvider.notifier).create();
+        if (pendingAgent == null) {
+          sessionId = await ref.read(sessionsProvider.notifier).create();
+        } else {
+          if (workspace == null) throw DshClosedException(appL10n.managedChooseWorkspace);
+          sessionId = await ref
+              .read(managedCreationProvider)
+              .create(ref, workspace.workspaceId, pendingAgent.id, navigate: false, isCurrent: ownsCreation);
+        }
       } catch (e) {
         if (ownsCreation()) {
           setState(() => _localError = chatErrorText(e, action: appL10n.chatCreateFailed));
@@ -517,11 +532,16 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
       // What the chips show is what the session gets: a pick the Host no
       // longer offers falls back to the default, a hidden Host default to
       // the offered one.
-      final setup = OwedSetup(
-        preset: newChatPresetToApply(ref.read(agentPresetsProvider).value, pendingModes.preset),
-        permission: newChatPermissionToApply(ref.read(permissionStateProvider(null)).value, pendingModes.permission),
-        model: ref.read(pendingModelProvider),
-      );
+      final setup = pendingAgent != null
+          ? const OwedSetup()
+          : OwedSetup(
+              preset: newChatPresetToApply(ref.read(agentPresetsProvider).value, pendingModes.preset),
+              permission: newChatPermissionToApply(
+                ref.read(permissionStateProvider(null)).value,
+                pendingModes.permission,
+              ),
+              model: ref.read(pendingModelProvider),
+            );
       _draftKey = sessionId;
       _saveDraft();
       if (!ownsCreation() || _draftKey != sessionId) return null;
@@ -605,9 +625,14 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
     final typed = _input.text.trim();
     final drafts = _drafts;
     if ((typed.isEmpty && drafts.isEmpty) || _creating != null || _syncWait != null) return;
+    final pendingAgent = ref.read(currentSessionProvider) == null ? ref.read(pendingManagedAgentProvider) : null;
+    if (pendingAgent != null && drafts.isNotEmpty) {
+      _toast(appL10n.managedDraftAttachments);
+      return;
+    }
     // Generation mode: an ordinary message whose first line is the
     // parameter header (media-generation §8, revision of 2026-10-28).
-    final generate = ref.read(managedSessionProvider(ref.read(currentSessionProvider))) == null
+    final generate = pendingAgent == null && ref.read(managedSessionProvider(ref.read(currentSessionProvider))) == null
         ? ref.read(generateModeProvider).byKey[_draftKey]
         : null;
     if (generate != null && !_generateReady(generate, typed, drafts)) return;
@@ -633,7 +658,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
 
     // With attachments or a quote the line is a message, even if it starts
     // with "/".
-    if (drafts.isEmpty && quote == null && generate == null) {
+    if (pendingAgent == null && drafts.isEmpty && quote == null && generate == null) {
       final input = parseSlashInput(text);
       // A bare "/": the palette is open, the person picks a row.
       if (input != null && !input.hasArgs && input.token.isEmpty) return;
@@ -950,6 +975,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
   // 附件
 
   Future<void> _attach() async {
+    if (ref.read(currentSessionProvider) == null && ref.read(pendingManagedAgentProvider) != null) return;
     final caps = ref.read(managedSessionProvider(ref.read(currentSessionProvider)))?.managedAgentCapabilities;
     if (caps != null && !caps.imagePrompts && !caps.fileAttachments) return;
     final room = maxAttachments - _drafts.length;
@@ -1025,6 +1051,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
 
   /// An image from the keyboard (screenshot, sticker): into the tray, not sent.
   void _pasteContent(KeyboardInsertedContent content) {
+    if (ref.read(currentSessionProvider) == null && ref.read(pendingManagedAgentProvider) != null) return;
     final caps = ref.read(managedSessionProvider(ref.read(currentSessionProvider)))?.managedAgentCapabilities;
     if (caps != null && !caps.imagePrompts && !caps.fileAttachments) return;
     final data = content.data;
@@ -1295,6 +1322,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
   /// normal message (not a command line, or an unknown name with input,
   /// such as a path).
   (SlashCommand, String, bool)? _slashFor(String text) {
+    if (ref.read(currentSessionProvider) == null && ref.read(pendingManagedAgentProvider) != null) return null;
     final input = parseSlashInput(text);
     if (input == null) return null;
     final commands = _commands;
@@ -1341,6 +1369,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
   }
 
   Future<void> _runSlash(SlashCommand command, String line) async {
+    if (ref.read(currentSessionProvider) == null && ref.read(pendingManagedAgentProvider) != null) return;
     HapticFeedback.selectionClick();
     switch (command.kind) {
       case SlashCommandKind.app:
@@ -1421,6 +1450,9 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
   }
 
   Future<void> _showModelSheet() {
+    if (ref.read(currentSessionProvider) == null && ref.read(pendingManagedAgentProvider) != null) {
+      return Future<void>.value();
+    }
     final sessionId = ref.read(currentSessionProvider);
     final selection = sessionId == null ? ref.read(pendingModelProvider) : ref.read(chatProvider(sessionId)).model;
     final managed = ref.read(managedSessionProvider(sessionId));
@@ -1486,11 +1518,13 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
     final l10n = context.l10n;
     final sessionId = ref.watch(currentSessionProvider);
     final managed = ref.watch(managedSessionProvider(sessionId));
+    final pendingAgent = sessionId == null ? ref.watch(pendingManagedAgentProvider) : null;
     final managedCapabilities = managed?.managedAgentCapabilities;
     final managedSessionId = managed == null ? null : sessionId;
-    final canSelectModel = managedCapabilities == null || managedCapabilities.modelSelection;
+    final canSelectModel = pendingAgent == null && (managedCapabilities == null || managedCapabilities.modelSelection);
     final canAttach =
-        managedCapabilities == null || managedCapabilities.imagePrompts || managedCapabilities.fileAttachments;
+        pendingAgent == null &&
+        (managedCapabilities == null || managedCapabilities.imagePrompts || managedCapabilities.fileAttachments);
     final connAsync = ref.watch(activeConnectionProvider);
     final conn = connAsync.value;
     final connected = conn != null;
@@ -1580,7 +1614,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
         ? ref.watch(drawerViewProvider).byId(ref.watch(pendingSessionFolderProvider))
         : null;
     final hasFolders = sessionId == null && ref.watch(drawerViewProvider).folders.isNotEmpty;
-    final commands = ref.watch(slashCommandsProvider(sessionId));
+    final commands = pendingAgent != null ? const <SlashCommand>[] : ref.watch(slashCommandsProvider(sessionId));
     final contextFraction = sessionId == null || (managedCapabilities != null && !managedCapabilities.contextUsage)
         ? null
         : ref.watch(sessionUsageProvider(sessionId).select((u) => u.contextFraction));
@@ -1662,7 +1696,9 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
     // the 新对话 key would have nothing to mirror.
     final isChild = sessionId != null && ref.watch(subagentParentProvider(sessionId).select((p) => p != null));
     // 生成模式: this conversation's, and what the host can do.
-    final generate = managed == null ? ref.watch(generateModeProvider.select((m) => m.byKey[_draftKey])) : null;
+    final generate = managed == null && pendingAgent == null
+        ? ref.watch(generateModeProvider.select((m) => m.byKey[_draftKey]))
+        : null;
     final mediaReady = ref.watch(mediaPluginProvider) == MediaPluginState.ready;
     // What the catalogue really offers here (§4.3): a picture can go in as a
     // reference, or as a video's first frame, only where a model takes one.
@@ -2138,7 +2174,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
                                         ? l10n.mediaHintVideo
                                         : l10n.mediaHintImage,
                                     onSend: _send,
-                                    onSendOptions: managed == null && (chat?.controlReady ?? true)
+                                    onSendOptions:
+                                        pendingAgent == null && managed == null && (chat?.controlReady ?? true)
                                         ? _sendOptions
                                         : null,
                                     voice: _voice,

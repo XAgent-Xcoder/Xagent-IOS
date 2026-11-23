@@ -9104,6 +9104,9 @@ class L10nZh extends L10n {
   String get managedManageWorkspaces => '管理工作区';
 
   @override
+  String get managedDraftAttachments => '当前 Agent 暂不支持草稿中的附件。请移除附件后发送，或切回 DSH。';
+
+  @override
   String get marketSectionOfficial => '官方';
 
   @override

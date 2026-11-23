@@ -46,6 +46,7 @@ class _Creation extends ManagedSessionCreation {
     String workspaceId,
     String agentId, {
     String? folderId,
+    bool navigate = true,
     required bool Function() isCurrent,
   }) async {
     expect(isCurrent(), isTrue);
@@ -123,6 +124,12 @@ void main() {
         ],
       ),
     );
+    final staged = await tester.runAsync(
+      () => ref.read(managedCreationProvider).create(ref, 'ws', 'codex', navigate: false, isCurrent: () => true),
+    );
+    expect(staged, 'managed-new');
+    expect(ref.read(currentSessionProvider), isNull, reason: 'draft migration must precede navigation');
+    host.calls.clear();
     await tester.tap(find.text('Create'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Codex'));

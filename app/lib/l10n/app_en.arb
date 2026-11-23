@@ -2784,6 +2784,7 @@
   "managedWorkspaceLoading": "Workspaces are not ready. Check the connection or open workspace management.",
   "managedNoWorkspace": "This computer has no workspaces. Add a workspace first.",
   "managedManageWorkspaces": "Manage workspaces",
+  "managedDraftAttachments": "This Agent does not support the draft attachments. Remove them before sending, or switch back to DSH.",
   "marketSectionOfficial": "Official",
   "marketSectionAdapted": "Made for AgentPort",
   "marketSectionAll": "All",

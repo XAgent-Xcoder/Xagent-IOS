@@ -5622,6 +5622,7 @@
   "managedWorkspaceLoading": "尚未读取到工作区，请检查连接或打开工作区管理。",
   "managedNoWorkspace": "这台电脑还没有工作区，请先添加工作区。",
   "managedManageWorkspaces": "管理工作区",
+  "managedDraftAttachments": "当前 Agent 暂不支持草稿中的附件。请移除附件后发送，或切回 DSH。",
   "marketSectionOfficial": "官方",
   "marketSectionAdapted": "适配 AgentPort",
   "marketSectionAll": "全部",

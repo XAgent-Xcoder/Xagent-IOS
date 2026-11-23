@@ -9606,6 +9606,10 @@ class L10nEn extends L10n {
   String get managedManageWorkspaces => 'Manage workspaces';
 
   @override
+  String get managedDraftAttachments =>
+      'This Agent does not support the draft attachments. Remove them before sending, or switch back to DSH.';
+
+  @override
   String get marketSectionOfficial => 'Official';
 
   @override

@@ -1,3 +1,4 @@
+import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -18,6 +19,7 @@ Future<void> showNewAgentSession(
   VoidCallback nativeNewChat,
   VoidCallback closeDrawer, {
   String? folderId,
+  bool selectionOnly = false,
 }) async {
   if (ref.read(activeHostProvider).kind != HostKind.relay) {
     nativeNewChat();
@@ -26,14 +28,25 @@ Future<void> showNewAgentSession(
   await showModalBottomSheet<void>(
     context: context,
     isScrollControlled: true,
-    builder: (_) => _NewAgentSession(nativeNewChat: nativeNewChat, closeDrawer: closeDrawer, folderId: folderId),
+    builder: (_) => _NewAgentSession(
+      nativeNewChat: nativeNewChat,
+      closeDrawer: closeDrawer,
+      folderId: folderId,
+      selectionOnly: selectionOnly,
+    ),
   );
 }
 
 class _NewAgentSession extends ConsumerStatefulWidget {
-  const _NewAgentSession({required this.nativeNewChat, required this.closeDrawer, this.folderId});
+  const _NewAgentSession({
+    required this.nativeNewChat,
+    required this.closeDrawer,
+    this.folderId,
+    this.selectionOnly = false,
+  });
   final VoidCallback nativeNewChat, closeDrawer;
   final String? folderId;
+  final bool selectionOnly;
   @override
   ConsumerState<_NewAgentSession> createState() => _NewAgentSessionState();
 }
@@ -74,6 +87,7 @@ class _NewAgentSessionState extends ConsumerState<_NewAgentSession> {
                 title: const Text('DSH'),
                 enabled: !_busy && validOwner,
                 onTap: () {
+                  if (widget.selectionOnly) ref.read(pendingManagedAgentProvider.notifier).select(null);
                   Navigator.pop(context);
                   widget.nativeNewChat();
                 },
@@ -123,7 +137,7 @@ class _NewAgentSessionState extends ConsumerState<_NewAgentSession> {
                       agent.available &&
                       workspaces.ready &&
                       workspaces.byId(_workspaceId) != null,
-                  onTap: () => _create(agent.id),
+                  onTap: () => widget.selectionOnly ? _select(agent) : _create(agent.id),
                 ),
               if (_error != null) Text(_error!, style: TextStyle(color: Theme.of(context).colorScheme.error)),
             ],
@@ -131,6 +145,20 @@ class _NewAgentSessionState extends ConsumerState<_NewAgentSession> {
         ),
       ),
     );
+  }
+
+  Future<void> _select(ManagedAgentDefinition agent) async {
+    final workspaceId = _workspaceId;
+    if (workspaceId == null || _busy) return;
+    setState(() => _busy = true);
+    await ref.read(workspacePrefsProvider.notifier).select(workspaceId);
+    if (!mounted) return;
+    if (_owner != ref.read(readListIdentityProvider) || ref.read(currentSessionProvider) != null) {
+      setState(() => _busy = false);
+      return;
+    }
+    ref.read(pendingManagedAgentProvider.notifier).select(agent);
+    Navigator.pop(context);
   }
 
   Future<void> _create(String agentId) async {

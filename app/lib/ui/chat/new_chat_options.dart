@@ -16,6 +16,7 @@ import '../../runtime/runtime_state.dart';
 import '../../state/connection_state.dart';
 import '../../state/features_state.dart';
 import '../../state/hosts_state.dart';
+import '../../state/managed_agents_state.dart';
 import '../../state/models_state.dart' show modelSelectionScopeProvider;
 import '../../state/new_chat_modes.dart';
 import '../../state/sessions_state.dart' show currentSessionProvider, pendingSessionFolderProvider;
@@ -152,18 +153,26 @@ class NewChatOptions extends ConsumerWidget {
     final canChooseAgent =
         ref.watch(currentSessionProvider) == null &&
         ref.watch(activeHostProvider.select((host) => host.kind == HostKind.relay));
+    final pendingAgent = ref.watch(pendingManagedAgentProvider);
     final items = <Widget>[
       if (canChooseAgent)
         item(
           const ValueKey('new-chat-agent'),
           AppIcons.configure,
-          l10n.managedChooseAgent,
+          pendingAgent?.name ?? 'DSH',
           l10n.managedChooseAgent,
           () => unawaited(
-            showNewAgentSession(context, ref, () {}, () {}, folderId: ref.read(pendingSessionFolderProvider)),
+            showNewAgentSession(
+              context,
+              ref,
+              () {},
+              () {},
+              folderId: ref.read(pendingSessionFolderProvider),
+              selectionOnly: true,
+            ),
           ),
         ),
-      if (presets.length > 1 && shownPreset != null)
+      if (pendingAgent == null && presets.length > 1 && shownPreset != null)
         item(
           const ValueKey('new-chat-preset'),
           presetIcon(shownPreset.id),
@@ -171,7 +180,7 @@ class NewChatOptions extends ConsumerWidget {
           l10n.featuresAgentPresets,
           () => unawaited(_pickPreset(context, ref)),
         ),
-      if (permissionLabel != null)
+      if (pendingAgent == null && permissionLabel != null)
         item(
           const ValueKey('new-chat-permission'),
           AppIcons.permissions,

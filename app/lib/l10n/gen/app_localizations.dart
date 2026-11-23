@@ -16796,6 +16796,12 @@ abstract class L10n {
   /// **'管理工作区'**
   String get managedManageWorkspaces;
 
+  /// No description provided for @managedDraftAttachments.
+  ///
+  /// In zh, this message translates to:
+  /// **'当前 Agent 暂不支持草稿中的附件。请移除附件后发送，或切回 DSH。'**
+  String get managedDraftAttachments;
+
   /// No description provided for @marketSectionOfficial.
   ///
   /// In zh, this message translates to:

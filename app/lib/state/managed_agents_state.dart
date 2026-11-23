@@ -10,6 +10,25 @@ import 'sessions_state.dart';
 import 'read_list_identity.dart';
 import 'workspaces_state.dart';
 
+/// A new-chat choice belongs to its account/Host, and survives reconnects.
+final pendingManagedAgentProvider = NotifierProvider<PendingManagedAgent, ManagedAgentDefinition?>(
+  PendingManagedAgent.new,
+);
+
+class PendingManagedAgent extends Notifier<ManagedAgentDefinition?> {
+  @override
+  ManagedAgentDefinition? build() {
+    ref.watch(activeHostProvider);
+    ref.watch(readListIdentityProvider);
+    ref.listen(currentSessionProvider, (previous, next) {
+      if (previous != null && next == null) state = null;
+    });
+    return null;
+  }
+
+  void select(ManagedAgentDefinition? agent) => state = agent;
+}
+
 final managedAgentsProvider = FutureProvider<List<ManagedAgentDefinition>>((ref) async {
   final conn = ref.watch(readListLiveConnectionProvider);
   ref.watch(readListIdentityProvider);
@@ -56,6 +75,7 @@ class ManagedSessionCreation {
     String workspaceId,
     String agentId, {
     String? folderId,
+    bool navigate = true,
     required bool Function() isCurrent,
   }) async {
     final conn = ref.read(readListLiveConnectionProvider);
@@ -105,7 +125,7 @@ class ManagedSessionCreation {
               );
           check();
         }
-        ref.read(currentSessionProvider.notifier).select(created.sessionId);
+        if (navigate) ref.read(currentSessionProvider.notifier).select(created.sessionId);
         return created.sessionId;
       },
     );
