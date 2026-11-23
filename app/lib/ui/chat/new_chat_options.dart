@@ -15,9 +15,10 @@ import '../../l10n/l10n.dart';
 import '../../runtime/runtime_state.dart';
 import '../../state/connection_state.dart';
 import '../../state/features_state.dart';
+import '../../state/hosts_state.dart';
 import '../../state/models_state.dart' show modelSelectionScopeProvider;
 import '../../state/new_chat_modes.dart';
-import '../../state/sessions_state.dart' show currentSessionProvider;
+import '../../state/sessions_state.dart' show currentSessionProvider, pendingSessionFolderProvider;
 import '../../state/settings_state.dart';
 import '../common/app_sheet.dart';
 import '../common/list_page_row.dart';
@@ -26,6 +27,7 @@ import '../features/feature_format.dart';
 import '../features/permission_page.dart' show confirmPermission;
 import '../theme/app_icons.dart';
 import 'empty_actions.dart';
+import 'managed_agent_picker.dart';
 
 /// The longest a single option may grow before its label is cut.
 const _itemMaxWidth = 200.0;
@@ -147,7 +149,20 @@ class NewChatOptions extends ConsumerWidget {
       ),
     );
 
+    final canChooseAgent =
+        ref.watch(currentSessionProvider) == null &&
+        ref.watch(activeHostProvider.select((host) => host.kind == HostKind.relay));
     final items = <Widget>[
+      if (canChooseAgent)
+        item(
+          const ValueKey('new-chat-agent'),
+          AppIcons.configure,
+          l10n.managedChooseAgent,
+          l10n.managedChooseAgent,
+          () => unawaited(
+            showNewAgentSession(context, ref, () {}, () {}, folderId: ref.read(pendingSessionFolderProvider)),
+          ),
+        ),
       if (presets.length > 1 && shownPreset != null)
         item(
           const ValueKey('new-chat-preset'),
