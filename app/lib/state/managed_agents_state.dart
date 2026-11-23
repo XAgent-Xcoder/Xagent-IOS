@@ -4,7 +4,6 @@ import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'hosts_state.dart';
-import 'drawer_view_state.dart';
 import 'chat_state.dart';
 import 'sessions_state.dart';
 import 'read_list_identity.dart';
@@ -110,101 +109,6 @@ final managedSessionProvider = Provider.family<SessionProjections?, String?>((re
   }
   return null;
 });
-
-/// Retain the create identity on an ambiguous response, including retry after
-/// reconnect. Scope includes the account/Host display identity; no credentials.
-final managedCreationProvider = Provider((ref) => ManagedSessionCreation());
-
-class ManagedSessionCreation {
-  final operations = ManagedCreationOperations();
-  Future<String> create(
-    WidgetRef ref,
-    String workspaceId,
-    String agentId, {
-    String? folderId,
-    bool navigate = true,
-    required bool Function() isCurrent,
-  }) async {
-    final conn = ref.read(readListLiveConnectionProvider);
-    final owner = ref.read(readListIdentityProvider);
-    final host = ref.read(activeHostProvider);
-    if (conn == null || owner == null || host.kind != HostKind.relay) {
-      throw const DshClosedException('Host unavailable');
-    }
-    final generation = conn.client.mux.generation;
-    void check() {
-      if (!isCurrent() ||
-          ref.read(readListIdentityProvider) != owner ||
-          ref.read(activeHostProvider) != host ||
-          !identical(ref.read(readListLiveConnectionProvider), conn) ||
-          !identical(conn.client.mux.generation, generation) ||
-          !ref.read(workspacesProvider).ready ||
-          ref.read(workspacesProvider).byId(workspaceId) == null) {
-        throw const DshClosedException('Session creation context changed');
-      }
-    }
-
-    check();
-    return operations.run(
-      owner.digest,
-      workspaceId,
-      agentId,
-      check: check,
-      action: (operationId) async {
-        final created = await conn.client.createManagedSession(
-          workspaceId: workspaceId,
-          agentId: agentId,
-          operationId: operationId,
-        );
-        check();
-        await ref.read(sessionsProvider.notifier).refresh();
-        check();
-        if (folderId != null) {
-          await ref
-              .read(drawerViewProvider.notifier)
-              .moveSessions(
-                [created.sessionId],
-                folderId,
-                isCurrent: () {
-                  check();
-                  return true;
-                },
-              );
-          check();
-        }
-        if (navigate) ref.read(currentSessionProvider.notifier).select(created.sessionId);
-        return created.sessionId;
-      },
-    );
-  }
-}
-
-/// Retains uncertain delivery IDs within an account/Host/workspace/Agent scope.
-/// Explicit retry reuses the ID; success clears it for the next new session.
-class ManagedCreationOperations {
-  final _pending = <(String, String, String), String>{};
-  final _busy = <(String, String, String)>{};
-  Future<String> run(
-    String owner,
-    String workspaceId,
-    String agentId, {
-    required void Function() check,
-    required Future<String> Function(String operationId) action,
-  }) async {
-    check();
-    final key = (owner, workspaceId, agentId);
-    if (!_busy.add(key)) throw const DshClosedException('Session creation is already pending');
-    final operationId = _pending.putIfAbsent(key, _operationId);
-    try {
-      final result = await action(operationId);
-      check();
-      _pending.remove(key);
-      return result;
-    } finally {
-      _busy.remove(key);
-    }
-  }
-}
 
 String _operationId() {
   final random = Random.secure();

@@ -1,59 +1,16 @@
 import 'package:dsh_app/state/connection_state.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-import '../workspace/support.dart';
-
-import 'package:dsh_app/state/drawer_view_state.dart';
 import 'package:dsh_app/state/hosts_state.dart';
 import 'package:dsh_app/state/managed_agents_state.dart';
 import 'package:dsh_app/state/read_list_identity.dart';
 import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/state/workspaces_state.dart';
 import 'package:dsh_app/ui/chat/managed_agent_picker.dart';
-import 'package:dsh_app/ui/shell/drawer/drawer_actions.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import '../workspace/support.dart';
 import 'support/harness.dart';
-
-const workspace = Workspace(workspaceId: 'ws', path: '/project', title: 'Project', sessionIds: []);
-const folder = DrawerFolder(id: 'folder', name: 'My folder');
-
-class _Host extends ActiveHostController {
-  @override
-  HostRef build() => const HostRef.relay('computer');
-}
-
-class _Workspaces extends WorkspacesController {
-  _Workspaces(this.empty);
-  final bool empty;
-  @override
-  WorkspacesState build() => WorkspacesState(status: WorkspacesStatus.ready, workspaces: empty ? [] : [workspace]);
-}
-
-class _Folders extends DrawerViewController {
-  @override
-  DrawerView build() => const DrawerView(loaded: true, folders: [folder]);
-}
-
-class _Creation extends ManagedSessionCreation {
-  final calls = <(String, String, String?)>[];
-  @override
-  Future<String> create(
-    WidgetRef ref,
-    String workspaceId,
-    String agentId, {
-    String? folderId,
-    bool navigate = true,
-    required bool Function() isCurrent,
-  }) async {
-    expect(isCurrent(), isTrue);
-    calls.add((workspaceId, agentId, folderId));
-    return 'created';
-  }
-}
 
 const agents = [
   ManagedAgentDefinition(
@@ -65,22 +22,9 @@ const agents = [
   ManagedAgentDefinition(id: 'codex', name: 'Codex', available: true, capabilities: ManagedAgentCapabilities({})),
 ];
 
-class _ManagedHost extends FakeWorkspaceHost {
+class _Host extends ActiveHostController {
   @override
-  Future<RpcResult> call(String endpoint, Map<String, Object?> args, {Duration? timeout}) async {
-    if (endpoint == 'managedAgent/create') {
-      calls.add((endpoint, args));
-      return const RpcOk({'sessionId': 'managed-new'});
-    }
-    return super.call(endpoint, args, timeout: timeout);
-  }
-}
-
-class _Sessions extends SessionsController {
-  @override
-  Future<List<SessionSummary>> build() async => [];
-  @override
-  Future<void> refresh() async {}
+  HostRef build() => const HostRef.relay('computer');
 }
 
 class _Current extends CurrentSessionController {
@@ -90,128 +34,100 @@ class _Current extends CurrentSessionController {
   void select(String? id) => state = id;
 }
 
-void main() {
-  setUp(() => SharedPreferences.setMockInitialValues({}));
-  testWidgets('managed create assigns the returned session to the requested folder before navigation', (tester) async {
-    final host = _ManagedHost();
-    final client = DshClient.withCarrier(host);
-    addTearDown(client.close);
-    final connection = HostConnection(client: client, isLocal: false, kind: HostKind.relay);
-    late WidgetRef ref;
-    await tester.pumpWidget(
-      testApp(
-        Consumer(
-          builder: (context, value, _) {
-            ref = value;
-            return Scaffold(
-              body: TextButton(
-                onPressed: () => showNewAgentSession(context, ref, () {}, () {}, folderId: folder.id),
-                child: const Text('Create'),
-              ),
-            );
-          },
-        ),
-        overrides: [
-          activeHostProvider.overrideWith(_Host.new),
-          readListIdentityProvider.overrideWithValue(const ReadListIdentity('owner')),
-          readListLiveConnectionProvider.overrideWithValue(connection),
-          workspacesProvider.overrideWith(() => _Workspaces(false)),
-          selectedWorkspaceProvider.overrideWithValue(workspace),
-          managedAgentsProvider.overrideWith((ref) async => agents),
-          drawerViewProvider.overrideWith(_Folders.new),
-          sessionsProvider.overrideWith(_Sessions.new),
-          currentSessionProvider.overrideWith(_Current.new),
-        ],
-      ),
-    );
-    final staged = await tester.runAsync(
-      () => ref.read(managedCreationProvider).create(ref, 'ws', 'codex', navigate: false, isCurrent: () => true),
-    );
-    expect(staged, 'managed-new');
-    expect(ref.read(currentSessionProvider), isNull, reason: 'draft migration must precede navigation');
-    host.calls.clear();
-    await tester.tap(find.text('Create'));
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('Codex'));
-    await tester.pumpAndSettle();
-    expect(host.calls.single.$1, 'managedAgent/create');
-    expect((host.calls.single.$2['request'] as Map)['agentId'], 'codex');
-    expect(ref.read(drawerViewProvider).byId(folder.id)!.sessionIds, ['managed-new']);
-    expect(ref.read(currentSessionProvider), 'managed-new');
-  });
-  Future<_Creation> open(
-    WidgetTester tester, {
-    bool inFolder = false,
-    bool connected = true,
-    bool empty = false,
-    bool supported = true,
-  }) async {
-    final creation = _Creation();
-    await tester.pumpWidget(
-      testApp(
-        Consumer(
-          builder: (context, ref, _) => Scaffold(
-            body: TextButton(
-              onPressed: () =>
-                  inFolder ? folderActionsFlow(context, ref, folder) : showNewAgentSession(context, ref, () {}, () {}),
-              child: const Text('Open'),
+/// A relay connection the picker reads; [connected] nulls it for the offline case.
+Future<WidgetRef> open(WidgetTester tester, {required bool connected}) async {
+  final connection = HostConnection(
+    client: DshClient.withCarrier(FakeWorkspaceHost()),
+    isLocal: false,
+    kind: HostKind.relay,
+  );
+  late WidgetRef ref;
+  await tester.pumpWidget(
+    testApp(
+      Consumer(
+        builder: (context, value, _) {
+          ref = value;
+          return Scaffold(
+            body: Row(
+              children: [
+                TextButton(onPressed: () => showAgentPicker(context, ref), child: const Text('pick')),
+                TextButton(
+                  onPressed: () => showNewAgentSession(context, ref, () {}, () {}, folderId: 'folder'),
+                  child: const Text('new-folder'),
+                ),
+                TextButton(
+                  onPressed: () => showNewAgentSession(context, ref, () {}, () {}),
+                  child: const Text('new'),
+                ),
+              ],
             ),
-          ),
-        ),
-        overrides: [
-          activeHostProvider.overrideWith(_Host.new),
-          readListIdentityProvider.overrideWithValue(const ReadListIdentity('owner')),
-          readListLiveConnectionProvider.overrideWithValue(connected ? fakeConnection : null),
-          workspacesProvider.overrideWith(() => _Workspaces(empty)),
-          selectedWorkspaceProvider.overrideWithValue(null),
-          recentWorkspaceForNewChatProvider.overrideWithValue(null),
-          managedAgentsProvider.overrideWith((ref) async => supported ? agents : []),
-          managedCreationProvider.overrideWithValue(creation),
-          drawerViewProvider.overrideWith(_Folders.new),
-        ],
+          );
+        },
       ),
-    );
-    await tester.tap(find.text('Open'));
-    await tester.pumpAndSettle();
-    if (inFolder) {
-      await tester.tap(find.text('新对话'));
-      await tester.pumpAndSettle();
-    }
-    return creation;
-  }
+      overrides: [
+        activeHostProvider.overrideWith(_Host.new),
+        readListIdentityProvider.overrideWithValue(const ReadListIdentity('owner')),
+        readListLiveConnectionProvider.overrideWithValue(connected ? connection : null),
+        managedAgentsProvider.overrideWith((ref) async => agents),
+        currentSessionProvider.overrideWith(_Current.new),
+      ],
+    ),
+  );
+  return ref;
+}
 
-  for (final entry in [('claude', 'Claude Code'), ('codex', 'Codex')]) {
-    testWidgets('folder new chat selects ${entry.$1} and carries the folder', (tester) async {
-      final creation = await open(tester, inFolder: true);
-      expect(find.text('DSH'), findsOneWidget);
-      await tester.tap(find.text(entry.$2));
-      await tester.pumpAndSettle();
-      expect(creation.calls, [('ws', entry.$1, 'folder')]);
-    });
-  }
-  testWidgets('ordinary new chat has no folder assignment', (tester) async {
-    final creation = await open(tester);
+void main() {
+  testWidgets('picker lists DSH and the registered managed agents', (tester) async {
+    await open(tester, connected: true);
+    await tester.tap(find.text('pick'));
+    await tester.pumpAndSettle();
+    expect(find.text('选择 Agent'), findsOneWidget);
+    expect(find.text('DSH'), findsOneWidget);
+    expect(find.text('Claude Code'), findsOneWidget);
+    expect(find.text('Codex'), findsOneWidget);
+  });
+  testWidgets('picking a managed agent selects it; DSH clears it', (tester) async {
+    final ref = await open(tester, connected: true);
+    await tester.tap(find.text('pick'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Codex'));
     await tester.pumpAndSettle();
-    expect(creation.calls, [('ws', 'codex', null)]);
+    expect(ref.read(pendingManagedAgentProvider)?.id, 'codex');
+    await tester.tap(find.text('pick'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('DSH'));
+    await tester.pumpAndSettle();
+    expect(ref.read(pendingManagedAgentProvider), isNull);
   });
-  testWidgets('offline creation stays disabled and explains connection', (tester) async {
-    final creation = await open(tester, connected: false);
+  testWidgets('offline picker shows the connect hint, DSH only', (tester) async {
+    await open(tester, connected: false);
+    await tester.tap(find.text('pick'));
+    await tester.pumpAndSettle();
     expect(find.text('请先连接电脑，再创建 Claude Code 或 Codex 对话。'), findsOneWidget);
-    await tester.tap(find.text('Codex'));
-    expect(creation.calls, isEmpty);
-  });
-  testWidgets('empty workspace offers management without creating', (tester) async {
-    final creation = await open(tester, empty: true);
-    expect(find.text('这台电脑还没有工作区，请先添加工作区。'), findsOneWidget);
-    expect(find.text('管理工作区'), findsOneWidget);
-    await tester.tap(find.text('Claude Code'));
-    expect(creation.calls, isEmpty);
-  });
-  testWidgets('old host explains unavailable agents and retains DSH', (tester) async {
-    await open(tester, supported: false);
-    expect(find.text('电脑未提供可用的 Agent。请更新 Xagent 插件并启用托管 Agent。'), findsOneWidget);
     expect(find.text('DSH'), findsOneWidget);
     expect(find.text('Codex'), findsNothing);
+  });
+  testWidgets('folder new chat carries the folder and resets the draft', (tester) async {
+    final ref = await open(tester, connected: true);
+    // A stale selection and an open session are both cleared by the entry.
+    ref.read(pendingManagedAgentProvider.notifier).select(agents[0]);
+    ref.read(currentSessionProvider.notifier).select('s1');
+    await tester.tap(find.text('new-folder'));
+    await tester.pumpAndSettle();
+    expect(ref.read(currentSessionProvider), isNull);
+    expect(ref.read(pendingManagedAgentProvider), isNull);
+    expect(ref.read(pendingSessionFolderProvider), 'folder');
+  });
+  testWidgets('ordinary new chat resets agent and session but leaves a stale folder', (tester) async {
+    final ref = await open(tester, connected: true);
+    ref.read(pendingSessionFolderProvider.notifier).select('folder');
+    ref.read(pendingManagedAgentProvider.notifier).select(agents[0]);
+    ref.read(currentSessionProvider.notifier).select('s1');
+    await tester.tap(find.text('new'));
+    await tester.pumpAndSettle();
+    expect(ref.read(currentSessionProvider), isNull);
+    expect(ref.read(pendingManagedAgentProvider), isNull);
+    // The folder entry is what sets the folder; a plain entry leaves it.
+    expect(ref.read(pendingSessionFolderProvider), 'folder');
   });
 }

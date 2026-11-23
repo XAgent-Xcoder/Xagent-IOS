@@ -84,3 +84,5 @@ iOS 应用定向回归 27 项通过；SDK 契约 6 项、加密隧道 1 项及�
 选择 Claude Code 或 Codex 后，手机按当前主机、工作区和 Agent 调用 `managedAgent/create` 准备空会话。界面仍停在首页，右上角通过该会话的 `session/modelCatalog` 读取主机实际支持的模型与推理强度。切换工作区或 Agent 后使用新选择对应的目录。连接恢复或重试同一创建请求沿用 operationId。
 
 首条消息复用准备好的 sessionId。用户显式选择模型时，先等待 `session/selectModel` 成功，再发送消息；失败时保留输入。主机按是否已有用户消息标记 blank，手机历史列表沿用已有过滤规则。原生 DSH 继续使用自己的目录和新建流程。
+
+验证：修改文件 `flutter analyze --no-pub` 通过；首页选择与 Agent 选择、托管创建面板、延迟创建及 operationId 复用共 3 个测试文件 12 项通过（`home_agent_picker_test` 5 项、`managed_agent_creation_test` 5 项、`managed_creation_test` 2 项）。`git diff --check` 通过。检查使用 Flutter 3.47.7 / Dart 3.13.5，串行执行，CPU 与内存预算各取启动时空闲资源三分之一；结束后释放测试进程。未构建 IPA、未做真机验收。
