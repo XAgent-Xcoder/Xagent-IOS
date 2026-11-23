@@ -504,9 +504,20 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
           sessionId = await ref.read(sessionsProvider.notifier).create();
         } else {
           if (workspace == null) throw DshClosedException(appL10n.managedChooseWorkspace);
-          sessionId = await ref
-              .read(managedCreationProvider)
-              .create(ref, workspace.workspaceId, pendingAgent.id, navigate: false, isCurrent: ownsCreation);
+          sessionId = await ref.read(managedDraftSessionProvider.future);
+          if (!ownsCreation() || ref.read(managedDraftSessionProvider).asData?.value != sessionId) return null;
+          final model = ref.read(managedDraftModelProvider);
+          if (model != null) {
+            final client = ref.read(activeConnectionProvider).value?.client;
+            if (client == null) return null;
+            await client.setModel(
+              sessionId,
+              provider: model.provider,
+              model: model.model,
+              reasoningEffort: model.reasoningEffort,
+            );
+            if (!ownsCreation() || !identical(ref.read(managedDraftModelProvider), model)) return null;
+          }
         }
       } catch (e) {
         if (ownsCreation()) {
@@ -1278,6 +1289,13 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
     }
   }
 
+  void _pickWorkspace() {
+    showWorkspaceSheet(
+      context,
+      onManage: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const WorkspacesPage())),
+    );
+  }
+
   Future<void> _pickNewChatFolder() async {
     final scope = _draftScope;
     final host = ref.read(activeHostProvider);
@@ -1492,6 +1510,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
     final client = ref.read(activeConnectionProvider).value?.client;
     final generation = client?.mux.generation;
     final sessionId = ref.read(currentSessionProvider);
+    final agent = sessionId == null ? ref.read(pendingManagedAgentProvider) : null;
+    final draftId = agent == null ? null : ref.read(managedDraftSessionProvider).asData?.value;
     return (selection) {
       if (!mounted ||
           client == null ||
@@ -1504,6 +1524,13 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
       }
       if (ref.read(managedSessionProvider(sessionId))?.managedAgentCapabilities?.modelSelection == false) return;
       if (sessionId == null) {
+        if (_creating != null || !identical(ref.read(pendingManagedAgentProvider), agent)) return;
+        if (agent != null) {
+          if (draftId != null && ref.read(managedDraftSessionProvider).asData?.value == draftId) {
+            ref.read(managedDraftModelProvider.notifier).select(selection);
+          }
+          return;
+        }
         ref.read(pendingModelProvider.notifier).select(selection);
       } else {
         // A newer pick replaces a model still owed from the new-chat screen.
@@ -1519,9 +1546,19 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
     final sessionId = ref.watch(currentSessionProvider);
     final managed = ref.watch(managedSessionProvider(sessionId));
     final pendingAgent = sessionId == null ? ref.watch(pendingManagedAgentProvider) : null;
+    final agentName =
+        pendingAgent?.name ??
+        switch (managed?.managedAgentId) {
+          'claude' || 'claude-code' => 'Claude Code',
+          'codex' => 'Codex',
+          final id => id,
+        };
     final managedCapabilities = managed?.managedAgentCapabilities;
-    final managedSessionId = managed == null ? null : sessionId;
-    final canSelectModel = pendingAgent == null && (managedCapabilities == null || managedCapabilities.modelSelection);
+    final draftSession = pendingAgent == null ? null : ref.watch(managedDraftSessionProvider);
+    final managedSessionId = draftSession?.asData?.value ?? (managed == null ? null : sessionId);
+    final canSelectModel = pendingAgent == null
+        ? managedCapabilities == null || managedCapabilities.modelSelection
+        : managedSessionId != null && pendingAgent.capabilities.modelSelection;
     final canAttach =
         pendingAgent == null &&
         (managedCapabilities == null || managedCapabilities.imagePrompts || managedCapabilities.fileAttachments);
@@ -1609,7 +1646,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
         : ref.watch(
             sessionsProvider.select((async) => async.value?.where((s) => s.sessionId == sessionId).firstOrNull?.title),
           );
-    final pendingModel = ref.watch(pendingModelProvider);
+    final pendingModel = pendingAgent == null ? ref.watch(pendingModelProvider) : ref.watch(managedDraftModelProvider);
     final newFolder = sessionId == null
         ? ref.watch(drawerViewProvider).byId(ref.watch(pendingSessionFolderProvider))
         : null;
@@ -1805,12 +1842,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
                                           : inHostDefault
                                           ? context.l10n.viewEmptyHostDefaultDirectory
                                           : null,
-                                      onWorkspace: () => showWorkspaceSheet(
-                                        context,
-                                        onManage: () =>
-                                            Navigator.of(context)
-                                                .push(MaterialPageRoute<void>(builder: (_) => const WorkspacesPage())),
-                                      ),
+                                      onWorkspace: _pickWorkspace,
                                     ),
                                   ],
                                 ),
@@ -1898,7 +1930,29 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
                         // A new chat's title is only 「新对话」, so the model takes the
                         // header's right like on a wide window — picked before typing,
                         // once there is an engine to send to.
-                        trailing: !canSelectModel || (narrow && (sessionId != null || !connected))
+                        trailing: draftSession != null && managedSessionId == null
+                            ? draftSession.hasError
+                                  ? IconButton(
+                                      tooltip: ref.watch(draftWorkspaceIdProvider) == null
+                                          ? l10n.managedChooseWorkspace
+                                          : l10n.managedCreateFailed,
+                                      icon: Icon(
+                                        ref.watch(draftWorkspaceIdProvider) == null
+                                            ? Icons.folder_open_rounded
+                                            : Icons.refresh_rounded,
+                                      ),
+                                      onPressed: ref.watch(draftWorkspaceIdProvider) == null
+                                          ? _pickWorkspace
+                                          : () => ref.invalidate(managedDraftSessionProvider),
+                                    )
+                                  : const Padding(
+                                      padding: EdgeInsets.all(12),
+                                      child: SizedBox.square(
+                                        dimension: 18,
+                                        child: CircularProgressIndicator(strokeWidth: 2),
+                                      ),
+                                    )
+                            : !canSelectModel || (narrow && (sessionId != null || !connected))
                             ? null
                             : ModelChip(
                                 managedSessionId: managedSessionId,
@@ -2167,7 +2221,9 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
                                         ? l10n.commonWaitingAnswer
                                         : null,
                                     placeholder: generate == null
-                                        ? null
+                                        ? agentName == null
+                                              ? null
+                                              : l10n.botsComposerHint(agentName)
                                         : _editing && !generate.isVideo
                                         ? l10n.mediaHintEdit
                                         : generate.isVideo

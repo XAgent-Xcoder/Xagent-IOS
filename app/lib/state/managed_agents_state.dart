@@ -29,6 +29,53 @@ class PendingManagedAgent extends Notifier<ManagedAgentDefinition?> {
   void select(ManagedAgentDefinition? agent) => state = agent;
 }
 
+/// A draft keeps its operation ID through a reconnect or an explicit retry.
+final _draftOperationProvider = Provider.autoDispose((ref) {
+  ref.watch(readListIdentityProvider);
+  ref.watch(activeHostProvider);
+  ref.watch(pendingManagedAgentProvider);
+  ref.watch(draftWorkspaceIdProvider);
+  return _operationId();
+});
+
+final draftWorkspaceIdProvider = Provider<String?>(
+  (ref) =>
+      ref.watch(selectedWorkspaceIdProvider) ??
+      ref.watch(recentWorkspaceForNewChatProvider.select((workspace) => workspace?.workspaceId)),
+);
+
+/// Preparing a managed chat does not navigate away from the new-chat composer.
+final managedDraftSessionProvider = FutureProvider.autoDispose<String>((ref) async {
+  final operationId = ref.watch(_draftOperationProvider);
+  final workspaceId = ref.watch(draftWorkspaceIdProvider);
+  final agent = ref.watch(pendingManagedAgentProvider);
+  final conn = ref.watch(readListLiveConnectionProvider);
+  if (workspaceId == null) throw const DshClosedException('Workspace unavailable');
+  if (agent == null || conn == null || ref.watch(readListIdentityProvider) == null) {
+    throw const DshClosedException('Host unavailable');
+  }
+  final created = await conn.client.createManagedSession(
+    workspaceId: workspaceId,
+    agentId: agent.id,
+    operationId: operationId,
+  );
+  return created.sessionId;
+}, retry: (_, _) => null);
+
+class ManagedDraftModel extends Notifier<ModelSelection?> {
+  @override
+  ModelSelection? build() {
+    ref.watch(_draftOperationProvider);
+    return null;
+  }
+
+  void select(ModelSelection selection) => state = selection;
+}
+
+final managedDraftModelProvider = NotifierProvider.autoDispose<ManagedDraftModel, ModelSelection?>(
+  ManagedDraftModel.new,
+);
+
 final managedAgentsProvider = FutureProvider<List<ManagedAgentDefinition>>((ref) async {
   final conn = ref.watch(readListLiveConnectionProvider);
   ref.watch(readListIdentityProvider);

@@ -19,7 +19,7 @@ import '../../state/hosts_state.dart';
 import '../../state/managed_agents_state.dart';
 import '../../state/models_state.dart' show modelSelectionScopeProvider;
 import '../../state/new_chat_modes.dart';
-import '../../state/sessions_state.dart' show currentSessionProvider, pendingSessionFolderProvider;
+import '../../state/sessions_state.dart' show currentSessionProvider;
 import '../../state/settings_state.dart';
 import '../common/app_sheet.dart';
 import '../common/list_page_row.dart';
@@ -161,16 +161,7 @@ class NewChatOptions extends ConsumerWidget {
           AppIcons.configure,
           pendingAgent?.name ?? 'DSH',
           l10n.managedChooseAgent,
-          () => unawaited(
-            showNewAgentSession(
-              context,
-              ref,
-              () {},
-              () {},
-              folderId: ref.read(pendingSessionFolderProvider),
-              selectionOnly: true,
-            ),
-          ),
+          () => unawaited(showAgentPicker(context, ref)),
         ),
       if (pendingAgent == null && presets.length > 1 && shownPreset != null)
         item(
