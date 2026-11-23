@@ -16766,6 +16766,36 @@ abstract class L10n {
   /// **'未能确认会话创建结果。请重连后在同一工作区重试同一 Agent，将复用原请求。'**
   String get managedCreateFailed;
 
+  /// No description provided for @managedConnectHost.
+  ///
+  /// In zh, this message translates to:
+  /// **'请先连接电脑，再创建 Claude Code 或 Codex 对话。'**
+  String get managedConnectHost;
+
+  /// No description provided for @managedUnavailable.
+  ///
+  /// In zh, this message translates to:
+  /// **'电脑未提供可用的 Agent。请更新 Xagent 插件并启用托管 Agent。'**
+  String get managedUnavailable;
+
+  /// No description provided for @managedWorkspaceLoading.
+  ///
+  /// In zh, this message translates to:
+  /// **'尚未读取到工作区，请检查连接或打开工作区管理。'**
+  String get managedWorkspaceLoading;
+
+  /// No description provided for @managedNoWorkspace.
+  ///
+  /// In zh, this message translates to:
+  /// **'这台电脑还没有工作区，请先添加工作区。'**
+  String get managedNoWorkspace;
+
+  /// No description provided for @managedManageWorkspaces.
+  ///
+  /// In zh, this message translates to:
+  /// **'管理工作区'**
+  String get managedManageWorkspaces;
+
   /// No description provided for @marketSectionOfficial.
   ///
   /// In zh, this message translates to:

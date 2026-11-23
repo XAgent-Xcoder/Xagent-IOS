@@ -8,6 +8,7 @@ import '../../state/sessions_state.dart';
 import '../../state/read_list_identity.dart';
 import '../../state/workspaces_state.dart';
 import 'managed_agent_logo.dart';
+import '../workspace/workspaces_page.dart';
 
 /// Native DSH remains available with old Hosts. Managed creation never falls
 /// back to a native conversation or to another workspace.
@@ -15,8 +16,9 @@ Future<void> showNewAgentSession(
   BuildContext context,
   WidgetRef ref,
   VoidCallback nativeNewChat,
-  VoidCallback closeDrawer,
-) async {
+  VoidCallback closeDrawer, {
+  String? folderId,
+}) async {
   if (ref.read(activeHostProvider).kind != HostKind.relay) {
     nativeNewChat();
     return;
@@ -24,13 +26,14 @@ Future<void> showNewAgentSession(
   await showModalBottomSheet<void>(
     context: context,
     isScrollControlled: true,
-    builder: (_) => _NewAgentSession(nativeNewChat: nativeNewChat, closeDrawer: closeDrawer),
+    builder: (_) => _NewAgentSession(nativeNewChat: nativeNewChat, closeDrawer: closeDrawer, folderId: folderId),
   );
 }
 
 class _NewAgentSession extends ConsumerStatefulWidget {
-  const _NewAgentSession({required this.nativeNewChat, required this.closeDrawer});
+  const _NewAgentSession({required this.nativeNewChat, required this.closeDrawer, this.folderId});
   final VoidCallback nativeNewChat, closeDrawer;
+  final String? folderId;
   @override
   ConsumerState<_NewAgentSession> createState() => _NewAgentSessionState();
 }
@@ -55,6 +58,7 @@ class _NewAgentSessionState extends ConsumerState<_NewAgentSession> {
       }
     }
     final validOwner = owner != null && owner == _owner;
+    final connected = ref.watch(readListLiveConnectionProvider) != null;
     final agents = ref.watch(managedAgentsProvider);
     final shownAgents = agents.isLoading || agents.hasError ? const [] : agents.value ?? const [];
     return SafeArea(
@@ -74,6 +78,9 @@ class _NewAgentSessionState extends ConsumerState<_NewAgentSession> {
                   widget.nativeNewChat();
                 },
               ),
+              if (!connected) Text(l10n.managedConnectHost),
+              if (connected && !agents.isLoading && !agents.hasError && shownAgents.isEmpty)
+                Text(l10n.managedUnavailable),
               if (workspaces.workspaces.isNotEmpty)
                 DropdownButton<String>(
                   isExpanded: true,
@@ -88,7 +95,16 @@ class _NewAgentSessionState extends ConsumerState<_NewAgentSession> {
                   ],
                   onChanged: _busy || !validOwner ? null : (value) => setState(() => _workspaceId = value),
                 ),
-              if (!workspaces.ready || workspaces.byId(_workspaceId) == null) Text(l10n.managedChooseWorkspace),
+              if (connected && !workspaces.ready) Text(l10n.managedWorkspaceLoading),
+              if (connected && workspaces.ready && workspaces.workspaces.isEmpty) Text(l10n.managedNoWorkspace),
+              if (connected && validOwner)
+                TextButton(
+                  onPressed: _busy
+                      ? null
+                      : () =>
+                            Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const WorkspacesPage())),
+                  child: Text(l10n.managedManageWorkspaces),
+                ),
               if (agents.isLoading || _busy) const LinearProgressIndicator(),
               if (agents.hasError)
                 TextButton(
@@ -102,6 +118,7 @@ class _NewAgentSessionState extends ConsumerState<_NewAgentSession> {
                   subtitle: Text(l10n.managedUsesComputerConfig),
                   enabled:
                       validOwner &&
+                      connected &&
                       !_busy &&
                       agent.available &&
                       workspaces.ready &&
@@ -126,7 +143,13 @@ class _NewAgentSessionState extends ConsumerState<_NewAgentSession> {
     try {
       await ref
           .read(managedCreationProvider)
-          .create(ref, workspace, agentId, isCurrent: () => mounted && _owner == ref.read(readListIdentityProvider));
+          .create(
+            ref,
+            workspace,
+            agentId,
+            folderId: widget.folderId,
+            isCurrent: () => mounted && _owner == ref.read(readListIdentityProvider),
+          );
       if (!mounted) return;
       Navigator.pop(context);
       widget.closeDrawer();

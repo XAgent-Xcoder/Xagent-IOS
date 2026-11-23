@@ -71,6 +71,20 @@
   "hubSettingsApiKeyHint": "填写 Key 后即可对话",
   "hubSettingsSignInAccount": "登录 DeepSeek 账号",
   "hubSettingsOrApiKey": "或填写 API Key",
+  "hubSettingsXcodexSignIn": "登录 xcodex 账号",
+  "hubSettingsXcodexSigningIn": "正在登录 xcodex 账号",
+  "hubSettingsXcodexSignedIn": "已登录",
+  "hubSettingsXcodexSignedInHost": "已登录 · {host} · {online}",
+  "@hubSettingsXcodexSignedInHost": {
+    "placeholders": {
+      "host": {
+        "type": "String"
+      },
+      "online": {
+        "type": "String"
+      }
+    }
+  },
   "hubPluginShare": "分享插件",
   "hubPluginDetails": "插件详情",
   "hubPluginFeatured": "dshfind 推荐",

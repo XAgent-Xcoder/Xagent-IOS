@@ -52,3 +52,11 @@ iOS 应用定向回归 27 项通过；SDK 契约 6 项、加密隧道 1 项及�
 未构建发布 APK/IPA，未进行真机或真实账号验收，未部署服务。
 
 图标来源：沿用 Xcodex 插件 `packages/plugin/client/icons.ts` 的 GPT 图标及 Claude 放射标记；目录分组不显示 Agent 头像。
+
+## 2026-11-23 新建入口补齐
+
+侧栏、聊天顶部与文件夹内新建统一使用 Agent 选择器。文件夹入口把 folderId 传入创建流程，在 Host 返回会话并刷新列表后保存手机本地文件夹归属，再进入对话；工作区归属仍由 Host 管理。非 Remote 插件连接继续沿用各自原有创建流程。
+
+选择器补充未连接、Agent 列表为空、工作区未就绪和无工作区提示，并提供工作区管理入口；离线时禁止托管创建。保留旧插件的 DSH 新建和 operationId 重试语义。补回既有登录文案缺失的 ARB 源条目，避免生成文案时丢失原有登录文字。
+
+验证：修改文件静态分析通过；`managed_agent_creation_test`、`managed_creation_test`、`managed_composer_test`、`managed_send_guard_test`、`drawer_state_test` 共 30 项通过，文案检查和 diff check 通过。检查使用 Flutter 3.47.7 / Dart 3.13.5，本地临时兼容解析调整 6 个测试依赖，原锁文件已恢复；不代表原锁文件的正式构建验收。检查串行、最多单核，内存不超过空闲三分之一且最多 4 GiB。未构建 IPA、未发布、未进行真机与真实 CLI 联调。

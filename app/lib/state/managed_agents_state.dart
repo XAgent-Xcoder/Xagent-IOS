@@ -4,6 +4,7 @@ import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'hosts_state.dart';
+import 'drawer_view_state.dart';
 import 'chat_state.dart';
 import 'sessions_state.dart';
 import 'read_list_identity.dart';
@@ -50,7 +51,13 @@ final managedCreationProvider = Provider((ref) => ManagedSessionCreation());
 
 class ManagedSessionCreation {
   final operations = ManagedCreationOperations();
-  Future<String> create(WidgetRef ref, String workspaceId, String agentId, {required bool Function() isCurrent}) async {
+  Future<String> create(
+    WidgetRef ref,
+    String workspaceId,
+    String agentId, {
+    String? folderId,
+    required bool Function() isCurrent,
+  }) async {
     final conn = ref.read(readListLiveConnectionProvider);
     final owner = ref.read(readListIdentityProvider);
     final host = ref.read(activeHostProvider);
@@ -85,6 +92,19 @@ class ManagedSessionCreation {
         check();
         await ref.read(sessionsProvider.notifier).refresh();
         check();
+        if (folderId != null) {
+          await ref
+              .read(drawerViewProvider.notifier)
+              .moveSessions(
+                [created.sessionId],
+                folderId,
+                isCurrent: () {
+                  check();
+                  return true;
+                },
+              );
+          check();
+        }
         ref.read(currentSessionProvider.notifier).select(created.sessionId);
         return created.sessionId;
       },

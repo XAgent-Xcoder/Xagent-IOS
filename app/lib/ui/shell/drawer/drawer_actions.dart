@@ -19,6 +19,7 @@ import '../../../state/read_list_identity.dart';
 import '../../../state/sessions_state.dart';
 import '../../../state/workspaces_state.dart';
 import 'folder_sheets.dart';
+import '../../chat/managed_agent_picker.dart';
 import '../session_search_page.dart' show showSessionSearch;
 import 'archive_notice.dart';
 import '../../common/brief_notice.dart';
@@ -113,9 +114,18 @@ Future<void> folderActionsFlow(
     switch (action) {
       case FolderAction.newChat:
         if (ref.read(drawerViewProvider).byId(folder.id) == null) return;
-        ref.read(currentSessionProvider.notifier).select(null);
-        ref.read(pendingSessionFolderProvider.notifier).select(folder.id);
-        onNewChat?.call();
+        await showNewAgentSession(
+          context,
+          ref,
+          () {
+            if (!owned() || ref.read(drawerViewProvider).byId(folder.id) == null) return;
+            ref.read(currentSessionProvider.notifier).select(null);
+            ref.read(pendingSessionFolderProvider.notifier).select(folder.id);
+            onNewChat?.call();
+          },
+          () => onNewChat?.call(),
+          folderId: folder.id,
+        );
       case FolderAction.edit:
         await editFolderFlow(context, ref, folder);
       case FolderAction.delete:

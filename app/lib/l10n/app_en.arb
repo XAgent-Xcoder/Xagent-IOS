@@ -2586,12 +2586,6 @@
   "hubSettingsXcodexSigningIn": "Signing in…",
   "hubSettingsXcodexSignedIn": "Signed in",
   "hubSettingsXcodexSignedInHost": "Signed in · {host} · {online}",
-  "@hubSettingsXcodexSignedInHost": {
-    "placeholders": {
-      "host": {"type": "String"},
-      "online": {"type": "String"}
-    }
-  },
   "hubPluginShare": "Share plugin",
   "hubPluginDetails": "Plugin details",
   "hubPluginFeatured": "Featured on dshfind",
@@ -2785,6 +2779,11 @@
   "managedDiscoveryRetry": "Could not read available Agents. Tap to retry.",
   "managedUsesComputerConfig": "Uses this computer’s CLI and configuration; availability is checked when starting.",
   "managedCreateFailed": "Could not confirm session creation. Reconnect and retry with the same Agent and workspace; the same request will be reused.",
+  "managedConnectHost": "Connect to your computer to create a Claude Code or Codex conversation.",
+  "managedUnavailable": "This computer offers no Agents. Update the Xagent plugin and enable managed Agents.",
+  "managedWorkspaceLoading": "Workspaces are not ready. Check the connection or open workspace management.",
+  "managedNoWorkspace": "This computer has no workspaces. Add a workspace first.",
+  "managedManageWorkspaces": "Manage workspaces",
   "marketSectionOfficial": "Official",
   "marketSectionAdapted": "Made for AgentPort",
   "marketSectionAll": "All",

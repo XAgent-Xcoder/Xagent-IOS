@@ -661,6 +661,7 @@
   "remoteBrowserSignIn": "在浏览器中登录",
   "remoteXcodexSignInTitle": "使用 xcodex 账号登录",
   "remoteXcodexSignInHelp": "输入邮箱和密码，服务器校验账号并签发凭证",
+  "remoteXcodexAccountTitle": "xcodex 账号",
   "remoteSignInWithProvider": "使用 {provider} 登录",
   "@remoteSignInWithProvider": {
     "placeholders": {

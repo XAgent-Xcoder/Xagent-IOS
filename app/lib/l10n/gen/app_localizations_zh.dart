@@ -9089,6 +9089,21 @@ class L10nZh extends L10n {
   String get managedCreateFailed => '未能确认会话创建结果。请重连后在同一工作区重试同一 Agent，将复用原请求。';
 
   @override
+  String get managedConnectHost => '请先连接电脑，再创建 Claude Code 或 Codex 对话。';
+
+  @override
+  String get managedUnavailable => '电脑未提供可用的 Agent。请更新 Xagent 插件并启用托管 Agent。';
+
+  @override
+  String get managedWorkspaceLoading => '尚未读取到工作区，请检查连接或打开工作区管理。';
+
+  @override
+  String get managedNoWorkspace => '这台电脑还没有工作区，请先添加工作区。';
+
+  @override
+  String get managedManageWorkspaces => '管理工作区';
+
+  @override
   String get marketSectionOfficial => '官方';
 
   @override

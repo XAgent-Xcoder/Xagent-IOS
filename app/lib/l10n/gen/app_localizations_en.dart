@@ -9590,6 +9590,22 @@ class L10nEn extends L10n {
       'Could not confirm session creation. Reconnect and retry with the same Agent and workspace; the same request will be reused.';
 
   @override
+  String get managedConnectHost => 'Connect to your computer to create a Claude Code or Codex conversation.';
+
+  @override
+  String get managedUnavailable =>
+      'This computer offers no Agents. Update the Xagent plugin and enable managed Agents.';
+
+  @override
+  String get managedWorkspaceLoading => 'Workspaces are not ready. Check the connection or open workspace management.';
+
+  @override
+  String get managedNoWorkspace => 'This computer has no workspaces. Add a workspace first.';
+
+  @override
+  String get managedManageWorkspaces => 'Manage workspaces';
+
+  @override
   String get marketSectionOfficial => 'Official';
 
   @override

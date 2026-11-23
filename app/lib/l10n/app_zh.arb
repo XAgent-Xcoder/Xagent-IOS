@@ -5195,8 +5195,12 @@
   "hubSettingsXcodexSignedInHost": "已登录 · {host} · {online}",
   "@hubSettingsXcodexSignedInHost": {
     "placeholders": {
-      "host": {"type": "String"},
-      "online": {"type": "String"}
+      "host": {
+        "type": "String"
+      },
+      "online": {
+        "type": "String"
+      }
     }
   },
   "hubPluginShare": "分享插件",
@@ -5613,6 +5617,11 @@
   "managedDiscoveryRetry": "读取 Agent 列表失败，点击重试",
   "managedUsesComputerConfig": "使用电脑上的 CLI 和配置，能否运行将在启动时确认。",
   "managedCreateFailed": "未能确认会话创建结果。请重连后在同一工作区重试同一 Agent，将复用原请求。",
+  "managedConnectHost": "请先连接电脑，再创建 Claude Code 或 Codex 对话。",
+  "managedUnavailable": "电脑未提供可用的 Agent。请更新 Xagent 插件并启用托管 Agent。",
+  "managedWorkspaceLoading": "尚未读取到工作区，请检查连接或打开工作区管理。",
+  "managedNoWorkspace": "这台电脑还没有工作区，请先添加工作区。",
+  "managedManageWorkspaces": "管理工作区",
   "marketSectionOfficial": "官方",
   "marketSectionAdapted": "适配 AgentPort",
   "marketSectionAll": "全部",

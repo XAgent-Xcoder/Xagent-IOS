@@ -71,6 +71,20 @@
   "hubSettingsApiKeyHint": "Add an API key to start chatting",
   "hubSettingsSignInAccount": "Sign in to DeepSeek",
   "hubSettingsOrApiKey": "Or add an API key",
+  "hubSettingsXcodexSignIn": "Sign in with xcodex",
+  "hubSettingsXcodexSigningIn": "Signing in…",
+  "hubSettingsXcodexSignedIn": "Signed in",
+  "hubSettingsXcodexSignedInHost": "Signed in · {host} · {online}",
+  "@hubSettingsXcodexSignedInHost": {
+    "placeholders": {
+      "host": {
+        "type": "String"
+      },
+      "online": {
+        "type": "String"
+      }
+    }
+  },
   "hubPluginShare": "Share plugin",
   "hubPluginDetails": "Plugin details",
   "hubPluginFeatured": "Featured on dshfind",
