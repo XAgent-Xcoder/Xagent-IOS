@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io' show Platform;
 
 import 'package:dsh_client/dsh_client.dart';
 import 'package:dsh_remote/dsh_remote.dart' as remote;
@@ -35,8 +36,16 @@ class DshRemoteRelayBackend implements RelayBackend, RelayNetworkBackend, RelayP
            remote.RemoteAccount(
              secrets: _Secrets(secrets),
              serverUrl: serverUrl,
-             deviceName: 'DSH App (Android)',
-             platform: 'dsh-app-android',
+             deviceName: switch (Platform.operatingSystem) {
+               'ohos' => 'DSH App (HarmonyOS)',
+               'ios' => 'DSH App (iOS)',
+               _ => 'DSH App (Android)',
+             },
+             platform: switch (Platform.operatingSystem) {
+               'ohos' => 'dsh-app-ohos',
+               'ios' => 'dsh-app-ios',
+               _ => 'dsh-app-android',
+             },
              clientVersion: clientVersion,
              onDirectFallback: (_) => debugPrint('[dsh-remote] automatic transport fallback'),
            ) {

@@ -90,6 +90,9 @@ class RelayHost {
     'darwin' || 'macos' || 'mac' => 'macOS',
     'linux' => 'Linux',
     'win32' || 'windows' => 'Windows',
+    'android' || 'dsh-app-android' => 'Android',
+    'ios' || 'dsh-app-ios' => 'iOS',
+    'ohos' || 'dsh-app-ohos' => 'HarmonyOS',
     _ => raw,
   };
 }
