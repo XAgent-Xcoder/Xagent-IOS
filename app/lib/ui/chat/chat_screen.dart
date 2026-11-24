@@ -305,6 +305,11 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
     WidgetsBinding.instance.addObserver(this);
     _scheduleInteraction();
     ref.listenManual(currentSessionProvider, (_, _) => _scheduleInteraction());
+    // The probe is async and can finish after this page is gone; a deactivated
+    // element is still mounted, so reading through ref would walk a dead
+    // ancestor. Read through the captured container instead (attachments.dart
+    // uses the same trick for a viewer that outlives its bubble).
+    final container = ProviderScope.containerOf(context, listen: false);
     _voice = VoiceInputController(
       input: _input,
       bridge: ref.read(voiceBridgeProvider),
@@ -315,7 +320,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> with WidgetsBindingObse
           (ref.read(activeConnectionProvider).value?.isLocal ?? false) &&
           ref.read(voiceModelProvider).status == VoiceModelStatus.ready,
       // The capability probe is async and can finish after this page is gone.
-      client: () => mounted ? ref.read(activeConnectionProvider).value?.client : null,
+      client: () => container.read(activeConnectionProvider).value?.client,
       onRecognized: () {
         if (mounted) ref.read(usageStatsProvider.notifier).count(UsageCount.voice);
       },
