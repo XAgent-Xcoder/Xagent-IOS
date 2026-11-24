@@ -13,7 +13,7 @@ import '../../pets/pet_signals.dart';
 import '../../pets/pet_state.dart';
 import '../common/pressable.dart';
 import '../common/typing_indicator.dart';
-import '../pets/pet_sprite.dart';
+import '../shell/xagent_logo.dart';
 import '../theme/app_icons.dart';
 import '../theme/glass.dart';
 import '../theme/motion.dart';
@@ -777,35 +777,21 @@ class CompanionWater extends StatelessWidget {
   );
 }
 
-/// The little pixel whale girl the app already ships: on first run and when
-/// something failed, she stands in for the Live2D one.
-class CompanionPixelWhale extends ConsumerWidget {
+/// The companion's placeholder: on first run and when the Live2D model can't
+/// load, the app's X stands in. The dsh-go pixel mascot (whale girl) is gone,
+/// so this no longer loads a built-in pack.
+class CompanionPixelWhale extends StatelessWidget {
   const CompanionPixelWhale({super.key, this.state = PetStateName.idle, this.bodyHeight = 92});
 
   final PetStateName state;
 
-  /// Roughly how tall she should be, in logical pixels.
+  /// Roughly how tall the placeholder should be, in logical pixels.
   final double bodyHeight;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final pack = ref.watch(petPackProvider('whale-girl')).value;
-    final dpr = MediaQuery.devicePixelRatioOf(context);
-    if (pack == null) return SizedBox(height: bodyHeight);
-    // Whole device pixels per art pixel, or pixel art goes soft.
-    final k = math.max(1, (bodyHeight * dpr / pack.contentBox.height).round());
-    final scale = k / dpr;
-    return SizedBox(
-      width: pack.canvas.width * scale,
-      height: pack.canvas.height * scale,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          Positioned.fill(
-            child: PetSprite(pack: pack, anim: pack.animFor(state), scale: scale),
-          ),
-        ],
-      ),
+  Widget build(BuildContext context) {
+    return Center(
+      child: BrandMark(tile: true, size: bodyHeight),
     );
   }
 }

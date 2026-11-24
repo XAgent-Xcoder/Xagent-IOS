@@ -149,7 +149,7 @@ void main() {
     await tester.tap(find.text('删除'));
     await settle(tester, () => find.text('小猫').evaluate().isEmpty);
     expect(find.text('小猫'), findsNothing);
-    expect(container.read(petPrefsProvider).packId, defaultPetId);
+    expect(container.read(petPrefsProvider).packId, noPetId);
     expect(Directory('${temp.path}/pets/user-cat').existsSync(), isFalse);
     expect(overlay.reloaded, ['user-cat', 'user-cat']);
   });
@@ -179,7 +179,7 @@ void main() {
     await tester.tap(find.text('导入'));
     await settle(tester, () => find.textContaining('少了序列帧图').evaluate().isNotEmpty);
     expect(find.text('zip 里少了序列帧图 idle.png'), findsOneWidget);
-    expect(container.read(petPrefsProvider).packId, defaultPetId);
+    expect(container.read(petPrefsProvider).packId, noPetId);
   });
 
   testWidgets('换宠物 with many brought pets: the sheet scrolls, 不显示 is still there', (tester) async {
@@ -264,7 +264,7 @@ void main() {
     test('deleted while hidden: the default comes back, hidden as it was', () async {
       final container = await chosenCat(PetLibrary(pets), hiddenUntil: until);
       await container.read(userPetsProvider.notifier).remove('user-cat');
-      expect(container.read(petPrefsProvider).packId, defaultPetId);
+      expect(container.read(petPrefsProvider).packId, noPetId);
       expect(container.read(petPrefsProvider).hiddenUntil, until);
     });
 
@@ -283,11 +283,11 @@ void main() {
       final container = await chosenCat(library);
       final removing = container.read(userPetsProvider.notifier).remove('user-cat');
       await pumpEventQueue();
-      expect(container.read(petPrefsProvider).packId, defaultPetId);
+      expect(container.read(petPrefsProvider).packId, noPetId);
       await container.read(petPrefsProvider.notifier).setPack('user-cat');
       library.gate.complete();
       await removing;
-      expect(container.read(petPrefsProvider).packId, defaultPetId);
+      expect(container.read(petPrefsProvider).packId, noPetId);
       expect(Directory('${temp.path}/pets/user-cat').existsSync(), isFalse);
     });
   });
@@ -297,6 +297,6 @@ void main() {
     await tester.tap(find.text('导入'));
     await settle(tester, () => false);
     expect(find.byType(SnackBar), findsNothing);
-    expect(container.read(petPrefsProvider).packId, defaultPetId);
+    expect(container.read(petPrefsProvider).packId, noPetId);
   });
 }

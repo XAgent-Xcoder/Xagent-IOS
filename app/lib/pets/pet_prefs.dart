@@ -10,11 +10,13 @@ import '../performance/performance_state.dart';
 import 'pet_library.dart';
 import 'pet_state.dart';
 
-/// The pets that ship with the app, in picker order.
-const builtInPets = ['deepy-whale', 'whale-girl'];
+/// The pets that ship with the app, in picker order. The dsh-go mascots
+/// (Deepy 小鲸鱼, 鲸娘) are gone with the copyright cleanup; there is nothing
+/// built in anymore, only pets the person brings.
+const builtInPets = <String>[];
 
-/// The default pet.
-const defaultPetId = 'deepy-whale';
+/// The default pet. With no built-ins, a first run shows none.
+const defaultPetId = noPetId;
 
 @immutable
 class PetPrefs {
@@ -160,11 +162,13 @@ class PetPrefsController extends Notifier<PetPrefs> {
       _save((s) => s.copyWith(packId: id, packExplicit: true), (p) => p.setString(keys.pack, id));
 
   /// First run's 「桌宠与悬浮窗」 was picked: the default pet, unless a pet
-  /// (or 「不显示」) was chosen already. Without it a light phone, whose
-  /// default is no pet, would turn on 「App 外显示」 with nothing to show.
+  /// (or 「不显示」) was chosen already. Without a built-in (the dsh-go mascots
+  /// are gone) the step is a no-op: the phone keeps its default (no pet), the
+  /// choice stays unexplicit, and the floating window is still what the
+  /// permission is for.
   Future<void> adoptDefault() async {
     await _loaded;
-    if (!ref.mounted || state.packExplicit) return;
+    if (builtInPets.isEmpty || !ref.mounted || state.packExplicit) return;
     await setPack(defaultPetId);
   }
 

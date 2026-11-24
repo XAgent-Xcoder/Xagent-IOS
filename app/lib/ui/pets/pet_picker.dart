@@ -26,10 +26,9 @@ import '../theme/app_icons.dart';
 import '../theme/theme.dart';
 import 'pet_sprite.dart';
 
-/// Names for the picker before a pack has loaded (and for 不显示).
+/// Names for the picker before a pack has loaded (and for 不显示). The dsh-go
+/// mascots are gone, so there are no built-in names — only 不显示.
 Map<String, String> get petNames => {
-  'deepy-whale': appL10n.botsPetDeepy,
-  'whale-girl': appL10n.botsPetWhaleGirl,
   noPetId: appL10n.botsPetNone,
 };
 
