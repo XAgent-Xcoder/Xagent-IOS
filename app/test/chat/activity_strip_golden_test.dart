@@ -105,11 +105,18 @@ Future<void> pumpSheet(
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
   });
 
   setUp(() => runClock = () => now);
   tearDown(() => runClock = DateTime.now);
+
+  testWidgets('the activity mark is a square CustomPaint (X, not a whale sprite)', (tester) async {
+    await pumpSheet(tester, [Center(child: const WhaleTail(level: 3, color: deepSeekBlue, height: 20))]);
+    final tail = find.byType(WhaleTail);
+    // Square: the X spins in its own box, not a 1.25:1 sprite strip.
+    expect(tester.getSize(tail), const Size(20, 20));
+    expect(find.descendant(of: tail, matching: find.byType(CustomPaint)), findsOneWidget);
+  });
 
   group('behaviour', () {
     testWidgets('one line: title, copy, turn clock, todo progress', (tester) async {
@@ -199,7 +206,7 @@ void main() {
       expect(taps, 1);
     });
 
-    testWidgets('it never stops while running: speed eases, forms blend', (tester) async {
+    testWidgets('it never stops while running: speed eases, the X keeps turning', (tester) async {
       var level = 1;
       late StateSetter set;
       await pumpSheet(tester, [
@@ -212,13 +219,12 @@ void main() {
       ]);
       WhaleTailState whale() => tester.state(find.byType(WhaleTail));
 
-      // No tokens (a long tool call): a slow swim, not a still frame.
-      final start = whale().frame;
+      // No tokens (a long tool call): a slow turn, not a still X.
+      final start = whale().angle;
       for (var i = 0; i < 20; i++) {
         await tester.pump(const Duration(milliseconds: 100));
       }
-      expect(whale().shownForm, 2);
-      expect(whale().frame, isNot(start), reason: 'still swimming');
+      expect(whale().angle, isNot(start), reason: 'still turning');
       expect(whale().rate, moreOrLessEquals(0.5, epsilon: 0.01));
 
       // Faster: the speed eases up instead of jumping.
@@ -231,30 +237,27 @@ void main() {
       }
       expect(whale().rate, moreOrLessEquals(1, epsilon: 0.01));
 
-      // Another form at once, cross-faded with the old one.
+      // Level 4: the fastest turn.
       set(() => level = 4);
       await tester.pump(const Duration(milliseconds: 16));
-      expect(whale().shownForm, 4);
+      expect(whale().rate, moreOrLessEquals(1, epsilon: 0.01));
 
-      // Waiting for the person: the slowest swim, still moving.
+      // Waiting for the person: the slowest turn, still moving.
       set(() => level = 0);
       for (var i = 0; i < 30; i++) {
         await tester.pump(const Duration(milliseconds: 100));
       }
-      expect(whale().shownForm, 2);
       expect(whale().rate, moreOrLessEquals(0.3, epsilon: 0.01));
       expect(tester.binding.hasScheduledFrame, isTrue, reason: 'ticking');
     });
 
-    testWidgets('still: the still frame, no ticker', (tester) async {
+    testWidgets('still: no ticker', (tester) async {
       await pumpSheet(tester, [const WhaleTail(still: true, color: deepSeekBlue)]);
       await tester.pump(const Duration(milliseconds: 100));
-      final whale = tester.state<WhaleTailState>(find.byType(WhaleTail));
-      expect(whale.shownForm, 1);
       expect(tester.binding.hasScheduledFrame, isFalse);
     });
 
-    testWidgets('reduced motion: the still frame, no ticker', (tester) async {
+    testWidgets('reduced motion: no ticker', (tester) async {
       tester.view.devicePixelRatio = 2;
       tester.view.physicalSize = const Size(780, 400);
       addTearDown(tester.view.reset);
@@ -265,8 +268,6 @@ void main() {
         ),
       );
       await tester.pump(const Duration(milliseconds: 100));
-      final whale = tester.state<WhaleTailState>(find.byType(WhaleTail));
-      expect(whale.shownForm, 1);
       expect(tester.binding.hasScheduledFrame, isFalse);
     });
 
