@@ -26,6 +26,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../l10n/l10n.dart';
 import '../../state/star_prompt.dart';
 import '../common/app_dialog.dart';
+import '../shell/xagent_logo.dart';
 import '../theme/app_icons.dart';
 import '../theme/theme.dart';
 
@@ -82,9 +83,6 @@ class StarPromptDialog extends StatelessWidget {
 
   /// Whole hours of use (0: half an hour).
   final int hours;
-
-  /// The picture: 576 px, the 192 dp it is drawn at most, at 3×.
-  static const asset = 'assets/star/star_whale.webp';
 
   /// The picture's side: 30 % of the height the dialog may take, within these.
   static const pictureMax = 192.0;
@@ -226,9 +224,9 @@ class BalancedText extends StatelessWidget {
   }
 }
 
-/// The whale girl and her star on a soft glow of the palette, [side] square,
-/// never cropped. She rises in with a little bob; with animations off she is
-/// simply there.
+/// The app's X on a soft glow of the palette, [side] square, never cropped. It
+/// rises in with a little bob; with animations off it is simply there. (The
+/// whale girl's sticker is gone with the copyright cleanup.)
 class StarPicture extends StatelessWidget {
   const StarPicture({super.key, required this.side});
 
@@ -253,7 +251,7 @@ class StarPicture extends StatelessWidget {
               gradient: RadialGradient(colors: [glow, glow.withValues(alpha: 0)], stops: const [0.3, 1]),
             ),
           ),
-          Image.asset(StarPromptDialog.asset, fit: BoxFit.contain, excludeFromSemantics: true),
+          Center(child: BrandMark(size: side * 0.62, color: scheme.primary)),
         ],
       ),
     );

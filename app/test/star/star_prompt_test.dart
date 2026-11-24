@@ -105,7 +105,7 @@ const _halfHour = Duration(minutes: 30);
 /// Half an hour in: due.
 const _due = StarPromptRecord(used: _halfHour);
 
-final _github = Uri.parse('https://github.com/ljx149/dsh-Go-ios');
+final _github = Uri.parse('https://github.com/XAgent-Xcoder/Xagent-IOS');
 
 String _title(int hours) => lookupL10n(AppLocale.zhCN).starPromptTitle(hours);
 
@@ -262,12 +262,13 @@ Future<_Bench> _pumpDialog(
     ),
   );
   await tester.pump();
-  // Decoded for real (FakeAsync never finishes a decode), as the host does before it opens.
-  await tester.runAsync(
-    () => precacheImage(const AssetImage(StarPromptDialog.asset), tester.element(find.byType(Scaffold))),
-  );
+  // The X is a vector (brand_glyph.g.dart), not an asset: no decode, no
+  // precache.
   await tester.tap(find.text('打开'));
   await tester.pump();
+  // No image in the dialog: the whale girl's sticker is gone, the X is drawn.
+  expect(_dialog.evaluate(), isNotEmpty);
+  expect(find.descendant(of: _dialog, matching: find.byType(Image)), findsNothing);
   return bench;
 }
 
