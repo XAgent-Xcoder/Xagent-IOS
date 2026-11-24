@@ -168,8 +168,12 @@ class SessionsDrawer extends ConsumerWidget {
                       ),
                     ),
                     // 网页模式, quietly: the one solid element stays 新对话.
-                    const WebModeKey(tier: GlassTier.pill),
-                    const SizedBox(width: 8),
+                    // iOS has no local engine (the local web is unreachable), so the
+                    // switch only serves an SSH host; hide it there.
+                    if (!ref.watch(isIosProvider)) ...[
+                      const WebModeKey(tier: GlassTier.pill),
+                      const SizedBox(width: 8),
+                    ],
                     NewChatButton(onTap: () => showNewAgentSession(context, ref, newChat, onClose)),
                   ],
                 ),
