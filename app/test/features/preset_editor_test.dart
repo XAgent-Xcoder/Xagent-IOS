@@ -5,13 +5,13 @@
 
 import 'dart:io';
 
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/schedule_editor_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/features/agent_presets_page.dart';
-import 'package:dsh_app/ui/features/preset_editor/preset_editor_page.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/schedule_editor_state.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/features/agent_presets_page.dart';
+import 'package:xagent/ui/features/preset_editor/preset_editor_page.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

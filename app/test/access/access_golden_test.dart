@@ -4,16 +4,16 @@
 //
 //   flutter test --update-goldens test/access/access_golden_test.dart
 
-import 'package:dsh_app/phone/phone_channel.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/access_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/access/access_pick_page.dart';
-import 'package:dsh_app/ui/access/access_summary_page.dart';
-import 'package:dsh_app/ui/access/access_walk.dart';
-import 'package:dsh_app/ui/onboarding/access_step.dart';
-import 'package:dsh_app/ui/onboarding/onboarding_scaffold.dart';
-import 'package:dsh_app/ui/settings/system_access_page.dart';
+import 'package:xagent/phone/phone_channel.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/access_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/access/access_pick_page.dart';
+import 'package:xagent/ui/access/access_summary_page.dart';
+import 'package:xagent/ui/access/access_walk.dart';
+import 'package:xagent/ui/onboarding/access_step.dart';
+import 'package:xagent/ui/onboarding/onboarding_scaffold.dart';
+import 'package:xagent/ui/settings/system_access_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart' show ProviderScope;
 import 'package:flutter_riverpod/misc.dart' show Override;

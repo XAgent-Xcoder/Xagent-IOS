@@ -4,14 +4,14 @@ import 'dart:async';
 //
 //   flutter test test/ios_privacy_diag_gate_test.dart
 
-import 'package:dsh_app/diagnostics/system_ime_evidence.dart';
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/platform_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/onboarding/local_install.dart';
-import 'package:dsh_app/ui/settings/diagnostics_page.dart';
-import 'package:dsh_app/ui/settings/privacy_page.dart';
+import 'package:xagent/diagnostics/system_ime_evidence.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/platform_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/onboarding/local_install.dart';
+import 'package:xagent/ui/settings/diagnostics_page.dart';
+import 'package:xagent/ui/settings/privacy_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';

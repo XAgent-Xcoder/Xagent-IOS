@@ -6,23 +6,23 @@
 // (test/plugins, test/session, …) are unaffected.
 // Regenerate with `flutter test --update-goldens test/plugins/seats`.
 
-import 'package:dsh_app/plugins/seams/seams.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/plugins_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/chat/empty_state.dart' show chatClock;
-import 'package:dsh_app/ui/chat/widgets/live_clock.dart' show runClock;
-import 'package:dsh_app/ui/cordis/cordis_page.dart';
-import 'package:dsh_app/ui/features/all_features_page.dart';
-import 'package:dsh_app/ui/features/feature_catalog.dart';
-import 'package:dsh_app/ui/plugins/plugin_detail_sheet.dart';
-import 'package:dsh_app/ui/plugins/plugins_screen.dart';
-import 'package:dsh_app/ui/plugins/seats/cordis_island_seat.dart';
-import 'package:dsh_app/ui/plugins/seats/plugin_seat_page.dart';
-import 'package:dsh_app/ui/plugins/seats/session_plugins_tab.dart';
-import 'package:dsh_app/ui/session/session_detail_page.dart';
-import 'package:dsh_app/ui/settings/settings_screen.dart';
-import 'package:dsh_app/ui/web/web_target.dart';
+import 'package:xagent/plugins/seams/seams.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/plugins_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/chat/empty_state.dart' show chatClock;
+import 'package:xagent/ui/chat/widgets/live_clock.dart' show runClock;
+import 'package:xagent/ui/cordis/cordis_page.dart';
+import 'package:xagent/ui/features/all_features_page.dart';
+import 'package:xagent/ui/features/feature_catalog.dart';
+import 'package:xagent/ui/plugins/plugin_detail_sheet.dart';
+import 'package:xagent/ui/plugins/plugins_screen.dart';
+import 'package:xagent/ui/plugins/seats/cordis_island_seat.dart';
+import 'package:xagent/ui/plugins/seats/plugin_seat_page.dart';
+import 'package:xagent/ui/plugins/seats/session_plugins_tab.dart';
+import 'package:xagent/ui/session/session_detail_page.dart';
+import 'package:xagent/ui/settings/settings_screen.dart';
+import 'package:xagent/ui/web/web_target.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

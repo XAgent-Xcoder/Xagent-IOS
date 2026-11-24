@@ -1,8 +1,8 @@
-import 'package:dsh_app/state/artifacts.dart';
-import 'package:dsh_app/ui/chat/artifact_preview.dart';
-import 'package:dsh_app/ui/chat/render/code_block.dart';
-import 'package:dsh_app/ui/chat/widgets/artifact_card.dart';
-import 'package:dsh_app/ui/session/workspace_files.dart';
+import 'package:xagent/state/artifacts.dart';
+import 'package:xagent/ui/chat/artifact_preview.dart';
+import 'package:xagent/ui/chat/render/code_block.dart';
+import 'package:xagent/ui/chat/widgets/artifact_card.dart';
+import 'package:xagent/ui/session/workspace_files.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

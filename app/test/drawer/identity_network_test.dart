@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/remote/link_status.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/ui/remote/network_details_sheet.dart';
-import 'package:dsh_app/ui/shell/sessions_drawer.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/remote/link_status.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/ui/remote/network_details_sheet.dart';
+import 'package:xagent/ui/shell/sessions_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

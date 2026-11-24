@@ -1,10 +1,10 @@
 import 'dart:ui' as ui;
 
-import 'package:dsh_app/ui/chat/dsh_ui/dsh_ui_plugin_styles.dart';
-import 'package:dsh_app/ui/chat/dsh_ui/dsh_ui_model.dart' show dshUiContrast;
-import 'package:dsh_app/ui/chat/dsh_ui/dsh_ui_blocks.dart' show DshUiProgressBlock, DshUiListBlock;
-import 'package:dsh_app/ui/chat/dsh_ui/dsh_ui_widgets.dart' show DshUiOptionRow;
-import 'package:dsh_app/ui/plugins/view/plugin_view.dart';
+import 'package:xagent/ui/chat/dsh_ui/dsh_ui_plugin_styles.dart';
+import 'package:xagent/ui/chat/dsh_ui/dsh_ui_model.dart' show dshUiContrast;
+import 'package:xagent/ui/chat/dsh_ui/dsh_ui_blocks.dart' show DshUiProgressBlock, DshUiListBlock;
+import 'package:xagent/ui/chat/dsh_ui/dsh_ui_widgets.dart' show DshUiOptionRow;
+import 'package:xagent/ui/plugins/view/plugin_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';

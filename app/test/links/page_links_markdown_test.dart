@@ -1,10 +1,10 @@
 // A reply's `dshgo://open/<page>` link opens that page through the router;
 // an unknown page gets the one-line toast and nothing else.
 
-import 'package:dsh_app/links/app_links.dart';
-import 'package:dsh_app/links/page_links.dart';
-import 'package:dsh_app/ui/chat/render/markdown_body.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/links/app_links.dart';
+import 'package:xagent/links/page_links.dart';
+import 'package:xagent/ui/chat/render/markdown_body.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

@@ -1,4 +1,4 @@
-import 'package:dsh_app/ui/chat/widgets/user_bubble.dart';
+import 'package:xagent/ui/chat/widgets/user_bubble.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'support/pending_notice_harness.dart';

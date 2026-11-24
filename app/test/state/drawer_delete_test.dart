@@ -2,17 +2,17 @@
 // Never connects to or deletes a user's sessions.
 import 'dart:async';
 
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/drawer_view_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/session_deletion_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/state/workspaces_state.dart';
-import 'package:dsh_app/ui/chat/composer.dart';
-import 'package:dsh_app/ui/shell/drawer/selection_bars.dart';
-import 'package:dsh_app/ui/shell/drawer/session_deletion.dart';
-import 'package:dsh_app/ui/shell/drawer/session_tile.dart';
-import 'package:dsh_app/ui/shell/home_shell.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/drawer_view_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/session_deletion_state.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/state/workspaces_state.dart';
+import 'package:xagent/ui/chat/composer.dart';
+import 'package:xagent/ui/shell/drawer/selection_bars.dart';
+import 'package:xagent/ui/shell/drawer/session_deletion.dart';
+import 'package:xagent/ui/shell/drawer/session_tile.dart';
+import 'package:xagent/ui/shell/home_shell.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

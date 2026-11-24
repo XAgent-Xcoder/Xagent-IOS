@@ -5,14 +5,14 @@
 
 import 'dart:async';
 
-import 'package:dsh_app/diagnostics/diagnostics_export.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/artifacts.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
-import 'package:dsh_app/ui/engine/diagnostics_export_card.dart';
-import 'package:dsh_app/ui/safe_mode/engine_failure_card.dart';
-import 'package:dsh_app/ui/theme/app_icons.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/diagnostics/diagnostics_export.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/artifacts.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
+import 'package:xagent/ui/engine/diagnostics_export_card.dart';
+import 'package:xagent/ui/safe_mode/engine_failure_card.dart';
+import 'package:xagent/ui/theme/app_icons.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';

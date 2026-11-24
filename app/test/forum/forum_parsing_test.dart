@@ -2,12 +2,12 @@
 // dsh-go forum, anonymised: user01… usernames, no real names or avatars, filler
 // prose; shapes, ids, counts, emoji and code kept) and cooked post HTML.
 
-import 'package:dsh_app/forum/discourse_client.dart';
-import 'package:dsh_app/forum/emoji.dart';
-import 'package:dsh_app/forum/forum_models.dart';
-import 'package:dsh_app/forum/forum_share.dart';
-import 'package:dsh_app/forum/render/cooked.dart';
-import 'package:dsh_app/share_code/share_models.dart';
+import 'package:xagent/forum/discourse_client.dart';
+import 'package:xagent/forum/emoji.dart';
+import 'package:xagent/forum/forum_models.dart';
+import 'package:xagent/forum/forum_share.dart';
+import 'package:xagent/forum/render/cooked.dart';
+import 'package:xagent/share_code/share_models.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'support.dart';

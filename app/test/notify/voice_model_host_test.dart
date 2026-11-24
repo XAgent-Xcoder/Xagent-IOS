@@ -4,8 +4,8 @@
 
 import 'dart:async';
 
-import 'package:dsh_app/state/voice_model_state.dart';
-import 'package:dsh_app/ui/notify/voice_model_host.dart';
+import 'package:xagent/state/voice_model_state.dart';
+import 'package:xagent/ui/notify/voice_model_host.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

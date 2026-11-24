@@ -8,17 +8,17 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/state/plugin_config/plugin_config_memory.dart';
-import 'package:dsh_app/state/plugin_config/plugin_config_state.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
-import 'package:dsh_app/ui/engine_settings/engine_settings_hub.dart';
-import 'package:dsh_app/ui/plugins/config/plugin_config_entries.dart';
-import 'package:dsh_app/ui/plugins/config/plugin_config_page.dart';
-import 'package:dsh_app/ui/plugins/plugin_detail_sheet.dart';
-import 'package:dsh_app/ui/settings/search/settings_search_page.dart';
-import 'package:dsh_app/ui/settings/settings_widgets.dart' show SettingsTile;
-import 'package:dsh_app/ui/theme/app_icons.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/state/plugin_config/plugin_config_memory.dart';
+import 'package:xagent/state/plugin_config/plugin_config_state.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
+import 'package:xagent/ui/engine_settings/engine_settings_hub.dart';
+import 'package:xagent/ui/plugins/config/plugin_config_entries.dart';
+import 'package:xagent/ui/plugins/config/plugin_config_page.dart';
+import 'package:xagent/ui/plugins/plugin_detail_sheet.dart';
+import 'package:xagent/ui/settings/search/settings_search_page.dart';
+import 'package:xagent/ui/settings/settings_widgets.dart' show SettingsTile;
+import 'package:xagent/ui/theme/app_icons.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

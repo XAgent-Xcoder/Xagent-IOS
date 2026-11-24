@@ -8,8 +8,8 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:dsh_app/remote/link_status.dart';
-import 'package:dsh_app/remote/relay/relay_backend.dart';
+import 'package:xagent/remote/link_status.dart';
+import 'package:xagent/remote/relay/relay_backend.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:dsh_remote/dsh_remote.dart' show harnessRemoteAllowlist;
 

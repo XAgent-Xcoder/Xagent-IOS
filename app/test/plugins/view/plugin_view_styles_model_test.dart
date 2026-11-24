@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math' as math;
 
-import 'package:dsh_app/ui/chat/dsh_ui/dsh_ui_model.dart';
-import 'package:dsh_app/ui/chat/dsh_ui/dsh_ui_style.dart' show DshUiPalette;
-import 'package:dsh_app/ui/plugins/view/plugin_view.dart';
+import 'package:xagent/ui/chat/dsh_ui/dsh_ui_model.dart';
+import 'package:xagent/ui/chat/dsh_ui/dsh_ui_style.dart' show DshUiPalette;
+import 'package:xagent/ui/plugins/view/plugin_view.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 DshUiView parseStyle(Object view, {Object? data, PluginViewBudget budget = PluginViewBudget.panel}) {

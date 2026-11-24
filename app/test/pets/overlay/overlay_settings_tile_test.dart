@@ -1,10 +1,10 @@
 // 宠物设置's 「App 外显示」 group and the overlay flavour of the restricted-settings
 // guide (docs/design/pets.md §6.4, §8).
 
-import 'package:dsh_app/ui/common/risk_notice.dart';
-import 'package:dsh_app/ui/pets/overlay_settings_tile.dart';
-import 'package:dsh_app/ui/phone/restricted_settings_guide.dart';
-import 'package:dsh_app/ui/settings/settings_widgets.dart';
+import 'package:xagent/ui/common/risk_notice.dart';
+import 'package:xagent/ui/pets/overlay_settings_tile.dart';
+import 'package:xagent/ui/phone/restricted_settings_guide.dart';
+import 'package:xagent/ui/settings/settings_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

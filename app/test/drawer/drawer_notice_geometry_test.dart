@@ -4,13 +4,13 @@
 // with a cutout on the left. With the drawer closed it keeps the theme's
 // placement, and it follows the drawer when it opens or closes under it.
 
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/drawer_view_state.dart';
-import 'package:dsh_app/state/workspaces_state.dart';
-import 'package:dsh_app/ui/chat/composer_toast.dart' show composerToastGap;
-import 'package:dsh_app/ui/shell/drawer/selection_bars.dart';
-import 'package:dsh_app/ui/shell/home_shell.dart';
-import 'package:dsh_app/ui/shell/sessions_drawer.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/drawer_view_state.dart';
+import 'package:xagent/state/workspaces_state.dart';
+import 'package:xagent/ui/chat/composer_toast.dart' show composerToastGap;
+import 'package:xagent/ui/shell/drawer/selection_bars.dart';
+import 'package:xagent/ui/shell/home_shell.dart';
+import 'package:xagent/ui/shell/sessions_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;

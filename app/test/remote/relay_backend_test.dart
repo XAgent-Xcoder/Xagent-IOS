@@ -1,10 +1,10 @@
 // The dsh_remote adapter's failure mapping, and RelayHostLink following the
 // relay client's own reconnect states.
 
-import 'package:dsh_app/remote/link_status.dart';
-import 'package:dsh_app/remote/relay/dsh_remote_backend.dart';
-import 'package:dsh_app/remote/relay/relay_backend.dart';
-import 'package:dsh_app/remote/secret_store.dart';
+import 'package:xagent/remote/link_status.dart';
+import 'package:xagent/remote/relay/dsh_remote_backend.dart';
+import 'package:xagent/remote/relay/relay_backend.dart';
+import 'package:xagent/remote/secret_store.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:dsh_remote/dsh_remote.dart' as remote;
 import 'package:flutter_test/flutter_test.dart';

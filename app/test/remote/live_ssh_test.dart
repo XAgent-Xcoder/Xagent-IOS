@@ -18,15 +18,15 @@
 
 import 'dart:io';
 
-import 'package:dsh_app/remote/link_status.dart';
-import 'package:dsh_app/remote/secret_store.dart';
-import 'package:dsh_app/remote/ssh/remote_bootstrap.dart';
-import 'package:dsh_app/remote/ssh/remote_shell.dart';
-import 'package:dsh_app/remote/ssh/ssh_link.dart';
-import 'package:dsh_app/remote/ssh/ssh_transport.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
+import 'package:xagent/remote/link_status.dart';
+import 'package:xagent/remote/secret_store.dart';
+import 'package:xagent/remote/ssh/remote_bootstrap.dart';
+import 'package:xagent/remote/ssh/remote_shell.dart';
+import 'package:xagent/remote/ssh/ssh_link.dart';
+import 'package:xagent/remote/ssh/ssh_transport.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/sessions_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

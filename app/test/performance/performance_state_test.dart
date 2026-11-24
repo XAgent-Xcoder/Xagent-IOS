@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:dsh_app/performance/performance_state.dart';
-import 'package:dsh_app/pets/pet_prefs.dart';
-import 'package:dsh_app/pets/pet_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
+import 'package:xagent/performance/performance_state.dart';
+import 'package:xagent/pets/pet_prefs.dart';
+import 'package:xagent/pets/pet_state.dart';
+import 'package:xagent/state/settings_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

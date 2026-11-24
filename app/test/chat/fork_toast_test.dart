@@ -2,12 +2,12 @@
 // toast with 返回原对话 floats above the composer — it neither covers it nor
 // pushes the layout — and goes away on its own.
 
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/composer.dart';
-import 'package:dsh_app/ui/chat/composer_toast.dart';
-import 'package:dsh_app/ui/settings/settings_widgets.dart' show SettingsTile;
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/composer.dart';
+import 'package:xagent/ui/chat/composer_toast.dart';
+import 'package:xagent/ui/settings/settings_widgets.dart' show SettingsTile;
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

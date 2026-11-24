@@ -6,9 +6,9 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/ui/chat/chat_rows.dart';
-import 'package:dsh_app/ui/chat/widgets/thinking_pill.dart';
-import 'package:dsh_app/ui/chat/widgets/turn_process.dart';
+import 'package:xagent/ui/chat/chat_rows.dart';
+import 'package:xagent/ui/chat/widgets/thinking_pill.dart';
+import 'package:xagent/ui/chat/widgets/turn_process.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 

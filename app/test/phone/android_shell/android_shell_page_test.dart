@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/state/phone_state.dart';
-import 'package:dsh_app/ui/common/app_sheet.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
-import 'package:dsh_app/ui/common/risk_notice.dart';
-import 'package:dsh_app/ui/phone/android_shell_page.dart';
-import 'package:dsh_app/ui/phone/phone_control_screen.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/state/phone_state.dart';
+import 'package:xagent/ui/common/app_sheet.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
+import 'package:xagent/ui/common/risk_notice.dart';
+import 'package:xagent/ui/phone/android_shell_page.dart';
+import 'package:xagent/ui/phone/phone_control_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

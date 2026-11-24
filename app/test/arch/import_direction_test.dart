@@ -96,7 +96,7 @@ void main() {
 import 'dart:async';
 import 'package:flutter/widgets.dart';
 import '../ui/a.dart' show A;
-import 'package:dsh_app/ui/b.dart'
+import 'package:xagent/ui/b.dart'
     if (dart.library.io) '../ui/c.dart';
 export 'other.dart';
 ''');

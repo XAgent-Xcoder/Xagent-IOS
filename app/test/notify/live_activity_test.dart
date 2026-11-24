@@ -1,11 +1,11 @@
 // The live activity in words (lib/notify/live_activity.dart): the pet's mood,
 // the conversation it names, the chip, and when it says nothing.
 
-import 'package:dsh_app/notify/live_activity.dart';
-import 'package:dsh_app/notify/notify_channel.dart';
-import 'package:dsh_app/pets/pet_mood.dart';
-import 'package:dsh_app/pets/pet_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
+import 'package:xagent/notify/live_activity.dart';
+import 'package:xagent/notify/notify_channel.dart';
+import 'package:xagent/pets/pet_mood.dart';
+import 'package:xagent/pets/pet_state.dart';
+import 'package:xagent/state/hosts_state.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 const _local = HostRef.local;

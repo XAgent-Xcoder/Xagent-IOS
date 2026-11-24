@@ -1,9 +1,9 @@
-import 'package:dsh_app/state/media_generation.dart';
-import 'package:dsh_app/state/plugins_state.dart';
-import 'package:dsh_app/ui/plugins/plugin_detail_sheet.dart';
-import 'package:dsh_app/ui/plugins/plugins_screen.dart';
-import 'package:dsh_app/ui/settings/media_settings_page.dart';
-import 'package:dsh_app/update/version.dart';
+import 'package:xagent/state/media_generation.dart';
+import 'package:xagent/state/plugins_state.dart';
+import 'package:xagent/ui/plugins/plugin_detail_sheet.dart';
+import 'package:xagent/ui/plugins/plugins_screen.dart';
+import 'package:xagent/ui/settings/media_settings_page.dart';
+import 'package:xagent/update/version.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

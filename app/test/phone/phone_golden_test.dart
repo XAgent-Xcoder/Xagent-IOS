@@ -4,13 +4,13 @@
 //
 //   flutter test --update-goldens test/phone/phone_golden_test.dart
 
-import 'package:dsh_app/phone/phone_channel.dart';
-import 'package:dsh_app/ui/phone/app_rules_page.dart';
-import 'package:dsh_app/ui/phone/a11y_restore_sheet.dart';
-import 'package:dsh_app/ui/phone/hold_to_confirm.dart';
-import 'package:dsh_app/ui/phone/phone_control_screen.dart';
-import 'package:dsh_app/ui/phone/phone_unlock_page.dart';
-import 'package:dsh_app/ui/phone/restricted_settings_guide.dart';
+import 'package:xagent/phone/phone_channel.dart';
+import 'package:xagent/ui/phone/app_rules_page.dart';
+import 'package:xagent/ui/phone/a11y_restore_sheet.dart';
+import 'package:xagent/ui/phone/hold_to_confirm.dart';
+import 'package:xagent/ui/phone/phone_control_screen.dart';
+import 'package:xagent/ui/phone/phone_unlock_page.dart';
+import 'package:xagent/ui/phone/restricted_settings_guide.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

@@ -4,9 +4,9 @@
 // (review_live_conflict_test), where both edits went out against r1 four
 // times and never landed.
 
-import 'package:dsh_app/state/engine_settings_state.dart';
-import 'package:dsh_app/state/plugin_config/plugin_config_state.dart';
-import 'package:dsh_app/state/plugins_state.dart' show installedPluginsProvider;
+import 'package:xagent/state/engine_settings_state.dart';
+import 'package:xagent/state/plugin_config/plugin_config_state.dart';
+import 'package:xagent/state/plugins_state.dart' show installedPluginsProvider;
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

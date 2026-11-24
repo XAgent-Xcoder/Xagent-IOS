@@ -5,13 +5,13 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/forum/discourse_client.dart';
-import 'package:dsh_app/forum/forum_auth.dart';
-import 'package:dsh_app/forum/forum_config.dart';
-import 'package:dsh_app/forum/forum_crypto.dart';
-import 'package:dsh_app/forum/forum_state.dart';
-import 'package:dsh_app/remote/secret_store.dart';
-import 'package:dsh_app/state/account_state.dart' show accountBrowserProvider;
+import 'package:xagent/forum/discourse_client.dart';
+import 'package:xagent/forum/forum_auth.dart';
+import 'package:xagent/forum/forum_config.dart';
+import 'package:xagent/forum/forum_crypto.dart';
+import 'package:xagent/forum/forum_state.dart';
+import 'package:xagent/remote/secret_store.dart';
+import 'package:xagent/state/account_state.dart' show accountBrowserProvider;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;

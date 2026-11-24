@@ -5,11 +5,11 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:dsh_app/plugins/native/native_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/plugins_state.dart';
-import 'package:dsh_app/ui/plugins/native/native_taps.dart';
-import 'package:dsh_app/ui_config/ui_config.dart';
+import 'package:xagent/plugins/native/native_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/plugins_state.dart';
+import 'package:xagent/ui/plugins/native/native_taps.dart';
+import 'package:xagent/ui_config/ui_config.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

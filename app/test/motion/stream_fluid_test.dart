@@ -3,18 +3,18 @@
 
 import 'dart:math' as math;
 
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/ui/chat/chat_header.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/empty_state.dart' show chatClock;
-import 'package:dsh_app/ui/chat/render/markdown_body.dart';
-import 'package:dsh_app/ui/chat/widgets/assistant_message.dart';
-import 'package:dsh_app/ui/chat/widgets/stream_pacer.dart';
-import 'package:dsh_app/ui/chat/widgets/thinking_pill.dart';
-import 'package:dsh_app/ui/chat/widgets/tool_row.dart';
-import 'package:dsh_app/ui/common/fluid_bits.dart';
-import 'package:dsh_app/ui/common/streaming_cursor.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/ui/chat/chat_header.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/empty_state.dart' show chatClock;
+import 'package:xagent/ui/chat/render/markdown_body.dart';
+import 'package:xagent/ui/chat/widgets/assistant_message.dart';
+import 'package:xagent/ui/chat/widgets/stream_pacer.dart';
+import 'package:xagent/ui/chat/widgets/thinking_pill.dart';
+import 'package:xagent/ui/chat/widgets/tool_row.dart';
+import 'package:xagent/ui/common/fluid_bits.dart';
+import 'package:xagent/ui/common/streaming_cursor.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

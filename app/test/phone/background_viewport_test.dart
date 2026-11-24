@@ -1,5 +1,5 @@
-import 'package:dsh_app/phone/phone_channel.dart';
-import 'package:dsh_app/ui/phone/dnd_mode_page.dart';
+import 'package:xagent/phone/phone_channel.dart';
+import 'package:xagent/ui/phone/dnd_mode_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

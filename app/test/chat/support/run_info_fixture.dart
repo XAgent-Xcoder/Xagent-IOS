@@ -7,7 +7,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/state/chat_state.dart';
+import 'package:xagent/state/chat_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 
 const runInfoFixture = 'test/chat/fixtures/follow_run_info.jsonl';

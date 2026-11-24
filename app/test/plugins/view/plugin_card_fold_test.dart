@@ -5,14 +5,14 @@
 
 import 'dart:convert';
 
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/empty_state.dart' show chatClock;
-import 'package:dsh_app/ui/chat/widgets/live_clock.dart';
-import 'package:dsh_app/ui/chat/widgets/tool_row.dart';
-import 'package:dsh_app/ui/chat/widgets/turn_process.dart';
-import 'package:dsh_app/ui/chat/widgets/whale_tail.dart';
-import 'package:dsh_app/ui/plugins/view/plugin_view.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/empty_state.dart' show chatClock;
+import 'package:xagent/ui/chat/widgets/live_clock.dart';
+import 'package:xagent/ui/chat/widgets/tool_row.dart';
+import 'package:xagent/ui/chat/widgets/turn_process.dart';
+import 'package:xagent/ui/chat/widgets/whale_tail.dart';
+import 'package:xagent/ui/plugins/view/plugin_view.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

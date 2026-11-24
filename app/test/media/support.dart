@@ -7,11 +7,11 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:ui' as ui;
 
-import 'package:dsh_app/state/artifact_files.dart';
-import 'package:dsh_app/state/media_generation.dart';
-import 'package:dsh_app/state/risk_notice_store.dart';
-import 'package:dsh_app/state/session_modes.dart';
-import 'package:dsh_app/ui/chat/render/markdown_image.dart';
+import 'package:xagent/state/artifact_files.dart';
+import 'package:xagent/state/media_generation.dart';
+import 'package:xagent/state/risk_notice_store.dart';
+import 'package:xagent/state/session_modes.dart';
+import 'package:xagent/ui/chat/render/markdown_image.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

@@ -1,9 +1,9 @@
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
-import 'package:dsh_app/state/bots_state.dart';
-import 'package:dsh_app/ui/bots/bot_avatar.dart';
-import 'package:dsh_app/ui/common/status_dot.dart';
+import 'package:xagent/state/bots_state.dart';
+import 'package:xagent/ui/bots/bot_avatar.dart';
+import 'package:xagent/ui/common/status_dot.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

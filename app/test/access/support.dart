@@ -5,11 +5,11 @@
 
 import 'dart:async';
 
-import 'package:dsh_app/phone/phone_channel.dart';
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/access_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
+import 'package:xagent/phone/phone_channel.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/access_state.dart';
+import 'package:xagent/state/settings_state.dart';
 import 'package:flutter/services.dart' show PlatformException;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;

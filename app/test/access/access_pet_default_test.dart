@@ -3,15 +3,15 @@
 // pet, and the floating window is still what the permission is for. A choice
 // already made — a user-imported pet — stays.
 
-import 'package:dsh_app/performance/performance_state.dart';
-import 'package:dsh_app/pets/overlay_channel.dart';
-import 'package:dsh_app/pets/pet_prefs.dart';
-import 'package:dsh_app/pets/pet_state.dart';
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/access_state.dart';
-import 'package:dsh_app/state/phone_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
+import 'package:xagent/performance/performance_state.dart';
+import 'package:xagent/pets/overlay_channel.dart';
+import 'package:xagent/pets/pet_prefs.dart';
+import 'package:xagent/pets/pet_state.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/access_state.dart';
+import 'package:xagent/state/phone_state.dart';
+import 'package:xagent/state/settings_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

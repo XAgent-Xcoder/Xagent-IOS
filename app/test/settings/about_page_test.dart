@@ -1,12 +1,12 @@
 import 'dart:ui' show SemanticsAction;
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/state/star_prompt.dart';
-import 'package:dsh_app/state/update_state.dart';
-import 'package:dsh_app/ui/settings/about_page.dart';
-import 'package:dsh_app/ui/settings/settings_widgets.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
-import 'package:dsh_app/update/version.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/state/star_prompt.dart';
+import 'package:xagent/state/update_state.dart';
+import 'package:xagent/ui/settings/about_page.dart';
+import 'package:xagent/ui/settings/settings_widgets.dart';
+import 'package:xagent/ui/theme/theme.dart';
+import 'package:xagent/update/version.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

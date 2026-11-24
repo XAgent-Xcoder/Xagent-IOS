@@ -6,16 +6,16 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:dsh_app/remote/secret_store.dart';
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/account_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/notify_state.dart';
-import 'package:dsh_app/state/onboarding_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/shell/root_gate.dart';
+import 'package:xagent/remote/secret_store.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/account_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/notify_state.dart';
+import 'package:xagent/state/onboarding_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/shell/root_gate.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;

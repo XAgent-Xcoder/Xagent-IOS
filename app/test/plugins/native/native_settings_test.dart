@@ -2,9 +2,9 @@
 // 「原生界面」 line that opens the problems with their paths. Plugins without
 // a native part get nothing.
 
-import 'package:dsh_app/plugins/native/native_model.dart';
-import 'package:dsh_app/plugins/native/native_state.dart';
-import 'package:dsh_app/ui/plugins/native/native_plugin_section.dart';
+import 'package:xagent/plugins/native/native_model.dart';
+import 'package:xagent/plugins/native/native_state.dart';
+import 'package:xagent/ui/plugins/native/native_plugin_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

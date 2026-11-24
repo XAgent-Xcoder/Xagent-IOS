@@ -1,8 +1,8 @@
-import 'package:dsh_app/state/workspace_state.dart';
-import 'package:dsh_app/ui/chat/artifact_preview.dart';
-import 'package:dsh_app/ui/chat/render/markdown_body.dart';
-import 'package:dsh_app/ui/chat/render/markdown_image.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/state/workspace_state.dart';
+import 'package:xagent/ui/chat/artifact_preview.dart';
+import 'package:xagent/ui/chat/render/markdown_body.dart';
+import 'package:xagent/ui/chat/render/markdown_image.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

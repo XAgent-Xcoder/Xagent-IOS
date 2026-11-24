@@ -2,12 +2,12 @@
 // looks for, what a row calls an occupant, and the route-guard report the
 // islands' security gate reads from the inventory.
 
-import 'package:dsh_app/plugins/seams/seams.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/ui/plugins/islands/island_gate.dart';
-import 'package:dsh_app/ui/plugins/seats/seat_island.dart';
-import 'package:dsh_app/ui/plugins/seats/seat_links.dart';
-import 'package:dsh_app/ui/web/web_target.dart';
+import 'package:xagent/plugins/seams/seams.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/ui/plugins/islands/island_gate.dart';
+import 'package:xagent/ui/plugins/seats/seat_island.dart';
+import 'package:xagent/ui/plugins/seats/seat_links.dart';
+import 'package:xagent/ui/web/web_target.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

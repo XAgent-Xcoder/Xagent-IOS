@@ -4,7 +4,7 @@
 import 'dart:async';
 
 import 'package:dsh_client/dsh_client.dart';
-import 'package:dsh_app/ui_config/ui_config.dart';
+import 'package:xagent/ui_config/ui_config.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'support.dart';

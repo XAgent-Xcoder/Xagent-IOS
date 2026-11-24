@@ -1,11 +1,11 @@
 import 'dart:io';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/state/engine_settings_state.dart';
-import 'package:dsh_app/ui/engine_settings/engine_settings_page.dart';
-import 'package:dsh_app/ui/engine_settings/schema_documentation.dart';
-import 'package:dsh_app/ui/engine_settings/schema_fields.dart' show FieldCopy, hintFor, labelFor, plainSchemaText;
-import 'package:dsh_app/ui/plugins/plugin_inventory_page.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/state/engine_settings_state.dart';
+import 'package:xagent/ui/engine_settings/engine_settings_page.dart';
+import 'package:xagent/ui/engine_settings/schema_documentation.dart';
+import 'package:xagent/ui/engine_settings/schema_fields.dart' show FieldCopy, hintFor, labelFor, plainSchemaText;
+import 'package:xagent/ui/plugins/plugin_inventory_page.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

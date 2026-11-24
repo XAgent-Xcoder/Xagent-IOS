@@ -1,7 +1,7 @@
-import 'package:dsh_app/ui/chat/chat_list.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/composer.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/ui/chat/chat_list.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/composer.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

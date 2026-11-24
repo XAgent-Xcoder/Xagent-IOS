@@ -4,13 +4,13 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/state/balance_state.dart';
-import 'package:dsh_app/state/commands_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/state/usage_state.dart';
-import 'package:dsh_app/ui/chat/balance_widgets.dart';
-import 'package:dsh_app/ui/chat/slash_palette.dart';
-import 'package:dsh_app/ui/chat/usage_sheet.dart';
+import 'package:xagent/state/balance_state.dart';
+import 'package:xagent/state/commands_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/state/usage_state.dart';
+import 'package:xagent/ui/chat/balance_widgets.dart';
+import 'package:xagent/ui/chat/slash_palette.dart';
+import 'package:xagent/ui/chat/usage_sheet.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

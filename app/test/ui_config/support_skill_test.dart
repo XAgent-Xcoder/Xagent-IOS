@@ -1,7 +1,7 @@
 // The dsh-go-support skill: troubleshooting playbook + issue draft, reading the
 // diagnostics snapshot the app writes into the engine.
 
-import 'package:dsh_app/ui_config/ui_config.dart';
+import 'package:xagent/ui_config/ui_config.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'support.dart';

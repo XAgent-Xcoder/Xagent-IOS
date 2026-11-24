@@ -1,8 +1,8 @@
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/empty_state.dart';
-import 'package:dsh_app/ui/chat/widgets/user_bubble.dart';
-import 'package:dsh_app/ui/theme/app_icons.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/empty_state.dart';
+import 'package:xagent/ui/chat/widgets/user_bubble.dart';
+import 'package:xagent/ui/theme/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

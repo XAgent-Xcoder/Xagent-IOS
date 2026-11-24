@@ -4,20 +4,20 @@
 //
 //   flutter test test/shell/shell_geometry_test.dart
 
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/common/app_sheet.dart';
-import 'package:dsh_app/ui/onboarding/onboarding_scaffold.dart';
-import 'package:dsh_app/ui/onboarding/runtime_setup_page.dart';
-import 'package:dsh_app/ui/shell/brand_mark.dart';
-import 'package:dsh_app/ui/shell/home_shell.dart';
-import 'package:dsh_app/ui/shell/page_frame.dart';
-import 'package:dsh_app/ui/shell/session_search_page.dart';
-import 'package:dsh_app/ui/shell/sessions_drawer.dart';
-import 'package:dsh_app/ui/theme/app_icons.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/common/app_sheet.dart';
+import 'package:xagent/ui/onboarding/onboarding_scaffold.dart';
+import 'package:xagent/ui/onboarding/runtime_setup_page.dart';
+import 'package:xagent/ui/shell/brand_mark.dart';
+import 'package:xagent/ui/shell/home_shell.dart';
+import 'package:xagent/ui/shell/page_frame.dart';
+import 'package:xagent/ui/shell/session_search_page.dart';
+import 'package:xagent/ui/shell/sessions_drawer.dart';
+import 'package:xagent/ui/theme/app_icons.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

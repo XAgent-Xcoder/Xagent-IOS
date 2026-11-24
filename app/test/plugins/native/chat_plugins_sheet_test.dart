@@ -11,17 +11,17 @@
 
 import 'dart:io';
 
-import 'package:dsh_app/plugins/seams/seams.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
-import 'package:dsh_app/ui/plugins/islands/islands.dart';
-import 'package:dsh_app/ui/plugins/native/chat_plugins_sheet.dart';
-import 'package:dsh_app/ui/plugins/native/composer_capsules.dart';
-import 'package:dsh_app/ui/plugins/native/native_composer_bar.dart';
-import 'package:dsh_app/ui/plugins/seats/seat_links.dart' show seatWebOpenerProvider;
-import 'package:dsh_app/ui/plugins/view/plugin_view.dart';
-import 'package:dsh_app/ui/web/web_target.dart';
-import 'package:dsh_app/ui_config/ui_config.dart';
+import 'package:xagent/plugins/seams/seams.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
+import 'package:xagent/ui/plugins/islands/islands.dart';
+import 'package:xagent/ui/plugins/native/chat_plugins_sheet.dart';
+import 'package:xagent/ui/plugins/native/composer_capsules.dart';
+import 'package:xagent/ui/plugins/native/native_composer_bar.dart';
+import 'package:xagent/ui/plugins/seats/seat_links.dart' show seatWebOpenerProvider;
+import 'package:xagent/ui/plugins/view/plugin_view.dart';
+import 'package:xagent/ui/web/web_target.dart';
+import 'package:xagent/ui_config/ui_config.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

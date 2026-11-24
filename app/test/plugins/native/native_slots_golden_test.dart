@@ -4,18 +4,18 @@
 // the plugin's native settings. Regenerate with
 // `flutter test --update-goldens test/plugins/native/native_slots_golden_test.dart`.
 
-import 'package:dsh_app/plugins/native/native_model.dart';
-import 'package:dsh_app/plugins/native/native_state.dart';
-import 'package:dsh_app/plugins/seams/seams.dart';
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/ui/chat/composer.dart';
-import 'package:dsh_app/ui/chat/widgets/assistant_message.dart';
-import 'package:dsh_app/ui/plugins/native/native_composer_bar.dart';
-import 'package:dsh_app/ui/plugins/native/native_panel.dart';
-import 'package:dsh_app/ui/plugins/native/native_plugin_section.dart';
-import 'package:dsh_app/ui/plugins/seats/session_plugins_tab.dart';
-import 'package:dsh_app/ui/theme/backdrop.dart';
-import 'package:dsh_app/ui_config/ui_config.dart';
+import 'package:xagent/plugins/native/native_model.dart';
+import 'package:xagent/plugins/native/native_state.dart';
+import 'package:xagent/plugins/seams/seams.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/ui/chat/composer.dart';
+import 'package:xagent/ui/chat/widgets/assistant_message.dart';
+import 'package:xagent/ui/plugins/native/native_composer_bar.dart';
+import 'package:xagent/ui/plugins/native/native_panel.dart';
+import 'package:xagent/ui/plugins/native/native_plugin_section.dart';
+import 'package:xagent/ui/plugins/seats/session_plugins_tab.dart';
+import 'package:xagent/ui/theme/backdrop.dart';
+import 'package:xagent/ui_config/ui_config.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

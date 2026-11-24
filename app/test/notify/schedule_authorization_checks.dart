@@ -3,7 +3,7 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:dsh_app/ui/features/schedule_editor/schedule_authorization.dart';
+import 'package:xagent/ui/features/schedule_editor/schedule_authorization.dart';
 import 'package:dsh_client/dsh_client.dart';
 
 class _Carrier extends DshCarrier {

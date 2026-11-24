@@ -9,13 +9,13 @@ import 'dart:io';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
-import 'package:dsh_app/share_code/conversation_export.dart';
-import 'package:dsh_app/share_code/conversation_redact.dart';
-import 'package:dsh_app/share_code/conversation_share.dart';
-import 'package:dsh_app/share_code/image_shrink.dart';
-import 'package:dsh_app/share_code/jpeg_encoder.dart';
-import 'package:dsh_app/share_code/share_codec.dart';
-import 'package:dsh_app/share_code/share_models.dart';
+import 'package:xagent/share_code/conversation_export.dart';
+import 'package:xagent/share_code/conversation_redact.dart';
+import 'package:xagent/share_code/conversation_share.dart';
+import 'package:xagent/share_code/image_shrink.dart';
+import 'package:xagent/share_code/jpeg_encoder.dart';
+import 'package:xagent/share_code/share_codec.dart';
+import 'package:xagent/share_code/share_models.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 

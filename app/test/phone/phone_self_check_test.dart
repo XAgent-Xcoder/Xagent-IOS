@@ -2,10 +2,10 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/diagnostics/diagnostics_markdown.dart' show diagnosticsMarkdownBytes;
-import 'package:dsh_app/phone/phone_self_check.dart';
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/ui/phone/phone_self_check_panel.dart';
+import 'package:xagent/diagnostics/diagnostics_markdown.dart' show diagnosticsMarkdownBytes;
+import 'package:xagent/phone/phone_self_check.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/ui/phone/phone_self_check_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';

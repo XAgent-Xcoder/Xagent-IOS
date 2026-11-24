@@ -1,12 +1,12 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:dsh_app/diagnostics/app_error_log.dart';
-import 'package:dsh_app/diagnostics/diagnostics_bundle.dart';
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
+import 'package:xagent/diagnostics/app_error_log.dart';
+import 'package:xagent/diagnostics/diagnostics_bundle.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/settings_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

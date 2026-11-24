@@ -4,19 +4,19 @@
 
 import 'dart:io';
 
-import 'package:dsh_app/links/app_links.dart';
-import 'package:dsh_app/share_code/guest_fs.dart';
-import 'package:dsh_app/share_code/share_code_state.dart';
-import 'package:dsh_app/share_code/share_codec.dart';
-import 'package:dsh_app/share_code/share_import.dart';
-import 'package:dsh_app/share_code/share_link.dart';
-import 'package:dsh_app/share_code/share_models.dart';
-import 'package:dsh_app/share_code/share_net.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/ui/shell/home_shell.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/links/app_links.dart';
+import 'package:xagent/share_code/guest_fs.dart';
+import 'package:xagent/share_code/share_code_state.dart';
+import 'package:xagent/share_code/share_codec.dart';
+import 'package:xagent/share_code/share_import.dart';
+import 'package:xagent/share_code/share_link.dart';
+import 'package:xagent/share_code/share_models.dart';
+import 'package:xagent/share_code/share_net.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/ui/shell/home_shell.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

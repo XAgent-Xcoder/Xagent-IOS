@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:crypto/crypto.dart';
-import 'package:dsh_app/state/update_state.dart';
-import 'package:dsh_app/update/installer.dart';
-import 'package:dsh_app/update/release.dart';
-import 'package:dsh_app/update/update_config.dart';
+import 'package:xagent/state/update_state.dart';
+import 'package:xagent/update/installer.dart';
+import 'package:xagent/update/release.dart';
+import 'package:xagent/update/update_config.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

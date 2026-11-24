@@ -1,15 +1,15 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:dsh_app/remote/relay/dsh_remote_backend.dart';
-import 'package:dsh_app/remote/relay/relay_backend.dart';
-import 'package:dsh_app/remote/relay/webrtc_peer.dart';
-import 'package:dsh_app/remote/link_status.dart';
-import 'package:dsh_app/state/hosts_state.dart';
+import 'package:xagent/remote/relay/dsh_remote_backend.dart';
+import 'package:xagent/remote/relay/relay_backend.dart';
+import 'package:xagent/remote/relay/webrtc_peer.dart';
+import 'package:xagent/remote/link_status.dart';
+import 'package:xagent/state/hosts_state.dart';
 
 import 'support/fake_relay.dart';
 
-import 'package:dsh_app/remote/secret_store.dart';
+import 'package:xagent/remote/secret_store.dart';
 
 void main() {
   for (final legacy in <bool?>[null, false, true]) {

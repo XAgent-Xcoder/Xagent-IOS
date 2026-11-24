@@ -3,10 +3,10 @@
 // (one credential per provider), the key written into the credential store,
 // and deleting a service clearing the defaults that named it.
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/state/engine_settings_state.dart';
-import 'package:dsh_app/state/media_generation.dart';
-import 'package:dsh_app/ui/settings/media_settings_page.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/state/engine_settings_state.dart';
+import 'package:xagent/state/media_generation.dart';
+import 'package:xagent/ui/settings/media_settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

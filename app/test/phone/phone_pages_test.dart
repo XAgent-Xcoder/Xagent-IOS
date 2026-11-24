@@ -2,15 +2,15 @@
 // set-ups; the channel picker itself is dnd_channels_test.dart), 应用名单 with
 // its risk notes.
 
-import 'package:dsh_app/state/phone_state.dart';
-import 'package:dsh_app/ui/common/app_sheet.dart';
-import 'package:dsh_app/ui/common/ask_ai.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
-import 'package:dsh_app/ui/common/risk_notice.dart';
-import 'package:dsh_app/ui/phone/app_rules_page.dart';
-import 'package:dsh_app/ui/phone/dnd_mode_page.dart';
-import 'package:dsh_app/ui/phone/phone_widgets.dart';
-import 'package:dsh_app/ui/phone/restricted_settings_guide.dart';
+import 'package:xagent/state/phone_state.dart';
+import 'package:xagent/ui/common/app_sheet.dart';
+import 'package:xagent/ui/common/ask_ai.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
+import 'package:xagent/ui/common/risk_notice.dart';
+import 'package:xagent/ui/phone/app_rules_page.dart';
+import 'package:xagent/ui/phone/dnd_mode_page.dart';
+import 'package:xagent/ui/phone/phone_widgets.dart';
+import 'package:xagent/ui/phone/restricted_settings_guide.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

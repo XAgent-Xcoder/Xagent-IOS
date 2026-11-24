@@ -1,14 +1,14 @@
 import 'dart:async';
 
-import 'package:dsh_app/state/agents_state.dart';
-import 'package:dsh_app/state/commands_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/models_state.dart';
-import 'package:dsh_app/state/plugins_state.dart';
-import 'package:dsh_app/state/session_detail_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/state/usage_state.dart';
+import 'package:xagent/state/agents_state.dart';
+import 'package:xagent/state/commands_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/models_state.dart';
+import 'package:xagent/state/plugins_state.dart';
+import 'package:xagent/state/session_detail_state.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/state/usage_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

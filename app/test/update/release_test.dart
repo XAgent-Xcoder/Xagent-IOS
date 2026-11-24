@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:dsh_app/update/release.dart';
-import 'package:dsh_app/update/version.dart';
+import 'package:xagent/update/release.dart';
+import 'package:xagent/update/version.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'support.dart';

@@ -1,7 +1,7 @@
-import 'package:dsh_app/app.dart';
-import 'package:dsh_app/performance/performance_state.dart';
-import 'package:dsh_app/state/locale_state.dart';
-import 'package:dsh_app/ui/settings/performance_page.dart';
+import 'package:xagent/app.dart';
+import 'package:xagent/performance/performance_state.dart';
+import 'package:xagent/state/locale_state.dart';
+import 'package:xagent/ui/settings/performance_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

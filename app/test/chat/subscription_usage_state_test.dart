@@ -1,6 +1,6 @@
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/read_list_epoch.dart';
-import 'package:dsh_app/state/subscriptions_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/read_list_epoch.dart';
+import 'package:xagent/state/subscriptions_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

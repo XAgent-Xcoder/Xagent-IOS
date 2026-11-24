@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:dsh_app/share_hosted/hosted_client.dart';
-import 'package:dsh_app/share_hosted/hosted_crypto.dart';
-import 'package:dsh_app/share_hosted/hosted_link.dart';
-import 'package:dsh_app/share_hosted/hosted_links_state.dart';
+import 'package:xagent/share_hosted/hosted_client.dart';
+import 'package:xagent/share_hosted/hosted_crypto.dart';
+import 'package:xagent/share_hosted/hosted_link.dart';
+import 'package:xagent/share_hosted/hosted_links_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 

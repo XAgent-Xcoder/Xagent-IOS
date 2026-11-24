@@ -7,8 +7,8 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:crypto/crypto.dart';
-import 'package:dsh_app/update/installer.dart';
-import 'package:dsh_app/update/update_http.dart';
+import 'package:xagent/update/installer.dart';
+import 'package:xagent/update/update_http.dart';
 
 String fixture(String name) => File('test/update/fixtures/$name').readAsStringSync();
 

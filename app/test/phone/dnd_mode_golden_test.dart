@@ -8,8 +8,8 @@
 //
 //   flutter test --update-goldens test/phone/dnd_mode_golden_test.dart
 
-import 'package:dsh_app/ui/phone/a11y_restore_sheet.dart';
-import 'package:dsh_app/ui/phone/dnd_mode_page.dart';
+import 'package:xagent/ui/phone/a11y_restore_sheet.dart';
+import 'package:xagent/ui/phone/dnd_mode_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

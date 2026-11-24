@@ -1,10 +1,10 @@
 // A long tool output is clipped in the chat row and whole on its own page.
 
-import 'package:dsh_app/ui/chat/output_page.dart';
-import 'package:dsh_app/ui/chat/render/ansi_text.dart';
-import 'package:dsh_app/ui/chat/render/long_text.dart';
-import 'package:dsh_app/ui/chat/tool_view.dart';
-import 'package:dsh_app/ui/chat/widgets/tool_row.dart';
+import 'package:xagent/ui/chat/output_page.dart';
+import 'package:xagent/ui/chat/render/ansi_text.dart';
+import 'package:xagent/ui/chat/render/long_text.dart';
+import 'package:xagent/ui/chat/tool_view.dart';
+import 'package:xagent/ui/chat/widgets/tool_row.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';

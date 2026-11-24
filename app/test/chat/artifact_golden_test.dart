@@ -5,14 +5,14 @@
 import 'dart:async';
 import 'dart:ui' as ui;
 
-import 'package:dsh_app/state/artifact_files.dart';
-import 'package:dsh_app/state/artifacts.dart';
-import 'package:dsh_app/state/workspace_state.dart';
-import 'package:dsh_app/ui/chat/artifact_preview.dart';
-import 'package:dsh_app/ui/chat/widgets/artifact_card.dart';
-import 'package:dsh_app/ui/session/session_artifacts.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
-import 'package:dsh_app/state/connection_state.dart';
+import 'package:xagent/state/artifact_files.dart';
+import 'package:xagent/state/artifacts.dart';
+import 'package:xagent/state/workspace_state.dart';
+import 'package:xagent/ui/chat/artifact_preview.dart';
+import 'package:xagent/ui/chat/widgets/artifact_card.dart';
+import 'package:xagent/ui/session/session_artifacts.dart';
+import 'package:xagent/ui/theme/theme.dart';
+import 'package:xagent/state/connection_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

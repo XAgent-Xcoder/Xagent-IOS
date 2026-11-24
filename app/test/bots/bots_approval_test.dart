@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:dsh_app/ui/bots/bots_page.dart';
-import 'package:dsh_app/ui/bots/room_chat_page.dart';
-import 'package:dsh_app/ui/bots/room_details_page.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
+import 'package:xagent/ui/bots/bots_page.dart';
+import 'package:xagent/ui/bots/room_chat_page.dart';
+import 'package:xagent/ui/bots/room_details_page.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

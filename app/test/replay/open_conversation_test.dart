@@ -5,9 +5,9 @@
 
 import 'dart:io';
 
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/replay/replay_page.dart';
-import 'package:dsh_app/ui/share_code/share_code_host.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/replay/replay_page.dart';
+import 'package:xagent/ui/share_code/share_code_host.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

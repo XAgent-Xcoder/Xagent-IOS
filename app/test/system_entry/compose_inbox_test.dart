@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:dsh_app/links/share_intake.dart';
-import 'package:dsh_app/state/attachments.dart';
-import 'package:dsh_app/state/compose_inbox.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/draft_store.dart';
-import 'package:dsh_app/state/hosts_state.dart';
+import 'package:xagent/links/share_intake.dart';
+import 'package:xagent/state/attachments.dart';
+import 'package:xagent/state/compose_inbox.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/draft_store.dart';
+import 'package:xagent/state/hosts_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

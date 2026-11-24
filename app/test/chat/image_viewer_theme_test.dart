@@ -1,8 +1,8 @@
-import 'package:dsh_app/ui/chat/widgets/attachments.dart';
-import 'package:dsh_app/ui/chat/widgets/image_actions.dart';
-import 'package:dsh_app/ui/shell/page_frame.dart';
-import 'package:dsh_app/ui/theme/app_icons.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/ui/chat/widgets/attachments.dart';
+import 'package:xagent/ui/chat/widgets/image_actions.dart';
+import 'package:xagent/ui/shell/page_frame.dart';
+import 'package:xagent/ui/theme/app_icons.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

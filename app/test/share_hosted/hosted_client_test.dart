@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:dsh_app/share_hosted/hosted_client.dart';
-import 'package:dsh_app/share_hosted/hosted_crypto.dart';
-import 'package:dsh_app/share_hosted/hosted_link.dart';
+import 'package:xagent/share_hosted/hosted_client.dart';
+import 'package:xagent/share_hosted/hosted_crypto.dart';
+import 'package:xagent/share_hosted/hosted_link.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';

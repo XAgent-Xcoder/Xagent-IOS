@@ -6,10 +6,10 @@
 // with equal room either side of their text; the galleries' even gaps and
 // edges on the column; and the card unchanged by the phone's text size.
 
-import 'package:dsh_app/ui/share/qr_code.dart';
-import 'package:dsh_app/ui/share/share_card.dart';
-import 'package:dsh_app/ui/share/share_content.dart';
-import 'package:dsh_app/ui/share/share_gallery.dart';
+import 'package:xagent/ui/share/qr_code.dart';
+import 'package:xagent/ui/share/share_card.dart';
+import 'package:xagent/ui/share/share_content.dart';
+import 'package:xagent/ui/share/share_gallery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

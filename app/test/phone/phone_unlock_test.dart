@@ -3,11 +3,11 @@
 // hold (never during a task), off in one tap; 确认方式's 「这些由你来操作」;
 // the main page's 「已解除限制」 tag.
 
-import 'package:dsh_app/phone/phone_channel.dart';
-import 'package:dsh_app/ui/phone/app_rules_page.dart';
-import 'package:dsh_app/ui/phone/hold_to_confirm.dart';
-import 'package:dsh_app/ui/phone/phone_control_screen.dart';
-import 'package:dsh_app/ui/phone/phone_unlock_page.dart';
+import 'package:xagent/phone/phone_channel.dart';
+import 'package:xagent/ui/phone/app_rules_page.dart';
+import 'package:xagent/ui/phone/hold_to_confirm.dart';
+import 'package:xagent/ui/phone/phone_control_screen.dart';
+import 'package:xagent/ui/phone/phone_unlock_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter_test/flutter_test.dart';

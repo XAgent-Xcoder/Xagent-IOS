@@ -5,15 +5,15 @@
 
 import 'dart:io';
 
-import 'package:dsh_app/links/app_links.dart';
-import 'package:dsh_app/links/plugin_links.dart';
-import 'package:dsh_app/share_code/share_net.dart';
-import 'package:dsh_app/state/plugins_state.dart';
-import 'package:dsh_app/ui/plugins/plugin_detail_sheet.dart';
-import 'package:dsh_app/ui/plugins/market_tab.dart';
-import 'package:dsh_app/ui/plugins/plugins_screen.dart';
-import 'package:dsh_app/ui/share_code/share_out.dart';
-import 'package:dsh_app/ui/share/share_entry.dart';
+import 'package:xagent/links/app_links.dart';
+import 'package:xagent/links/plugin_links.dart';
+import 'package:xagent/share_code/share_net.dart';
+import 'package:xagent/state/plugins_state.dart';
+import 'package:xagent/ui/plugins/plugin_detail_sheet.dart';
+import 'package:xagent/ui/plugins/market_tab.dart';
+import 'package:xagent/ui/plugins/plugins_screen.dart';
+import 'package:xagent/ui/share_code/share_out.dart';
+import 'package:xagent/ui/share/share_entry.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

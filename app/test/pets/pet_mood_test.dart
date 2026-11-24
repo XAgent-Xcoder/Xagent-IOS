@@ -4,12 +4,12 @@
 // stopped turns, sleep and waking, the two scopes, bubbles and the most
 // relevant conversation.
 
-import 'package:dsh_app/notify/chat_alerts.dart';
-import 'package:dsh_app/pets/pet_mood.dart';
-import 'package:dsh_app/pets/pet_signals.dart';
-import 'package:dsh_app/pets/pet_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/ui/chat/run_info.dart';
+import 'package:xagent/notify/chat_alerts.dart';
+import 'package:xagent/pets/pet_mood.dart';
+import 'package:xagent/pets/pet_signals.dart';
+import 'package:xagent/pets/pet_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/ui/chat/run_info.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 final t0 = DateTime(2026, 10, 25, 15);

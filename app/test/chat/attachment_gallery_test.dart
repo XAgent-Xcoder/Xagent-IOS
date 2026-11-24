@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:dsh_app/state/attachments.dart';
-import 'package:dsh_app/ui/chat/widgets/attachments.dart';
-import 'package:dsh_app/ui/chat/widgets/image_gallery.dart';
-import 'package:dsh_app/ui/settings/settings_widgets.dart' show SettingsTile;
-import 'package:dsh_app/ui/theme/app_icons.dart';
+import 'package:xagent/state/attachments.dart';
+import 'package:xagent/ui/chat/widgets/attachments.dart';
+import 'package:xagent/ui/chat/widgets/image_gallery.dart';
+import 'package:xagent/ui/settings/settings_widgets.dart' show SettingsTile;
+import 'package:xagent/ui/theme/app_icons.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

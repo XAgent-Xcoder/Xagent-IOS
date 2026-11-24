@@ -3,9 +3,9 @@
 //
 //   flutter test test/ios_blocked_page_routing_test.dart
 
-import 'package:dsh_app/links/page_links.dart';
-import 'package:dsh_app/ui/settings/blocked_page.dart';
-import 'package:dsh_app/ui/settings/index/settings_pages.dart';
+import 'package:xagent/links/page_links.dart';
+import 'package:xagent/ui/settings/blocked_page.dart';
+import 'package:xagent/ui/settings/index/settings_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

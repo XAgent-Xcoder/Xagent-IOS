@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:dsh_app/companion/companion_signals.dart';
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/notify/chat_alerts.dart';
-import 'package:dsh_app/pets/pet_signals.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
+import 'package:xagent/companion/companion_signals.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/notify/chat_alerts.dart';
+import 'package:xagent/pets/pet_signals.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/hosts_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 

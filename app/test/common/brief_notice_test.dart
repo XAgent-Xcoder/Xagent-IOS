@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/ui/chat/widgets/image_actions.dart';
-import 'package:dsh_app/ui/chat/widgets/message_actions.dart';
-import 'package:dsh_app/ui/common/brief_notice.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/ui/chat/widgets/image_actions.dart';
+import 'package:xagent/ui/chat/widgets/message_actions.dart';
+import 'package:xagent/ui/common/brief_notice.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

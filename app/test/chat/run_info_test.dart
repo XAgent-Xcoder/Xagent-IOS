@@ -6,11 +6,11 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/ui/chat/chat_rows.dart';
-import 'package:dsh_app/ui/chat/run_info.dart';
-import 'package:dsh_app/ui/chat/turn_summary.dart';
-import 'package:dsh_app/ui/chat/widgets/turn_footnote.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/ui/chat/chat_rows.dart';
+import 'package:xagent/ui/chat/run_info.dart';
+import 'package:xagent/ui/chat/turn_summary.dart';
+import 'package:xagent/ui/chat/widgets/turn_footnote.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 

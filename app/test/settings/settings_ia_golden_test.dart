@@ -6,18 +6,18 @@
 
 import 'dart:io';
 
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/share_code/guest_fs.dart';
-import 'package:dsh_app/state/account_state.dart';
-import 'package:dsh_app/state/balance_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/settings/about_page.dart';
-import 'package:dsh_app/ui/settings/interface_page.dart';
-import 'package:dsh_app/ui/settings/personalization_page.dart';
-import 'package:dsh_app/ui/settings/privacy_page.dart';
-import 'package:dsh_app/ui/settings/reply_prefs_page.dart';
-import 'package:dsh_app/ui/settings/settings_screen.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/share_code/guest_fs.dart';
+import 'package:xagent/state/account_state.dart';
+import 'package:xagent/state/balance_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/settings/about_page.dart';
+import 'package:xagent/ui/settings/interface_page.dart';
+import 'package:xagent/ui/settings/personalization_page.dart';
+import 'package:xagent/ui/settings/privacy_page.dart';
+import 'package:xagent/ui/settings/reply_prefs_page.dart';
+import 'package:xagent/ui/settings/settings_screen.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

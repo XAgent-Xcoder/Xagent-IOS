@@ -3,14 +3,14 @@
 //
 //   flutter test test/ios_hide_local_entries_test.dart
 
-import 'package:dsh_app/remote/secret_store.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/platform_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/remote/host_switcher.dart';
-import 'package:dsh_app/ui/settings/settings_screen.dart';
+import 'package:xagent/remote/secret_store.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/platform_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/remote/host_switcher.dart';
+import 'package:xagent/ui/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;
 import 'package:flutter_test/flutter_test.dart';

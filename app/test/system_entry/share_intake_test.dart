@@ -1,5 +1,5 @@
-import 'package:dsh_app/links/share_intake.dart';
-import 'package:dsh_app/share_code/share_link.dart';
+import 'package:xagent/links/share_intake.dart';
+import 'package:xagent/share_code/share_link.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

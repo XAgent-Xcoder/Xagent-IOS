@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:dsh_app/remote/orca/orca_host_config.dart';
-import 'package:dsh_app/remote/secret_store.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/orca_connection_state.dart';
-import 'package:dsh_app/state/orca_hosts_state.dart';
+import 'package:xagent/remote/orca/orca_host_config.dart';
+import 'package:xagent/remote/secret_store.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/orca_connection_state.dart';
+import 'package:xagent/state/orca_hosts_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:orca_client/orca_client.dart';

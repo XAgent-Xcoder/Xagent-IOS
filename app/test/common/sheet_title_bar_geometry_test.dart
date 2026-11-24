@@ -1,9 +1,9 @@
-import 'package:dsh_app/ui/common/app_sheet.dart';
-import 'package:dsh_app/ui/common/segmented_pill.dart';
-import 'package:dsh_app/ui/common/sheet_navigator.dart';
-import 'package:dsh_app/ui/common/sheet_title_bar.dart';
-import 'package:dsh_app/ui/common/status_chip.dart';
-import 'package:dsh_app/ui/theme/app_icons.dart';
+import 'package:xagent/ui/common/app_sheet.dart';
+import 'package:xagent/ui/common/segmented_pill.dart';
+import 'package:xagent/ui/common/sheet_navigator.dart';
+import 'package:xagent/ui/common/sheet_title_bar.dart';
+import 'package:xagent/ui/common/status_chip.dart';
+import 'package:xagent/ui/theme/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

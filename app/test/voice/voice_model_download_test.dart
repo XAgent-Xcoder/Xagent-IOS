@@ -4,7 +4,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:crypto/crypto.dart';
-import 'package:dsh_app/voice/voice_model_download.dart';
+import 'package:xagent/voice/voice_model_download.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// A file server like ModelScope's: ranges (206 + Content-Range), or 200 when

@@ -4,21 +4,21 @@
 //
 //   flutter test --update-goldens test/onboarding/local_optional_golden_test.dart
 
-import 'package:dsh_app/remote/secret_store.dart';
-import 'package:dsh_app/runtime/local_footprint.dart';
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/engine/engine_screen.dart';
-import 'package:dsh_app/ui/onboarding/local_install.dart';
-import 'package:dsh_app/ui/onboarding/onboarding_scaffold.dart';
-import 'package:dsh_app/ui/onboarding/runtime_setup_page.dart';
-import 'package:dsh_app/ui/remote/host_switcher.dart';
-import 'package:dsh_app/ui/shell/home_shell.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/remote/secret_store.dart';
+import 'package:xagent/runtime/local_footprint.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/engine/engine_screen.dart';
+import 'package:xagent/ui/onboarding/local_install.dart';
+import 'package:xagent/ui/onboarding/onboarding_scaffold.dart';
+import 'package:xagent/ui/onboarding/runtime_setup_page.dart';
+import 'package:xagent/ui/remote/host_switcher.dart';
+import 'package:xagent/ui/shell/home_shell.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;
 import 'package:flutter_test/flutter_test.dart';

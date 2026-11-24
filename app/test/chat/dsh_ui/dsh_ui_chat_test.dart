@@ -3,9 +3,9 @@
 // user's side shows a tag and the card turns read-only. Copying a reply never
 // copies the JSON.
 
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/dsh_ui/dsh_ui.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/dsh_ui/dsh_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';

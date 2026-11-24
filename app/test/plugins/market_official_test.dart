@@ -7,15 +7,15 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:dsh_app/state/plugins_state.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
-import 'package:dsh_app/ui/plugins/installed_tab.dart';
-import 'package:dsh_app/ui/plugins/market_tab.dart';
-import 'package:dsh_app/ui/plugins/plugin_detail_sheet.dart';
-import 'package:dsh_app/ui/plugins/plugin_widgets.dart';
-import 'package:dsh_app/ui/plugins/plugins_screen.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
-import 'package:dsh_app/update/version.dart';
+import 'package:xagent/state/plugins_state.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
+import 'package:xagent/ui/plugins/installed_tab.dart';
+import 'package:xagent/ui/plugins/market_tab.dart';
+import 'package:xagent/ui/plugins/plugin_detail_sheet.dart';
+import 'package:xagent/ui/plugins/plugin_widgets.dart';
+import 'package:xagent/ui/plugins/plugins_screen.dart';
+import 'package:xagent/ui/theme/theme.dart';
+import 'package:xagent/update/version.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

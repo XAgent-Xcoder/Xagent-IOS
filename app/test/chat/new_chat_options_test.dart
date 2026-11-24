@@ -3,15 +3,15 @@
 // session before its prompt — and does not send under defaults the person
 // did not choose when applying fails, not even after a restart.
 
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/models_state.dart' show pendingModelProvider;
-import 'package:dsh_app/state/new_chat_modes.dart';
-import 'package:dsh_app/state/features_state.dart' show PermissionOption, PermissionState, agentPresetsProvider;
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/empty_actions.dart';
-import 'package:dsh_app/ui/chat/model_sheet.dart' show ModelChip;
-import 'package:dsh_app/ui/chat/new_chat_options.dart';
-import 'package:dsh_app/ui/theme/app_icons.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/models_state.dart' show pendingModelProvider;
+import 'package:xagent/state/new_chat_modes.dart';
+import 'package:xagent/state/features_state.dart' show PermissionOption, PermissionState, agentPresetsProvider;
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/empty_actions.dart';
+import 'package:xagent/ui/chat/model_sheet.dart' show ModelChip;
+import 'package:xagent/ui/chat/new_chat_options.dart';
+import 'package:xagent/ui/theme/app_icons.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

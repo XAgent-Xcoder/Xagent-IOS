@@ -3,10 +3,10 @@
 // 「在网页版编辑此项」 in full under its title with the open-external glyph
 // on the chevrons' column.
 
-import 'package:dsh_app/ui/common/overview_card.dart' show OverviewChevron;
-import 'package:dsh_app/ui/engine_settings/engine_settings_page.dart';
-import 'package:dsh_app/ui/engine_settings/field_row.dart';
-import 'package:dsh_app/ui/theme/app_icons.dart';
+import 'package:xagent/ui/common/overview_card.dart' show OverviewChevron;
+import 'package:xagent/ui/engine_settings/engine_settings_page.dart';
+import 'package:xagent/ui/engine_settings/field_row.dart';
+import 'package:xagent/ui/theme/app_icons.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';

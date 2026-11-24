@@ -3,16 +3,16 @@
 // yet, and flashes its background twice; the row keeps its size the whole
 // time. With animations off the highlight holds still for a second.
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/links/page_links.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/settings/index/settings_pages.dart';
-import 'package:dsh_app/ui/settings/index/spot_anchor.dart';
-import 'package:dsh_app/ui/settings/settings_screen.dart';
-import 'package:dsh_app/ui/settings/settings_widgets.dart';
-import 'package:dsh_app/ui/shell/page_frame.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/links/page_links.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/settings/index/settings_pages.dart';
+import 'package:xagent/ui/settings/index/spot_anchor.dart';
+import 'package:xagent/ui/settings/settings_screen.dart';
+import 'package:xagent/ui/settings/settings_widgets.dart';
+import 'package:xagent/ui/shell/page_frame.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

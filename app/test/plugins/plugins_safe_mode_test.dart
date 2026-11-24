@@ -1,5 +1,5 @@
-import 'package:dsh_app/state/plugins_state.dart';
-import 'package:dsh_app/ui/plugins/plugins_screen.dart';
+import 'package:xagent/state/plugins_state.dart';
+import 'package:xagent/ui/plugins/plugins_screen.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 

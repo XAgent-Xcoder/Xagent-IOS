@@ -5,15 +5,15 @@
 // composer, sent as a blockquote, shown as a quote in the bubble, split back
 // out on 编辑后重发); and 保存到相册 on a picture in a message.
 
-import 'package:dsh_app/state/attachments.dart' show sessionImageProvider;
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/widgets/assistant_message.dart';
-import 'package:dsh_app/ui/chat/widgets/quote_chip.dart';
-import 'package:dsh_app/ui/chat/widgets/user_bubble.dart';
-import 'package:dsh_app/ui/settings/settings_widgets.dart' show SettingsTile;
-import 'package:dsh_app/ui/theme/app_icons.dart';
+import 'package:xagent/state/attachments.dart' show sessionImageProvider;
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/widgets/assistant_message.dart';
+import 'package:xagent/ui/chat/widgets/quote_chip.dart';
+import 'package:xagent/ui/chat/widgets/user_bubble.dart';
+import 'package:xagent/ui/settings/settings_widgets.dart' show SettingsTile;
+import 'package:xagent/ui/theme/app_icons.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

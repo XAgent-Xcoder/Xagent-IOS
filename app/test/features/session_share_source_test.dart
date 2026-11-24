@@ -3,9 +3,9 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:dsh_app/state/artifacts.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/session_export.dart';
+import 'package:xagent/state/artifacts.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/session_export.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';

@@ -3,10 +3,10 @@
 
 import 'dart:async';
 
-import 'package:dsh_app/state/bots_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/notify_state.dart';
-import 'package:dsh_app/state/plugins_state.dart';
+import 'package:xagent/state/bots_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/notify_state.dart';
+import 'package:xagent/state/plugins_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;

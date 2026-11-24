@@ -3,18 +3,18 @@
 // by tap / send key / hardware keys, opening folders, and what is sent.
 // Goldens: `flutter test --update-goldens test/chat/composer_mention_picker_test.dart`.
 
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/state/mention_state.dart';
-import 'package:dsh_app/state/voice_state.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/composer.dart';
-import 'package:dsh_app/ui/chat/mention/mention_chip.dart';
-import 'package:dsh_app/ui/chat/mention/mention_picker.dart';
-import 'package:dsh_app/ui/chat/slash_palette.dart';
-import 'package:dsh_app/ui/chat/voice/voice_bridge.dart';
-import 'package:dsh_app/ui/chat/widgets/whale_tail.dart';
-import 'package:dsh_app/ui/theme/app_icons.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/state/mention_state.dart';
+import 'package:xagent/state/voice_state.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/composer.dart';
+import 'package:xagent/ui/chat/mention/mention_chip.dart';
+import 'package:xagent/ui/chat/mention/mention_picker.dart';
+import 'package:xagent/ui/chat/slash_palette.dart';
+import 'package:xagent/ui/chat/voice/voice_bridge.dart';
+import 'package:xagent/ui/chat/widgets/whale_tail.dart';
+import 'package:xagent/ui/theme/app_icons.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

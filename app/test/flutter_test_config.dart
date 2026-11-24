@@ -5,11 +5,11 @@
 
 import 'dart:async';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/performance/performance_state.dart';
-import 'package:dsh_app/pets/pet_sheets.dart';
-import 'package:dsh_app/state/locale_state.dart';
-import 'package:dsh_app/ui/chat/empty_actions.dart' show tipStart;
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/performance/performance_state.dart';
+import 'package:xagent/pets/pet_sheets.dart';
+import 'package:xagent/state/locale_state.dart';
+import 'package:xagent/ui/chat/empty_actions.dart' show tipStart;
 
 import 'support/english_preview.dart';
 import 'support/quiet_performance.dart';

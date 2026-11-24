@@ -6,8 +6,8 @@
 //
 //   flutter test test/ios_notify_contract_test.dart
 
-import 'package:dsh_app/notify/notify_channel.dart';
-import 'package:dsh_app/state/hosts_state.dart';
+import 'package:xagent/notify/notify_channel.dart';
+import 'package:xagent/state/hosts_state.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

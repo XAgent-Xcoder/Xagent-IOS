@@ -5,12 +5,12 @@
 //
 //   flutter test --update-goldens test/community/community_page_test.dart
 
-import 'package:dsh_app/state/community_state.dart';
-import 'package:dsh_app/state/safe_mode_state.dart';
-import 'package:dsh_app/ui/community/community_page.dart';
-import 'package:dsh_app/ui/community/community_widgets.dart';
-import 'package:dsh_app/ui/share/qr_code.dart';
-import 'package:dsh_app/ui/shell/brand_mark.dart';
+import 'package:xagent/state/community_state.dart';
+import 'package:xagent/state/safe_mode_state.dart';
+import 'package:xagent/ui/community/community_page.dart';
+import 'package:xagent/ui/community/community_widgets.dart';
+import 'package:xagent/ui/share/qr_code.dart';
+import 'package:xagent/ui/shell/brand_mark.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

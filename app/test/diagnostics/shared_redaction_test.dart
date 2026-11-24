@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/diagnostics/redact.dart';
+import 'package:xagent/diagnostics/redact.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

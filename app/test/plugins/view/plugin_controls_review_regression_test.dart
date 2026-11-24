@@ -3,10 +3,10 @@
 import 'dart:math' as math;
 import 'dart:ui' as ui;
 
-import 'package:dsh_app/ui/chat/dsh_ui/dsh_ui_model.dart';
-import 'package:dsh_app/ui/chat/dsh_ui/dsh_ui_plugin_controls.dart';
-import 'package:dsh_app/ui/chat/dsh_ui/dsh_ui_plugin_controls_state.dart';
-import 'package:dsh_app/ui/plugins/view/plugin_view.dart';
+import 'package:xagent/ui/chat/dsh_ui/dsh_ui_model.dart';
+import 'package:xagent/ui/chat/dsh_ui/dsh_ui_plugin_controls.dart';
+import 'package:xagent/ui/chat/dsh_ui/dsh_ui_plugin_controls_state.dart';
+import 'package:xagent/ui/plugins/view/plugin_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';

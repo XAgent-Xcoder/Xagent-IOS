@@ -2,11 +2,11 @@
 // reachable from the hub, every searchable entry with synonyms in both
 // languages, link ids that don't collide.
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/links/page_links.dart';
-import 'package:dsh_app/ui/features/feature_catalog.dart';
-import 'package:dsh_app/ui/phone/android_shell_page.dart';
-import 'package:dsh_app/ui/settings/index/settings_pages.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/links/page_links.dart';
+import 'package:xagent/ui/features/feature_catalog.dart';
+import 'package:xagent/ui/phone/android_shell_page.dart';
+import 'package:xagent/ui/settings/index/settings_pages.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 

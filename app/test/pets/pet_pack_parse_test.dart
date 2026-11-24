@@ -3,8 +3,8 @@
 // used to read are gone (copyright cleanup), so a minimal valid pack is spelled
 // out here instead.
 
-import 'package:dsh_app/pets/pet_pack.dart';
-import 'package:dsh_app/pets/pet_state.dart' show PetStateName;
+import 'package:xagent/pets/pet_pack.dart';
+import 'package:xagent/pets/pet_state.dart' show PetStateName;
 import 'package:flutter_test/flutter_test.dart';
 
 /// A minimal schema-1 pack that parses.

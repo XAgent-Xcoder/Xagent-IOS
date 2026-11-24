@@ -4,15 +4,15 @@
 // in-use channel's own switch, and that an old native module keeps the
 // three-way page.
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/ui/phone/background_preview.dart';
-import 'package:dsh_app/state/phone_state.dart';
-import 'package:dsh_app/ui/common/app_sheet.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
-import 'package:dsh_app/ui/common/risk_notice.dart';
-import 'package:dsh_app/ui/engine_settings/field_row.dart' show FieldBadge;
-import 'package:dsh_app/ui/phone/dnd_mode_page.dart';
-import 'package:dsh_app/ui/phone/phone_widgets.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/ui/phone/background_preview.dart';
+import 'package:xagent/state/phone_state.dart';
+import 'package:xagent/ui/common/app_sheet.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
+import 'package:xagent/ui/common/risk_notice.dart';
+import 'package:xagent/ui/engine_settings/field_row.dart' show FieldBadge;
+import 'package:xagent/ui/phone/dnd_mode_page.dart';
+import 'package:xagent/ui/phone/phone_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';

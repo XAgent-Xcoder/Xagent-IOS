@@ -8,22 +8,22 @@
 
 import 'dart:ui' show GestureSettings;
 
-import 'package:dsh_app/state/adaptive_layout_state.dart';
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/state/quick_panel_state.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/render/code_block.dart';
-import 'package:dsh_app/ui/engine/engine_screen.dart';
-import 'package:dsh_app/ui/features/all_features_page.dart';
-import 'package:dsh_app/ui/plugins/plugins_screen.dart';
-import 'package:dsh_app/ui/remote/remote_screen.dart';
-import 'package:dsh_app/ui/session/session_detail_page.dart';
-import 'package:dsh_app/ui/settings/search/settings_search_page.dart';
-import 'package:dsh_app/ui/settings/settings_screen.dart';
-import 'package:dsh_app/ui/shell/home_shell.dart';
-import 'package:dsh_app/ui/shell/quick_panel.dart';
-import 'package:dsh_app/ui/shell/sessions_drawer.dart';
-import 'package:dsh_app/ui/web/local_web_screen.dart';
+import 'package:xagent/state/adaptive_layout_state.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/state/quick_panel_state.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/render/code_block.dart';
+import 'package:xagent/ui/engine/engine_screen.dart';
+import 'package:xagent/ui/features/all_features_page.dart';
+import 'package:xagent/ui/plugins/plugins_screen.dart';
+import 'package:xagent/ui/remote/remote_screen.dart';
+import 'package:xagent/ui/session/session_detail_page.dart';
+import 'package:xagent/ui/settings/search/settings_search_page.dart';
+import 'package:xagent/ui/settings/settings_screen.dart';
+import 'package:xagent/ui/shell/home_shell.dart';
+import 'package:xagent/ui/shell/quick_panel.dart';
+import 'package:xagent/ui/shell/sessions_drawer.dart';
+import 'package:xagent/ui/web/local_web_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

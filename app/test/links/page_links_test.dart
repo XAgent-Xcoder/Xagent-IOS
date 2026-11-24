@@ -1,13 +1,13 @@
 // `dshgo://open/<page>`: only pages from the fixed list open, pushed over the
 // home route; anything else gets the router's toast and nothing else happens.
 
-import 'package:dsh_app/links/app_links.dart';
-import 'package:dsh_app/links/page_links.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/ui/features/feature_catalog.dart';
-import 'package:dsh_app/ui/phone/phone_control_screen.dart';
-import 'package:dsh_app/ui/settings/index/settings_pages.dart';
-import 'package:dsh_app/ui/settings/index/spot_anchor.dart';
+import 'package:xagent/links/app_links.dart';
+import 'package:xagent/links/page_links.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/ui/features/feature_catalog.dart';
+import 'package:xagent/ui/phone/phone_control_screen.dart';
+import 'package:xagent/ui/settings/index/settings_pages.dart';
+import 'package:xagent/ui/settings/index/spot_anchor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

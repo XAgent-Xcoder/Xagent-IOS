@@ -1,4 +1,4 @@
-import 'package:dsh_app/companion/companion_context.dart';
+import 'package:xagent/companion/companion_context.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

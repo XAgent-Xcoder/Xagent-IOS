@@ -3,15 +3,15 @@
 
 import 'dart:async';
 
-import 'package:dsh_app/forum/discourse_client.dart';
-import 'package:dsh_app/forum/forum_models.dart';
-import 'package:dsh_app/forum/forum_share.dart';
-import 'package:dsh_app/links/app_links.dart';
-import 'package:dsh_app/share_code/share_link.dart';
-import 'package:dsh_app/ui/forum/forum_composer_sheet.dart';
-import 'package:dsh_app/ui/forum/forum_home_page.dart';
-import 'package:dsh_app/ui/forum/forum_link_host.dart';
-import 'package:dsh_app/ui/forum/forum_topic_page.dart';
+import 'package:xagent/forum/discourse_client.dart';
+import 'package:xagent/forum/forum_models.dart';
+import 'package:xagent/forum/forum_share.dart';
+import 'package:xagent/links/app_links.dart';
+import 'package:xagent/share_code/share_link.dart';
+import 'package:xagent/ui/forum/forum_composer_sheet.dart';
+import 'package:xagent/ui/forum/forum_home_page.dart';
+import 'package:xagent/ui/forum/forum_link_host.dart';
+import 'package:xagent/ui/forum/forum_topic_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;

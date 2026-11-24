@@ -2,20 +2,20 @@
 
 import 'dart:io';
 
-import 'package:dsh_app/share_code/profile_export.dart';
-import 'package:dsh_app/share_code/share_codec.dart';
-import 'package:dsh_app/share_code/share_link.dart';
-import 'package:dsh_app/share_code/share_models.dart';
-import 'package:dsh_app/share_code/share_net.dart';
-import 'package:dsh_app/ui/common/app_sheet.dart' show SheetDragHandle;
-import 'package:dsh_app/ui/share_code/import_sheet.dart';
-import 'package:dsh_app/ui/share_code/plugin_share_sheet.dart';
-import 'package:dsh_app/ui/share_code/profile_share_sheet.dart';
-import 'package:dsh_app/ui/share_code/share_code_host.dart';
-import 'package:dsh_app/ui/share_code/share_code_widgets.dart';
-import 'package:dsh_app/ui/share/share_card.dart';
-import 'package:dsh_app/ui/share/share_content.dart';
-import 'package:dsh_app/ui/share/share_image_page.dart';
+import 'package:xagent/share_code/profile_export.dart';
+import 'package:xagent/share_code/share_codec.dart';
+import 'package:xagent/share_code/share_link.dart';
+import 'package:xagent/share_code/share_models.dart';
+import 'package:xagent/share_code/share_net.dart';
+import 'package:xagent/ui/common/app_sheet.dart' show SheetDragHandle;
+import 'package:xagent/ui/share_code/import_sheet.dart';
+import 'package:xagent/ui/share_code/plugin_share_sheet.dart';
+import 'package:xagent/ui/share_code/profile_share_sheet.dart';
+import 'package:xagent/ui/share_code/share_code_host.dart';
+import 'package:xagent/ui/share_code/share_code_widgets.dart';
+import 'package:xagent/ui/share/share_card.dart';
+import 'package:xagent/ui/share/share_content.dart';
+import 'package:xagent/ui/share/share_image_page.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

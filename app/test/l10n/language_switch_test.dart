@@ -2,12 +2,12 @@
 // once, also text read through appL10n (no BuildContext dependency), and the
 // choice is stored for the next launch and for the native side.
 
-import 'package:dsh_app/app.dart';
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/state/appearance_state.dart';
-import 'package:dsh_app/state/locale_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/settings/language_tile.dart';
+import 'package:xagent/app.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/state/appearance_state.dart';
+import 'package:xagent/state/locale_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/settings/language_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

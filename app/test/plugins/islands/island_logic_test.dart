@@ -4,10 +4,10 @@
 
 import 'dart:io';
 
-import 'package:dsh_app/plugins/seams/seat_models.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/ui/plugins/islands/islands.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/plugins/seams/seat_models.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/ui/plugins/islands/islands.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

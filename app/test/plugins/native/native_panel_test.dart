@@ -4,15 +4,15 @@
 // that revision, and its controls go back to the plugin with the action
 // name and value; `patch` and `stale` land on it.
 
-import 'package:dsh_app/plugins/native/native_model.dart';
-import 'package:dsh_app/plugins/seams/seams.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/ui/features/feature_catalog.dart';
-import 'package:dsh_app/ui/plugins/native/native_panel.dart';
-import 'package:dsh_app/ui/plugins/seats/plugin_seat_page.dart';
-import 'package:dsh_app/ui/plugins/seats/session_plugins_tab.dart';
-import 'package:dsh_app/ui/plugins/view/plugin_view.dart';
-import 'package:dsh_app/ui/theme/app_icons.dart';
+import 'package:xagent/plugins/native/native_model.dart';
+import 'package:xagent/plugins/seams/seams.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/ui/features/feature_catalog.dart';
+import 'package:xagent/ui/plugins/native/native_panel.dart';
+import 'package:xagent/ui/plugins/seats/plugin_seat_page.dart';
+import 'package:xagent/ui/plugins/seats/session_plugins_tab.dart';
+import 'package:xagent/ui/plugins/view/plugin_view.dart';
+import 'package:xagent/ui/theme/app_icons.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

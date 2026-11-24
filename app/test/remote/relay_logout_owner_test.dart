@@ -4,15 +4,15 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/remote/relay/dsh_remote_backend.dart';
-import 'package:dsh_app/remote/secret_store.dart' as app_secrets;
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/ui/remote/relay_login_sheet.dart';
-import 'package:dsh_app/ui/remote/remote_screen.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/remote/relay/dsh_remote_backend.dart';
+import 'package:xagent/remote/secret_store.dart' as app_secrets;
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/ui/remote/relay_login_sheet.dart';
+import 'package:xagent/ui/remote/remote_screen.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:dsh_remote/dsh_remote.dart' as remote;
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';

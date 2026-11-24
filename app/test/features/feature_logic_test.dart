@@ -5,15 +5,15 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/state/commands_state.dart';
-import 'package:dsh_app/ui/chat/slash_palette.dart';
-import 'package:dsh_app/ui/engine_settings/runtime_settings_pages.dart';
-import 'package:dsh_app/links/page_links.dart';
-import 'package:dsh_app/ui/features/feature_catalog.dart';
-import 'package:dsh_app/ui/features/feature_format.dart';
-import 'package:dsh_app/ui/settings/index/spots.dart';
-import 'package:dsh_app/ui/terminal/terminal_page.dart';
-import 'package:dsh_app/ui/web/web_target.dart';
+import 'package:xagent/state/commands_state.dart';
+import 'package:xagent/ui/chat/slash_palette.dart';
+import 'package:xagent/ui/engine_settings/runtime_settings_pages.dart';
+import 'package:xagent/links/page_links.dart';
+import 'package:xagent/ui/features/feature_catalog.dart';
+import 'package:xagent/ui/features/feature_format.dart';
+import 'package:xagent/ui/settings/index/spots.dart';
+import 'package:xagent/ui/terminal/terminal_page.dart';
+import 'package:xagent/ui/web/web_target.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 

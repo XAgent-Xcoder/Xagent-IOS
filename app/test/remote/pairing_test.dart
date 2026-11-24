@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:dsh_app/remote/relay/relay_backend.dart';
-import 'package:dsh_app/state/account_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/remote_pairing_state.dart';
-import 'package:dsh_app/ui/remote/pairing_page.dart';
+import 'package:xagent/remote/relay/relay_backend.dart';
+import 'package:xagent/state/account_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/remote_pairing_state.dart';
+import 'package:xagent/ui/remote/pairing_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/phone/phone_channel.dart';
-import 'package:dsh_app/ui/phone/phone_skill_section.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/phone/phone_channel.dart';
+import 'package:xagent/ui/phone/phone_skill_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';

@@ -1,12 +1,12 @@
 import 'dart:io';
 
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/share_code/guest_fs.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/features_state.dart';
-import 'package:dsh_app/state/permission_default_repair.dart';
-import 'package:dsh_app/state/settings_state.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/share_code/guest_fs.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/features_state.dart';
+import 'package:xagent/state/permission_default_repair.dart';
+import 'package:xagent/state/settings_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:dsh_app/state/phone_state.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
-import 'package:dsh_app/ui/phone/dnd_mode_page.dart';
+import 'package:xagent/state/phone_state.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
+import 'package:xagent/ui/phone/dnd_mode_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';

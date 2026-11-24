@@ -3,8 +3,8 @@ import 'dart:io';
 import 'dart:math';
 import 'dart:typed_data';
 
-import 'package:dsh_app/share_hosted/hosted_crypto.dart';
-import 'package:dsh_app/share_hosted/hosted_link.dart';
+import 'package:xagent/share_hosted/hosted_crypto.dart';
+import 'package:xagent/share_hosted/hosted_link.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 final _fixtures = '${Directory.current.path}/test/share_hosted/fixtures';

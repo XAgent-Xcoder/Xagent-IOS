@@ -6,11 +6,11 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:dsh_app/state/drawer_view_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/session_attention_state.dart';
-import 'package:dsh_app/state/session_created_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
+import 'package:xagent/state/drawer_view_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/session_attention_state.dart';
+import 'package:xagent/state/session_created_state.dart';
+import 'package:xagent/state/sessions_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

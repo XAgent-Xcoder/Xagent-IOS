@@ -6,14 +6,14 @@
 
 import 'dart:async';
 
-import 'package:dsh_app/plugins/native/native_model.dart';
-import 'package:dsh_app/plugins/native/native_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/ui/plugins/native/composer_capsules.dart';
-import 'package:dsh_app/ui/plugins/native/composer_strip.dart';
-import 'package:dsh_app/ui/plugins/native/native_composer_bar.dart';
-import 'package:dsh_app/ui/plugins/native/native_panel.dart';
-import 'package:dsh_app/ui_config/ui_config.dart';
+import 'package:xagent/plugins/native/native_model.dart';
+import 'package:xagent/plugins/native/native_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/ui/plugins/native/composer_capsules.dart';
+import 'package:xagent/ui/plugins/native/composer_strip.dart';
+import 'package:xagent/ui/plugins/native/native_composer_bar.dart';
+import 'package:xagent/ui/plugins/native/native_panel.dart';
+import 'package:xagent/ui_config/ui_config.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

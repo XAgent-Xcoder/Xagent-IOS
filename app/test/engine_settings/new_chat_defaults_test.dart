@@ -1,14 +1,14 @@
 import 'dart:async';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/engine_settings_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/model_defaults_state.dart';
-import 'package:dsh_app/state/models_state.dart';
-import 'package:dsh_app/state/read_list_identity.dart';
-import 'package:dsh_app/ui/providers/new_chat_defaults_card.dart';
-import 'package:dsh_app/ui/providers/providers_page.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/engine_settings_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/model_defaults_state.dart';
+import 'package:xagent/state/models_state.dart';
+import 'package:xagent/state/read_list_identity.dart';
+import 'package:xagent/ui/providers/new_chat_defaults_card.dart';
+import 'package:xagent/ui/providers/providers_page.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

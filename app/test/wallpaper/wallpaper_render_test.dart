@@ -6,13 +6,13 @@
 
 import 'dart:ui' as ui;
 
-import 'package:dsh_app/ui/theme/accent.dart';
-import 'package:dsh_app/ui/theme/app_theme.dart';
-import 'package:dsh_app/ui/theme/palette.dart';
-import 'package:dsh_app/ui/theme/semantic_colors.dart';
-import 'package:dsh_app/wallpaper/custom_wallpaper.dart';
-import 'package:dsh_app/wallpaper/wallpaper_look.dart';
-import 'package:dsh_app/wallpaper/wallpaper_render.dart';
+import 'package:xagent/ui/theme/accent.dart';
+import 'package:xagent/ui/theme/app_theme.dart';
+import 'package:xagent/ui/theme/palette.dart';
+import 'package:xagent/ui/theme/semantic_colors.dart';
+import 'package:xagent/wallpaper/custom_wallpaper.dart';
+import 'package:xagent/wallpaper/wallpaper_look.dart';
+import 'package:xagent/wallpaper/wallpaper_render.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

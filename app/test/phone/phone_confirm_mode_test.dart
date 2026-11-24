@@ -1,7 +1,7 @@
-import 'package:dsh_app/phone/phone_channel.dart';
-import 'package:dsh_app/ui/common/app_sheet.dart';
-import 'package:dsh_app/ui/common/risk_notice.dart';
-import 'package:dsh_app/ui/phone/phone_control_screen.dart';
+import 'package:xagent/phone/phone_channel.dart';
+import 'package:xagent/ui/common/app_sheet.dart';
+import 'package:xagent/ui/common/risk_notice.dart';
+import 'package:xagent/ui/phone/phone_control_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

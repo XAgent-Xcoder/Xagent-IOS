@@ -2,19 +2,19 @@
 // (未就绪 / safe mode / remote host), permission rows with fixes, the test read,
 // a running task, the recent log and live status events.
 
-import 'package:dsh_app/state/compose_inbox.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/phone_state.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
-import 'package:dsh_app/ui/common/overview_card.dart';
-import 'package:dsh_app/ui/phone/action_log_page.dart';
-import 'package:dsh_app/ui/phone/dnd_mode_page.dart';
-import 'package:dsh_app/ui/phone/phone_control_screen.dart';
-import 'package:dsh_app/ui/phone/phone_background_guide.dart';
-import 'package:dsh_app/ui/phone/phone_widgets.dart';
-import 'package:dsh_app/ui/phone/restricted_settings_guide.dart';
-import 'package:dsh_app/ui/settings/background_guide_page.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/state/compose_inbox.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/phone_state.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
+import 'package:xagent/ui/common/overview_card.dart';
+import 'package:xagent/ui/phone/action_log_page.dart';
+import 'package:xagent/ui/phone/dnd_mode_page.dart';
+import 'package:xagent/ui/phone/phone_control_screen.dart';
+import 'package:xagent/ui/phone/phone_background_guide.dart';
+import 'package:xagent/ui/phone/phone_widgets.dart';
+import 'package:xagent/ui/phone/restricted_settings_guide.dart';
+import 'package:xagent/ui/settings/background_guide_page.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

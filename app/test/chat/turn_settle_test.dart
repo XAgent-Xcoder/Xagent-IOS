@@ -1,10 +1,10 @@
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/ui/chat/chat_list.dart';
-import 'package:dsh_app/ui/chat/widgets/assistant_message.dart';
-import 'package:dsh_app/ui/chat/widgets/tool_row.dart';
-import 'package:dsh_app/ui/chat/widgets/turn_process.dart';
-import 'package:dsh_app/ui/theme/app_icons.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/ui/chat/chat_list.dart';
+import 'package:xagent/ui/chat/widgets/assistant_message.dart';
+import 'package:xagent/ui/chat/widgets/tool_row.dart';
+import 'package:xagent/ui/chat/widgets/turn_process.dart';
+import 'package:xagent/ui/theme/app_icons.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

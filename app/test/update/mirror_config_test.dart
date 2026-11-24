@@ -5,9 +5,9 @@
 
 import 'dart:convert';
 
-import 'package:dsh_app/update/checker.dart';
-import 'package:dsh_app/update/release.dart';
-import 'package:dsh_app/update/update_config.dart';
+import 'package:xagent/update/checker.dart';
+import 'package:xagent/update/release.dart';
+import 'package:xagent/update/update_config.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'support.dart';

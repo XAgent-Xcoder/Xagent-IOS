@@ -1,8 +1,8 @@
-import 'package:dsh_app/diagnostics/diagnostics_bundle.dart';
-import 'package:dsh_app/diagnostics/diagnostics_channel.dart';
-import 'package:dsh_app/diagnostics/diagnostics_publish.dart';
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/state/settings_state.dart';
+import 'package:xagent/diagnostics/diagnostics_bundle.dart';
+import 'package:xagent/diagnostics/diagnostics_channel.dart';
+import 'package:xagent/diagnostics/diagnostics_publish.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/state/settings_state.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

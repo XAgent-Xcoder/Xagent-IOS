@@ -4,19 +4,19 @@
 // nothing matched and not in 网页模式); and the two ways in (the hub's
 // capsule, ⚙ held down in the drawer).
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/ask_ai.dart';
-import 'package:dsh_app/state/compose_inbox.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/features/feature_catalog.dart';
-import 'package:dsh_app/ui/settings/index/spot_anchor.dart';
-import 'package:dsh_app/ui/settings/index/spots.dart';
-import 'package:dsh_app/ui/settings/search/settings_search.dart';
-import 'package:dsh_app/ui/settings/search/settings_search_page.dart';
-import 'package:dsh_app/ui/settings/settings_screen.dart';
-import 'package:dsh_app/ui/shell/sessions_drawer.dart' show IdentityBar;
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/ask_ai.dart';
+import 'package:xagent/state/compose_inbox.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/features/feature_catalog.dart';
+import 'package:xagent/ui/settings/index/spot_anchor.dart';
+import 'package:xagent/ui/settings/index/spots.dart';
+import 'package:xagent/ui/settings/search/settings_search.dart';
+import 'package:xagent/ui/settings/search/settings_search_page.dart';
+import 'package:xagent/ui/settings/settings_screen.dart';
+import 'package:xagent/ui/shell/sessions_drawer.dart' show IdentityBar;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;

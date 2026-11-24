@@ -5,13 +5,13 @@
 
 import 'dart:async';
 
-import 'package:dsh_app/state/providers_state.dart';
-import 'package:dsh_app/ui/common/segmented_pill.dart';
-import 'package:dsh_app/ui/common/sheet_title_bar.dart';
-import 'package:dsh_app/ui/providers/provider_form_page.dart';
-import 'package:dsh_app/ui/settings/settings_widgets.dart' show SettingsMetrics;
-import 'package:dsh_app/ui/theme/app_icons.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/state/providers_state.dart';
+import 'package:xagent/ui/common/segmented_pill.dart';
+import 'package:xagent/ui/common/sheet_title_bar.dart';
+import 'package:xagent/ui/providers/provider_form_page.dart';
+import 'package:xagent/ui/settings/settings_widgets.dart' show SettingsMetrics;
+import 'package:xagent/ui/theme/app_icons.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

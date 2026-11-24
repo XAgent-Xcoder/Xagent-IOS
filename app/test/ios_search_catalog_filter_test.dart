@@ -3,13 +3,13 @@
 //
 //   flutter test test/ios_search_catalog_filter_test.dart
 
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/platform_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/features/feature_catalog.dart';
-import 'package:dsh_app/ui/settings/index/settings_pages.dart';
-import 'package:dsh_app/ui/settings/search/settings_search_page.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/platform_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/features/feature_catalog.dart';
+import 'package:xagent/ui/settings/index/settings_pages.dart';
+import 'package:xagent/ui/settings/search/settings_search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;
 import 'package:flutter_test/flutter_test.dart';

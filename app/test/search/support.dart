@@ -2,7 +2,7 @@
 
 import 'dart:async';
 
-import 'package:dsh_app/state/session_search.dart';
+import 'package:xagent/state/session_search.dart';
 import 'package:dsh_client/dsh_client.dart';
 
 import '../shell/golden_harness.dart';

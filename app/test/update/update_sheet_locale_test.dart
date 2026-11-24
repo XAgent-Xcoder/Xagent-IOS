@@ -3,12 +3,12 @@
 // written as 「### 中文 … ### English …」, Chinese when the release has
 // nothing in the app's language. The split survives the cached offer.
 
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/state/update_state.dart';
-import 'package:dsh_app/ui/update/update_sheet.dart';
-import 'package:dsh_app/update/release.dart';
-import 'package:dsh_app/update/version.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/state/update_state.dart';
+import 'package:xagent/ui/update/update_sheet.dart';
+import 'package:xagent/update/release.dart';
+import 'package:xagent/update/version.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:dsh_app/companion/companion_initiative.dart';
-import 'package:dsh_app/companion/companion_initiative_owner.dart';
-import 'package:dsh_app/companion/companion_elapsed_clock.dart';
+import 'package:xagent/companion/companion_initiative.dart';
+import 'package:xagent/companion/companion_initiative_owner.dart';
+import 'package:xagent/companion/companion_elapsed_clock.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

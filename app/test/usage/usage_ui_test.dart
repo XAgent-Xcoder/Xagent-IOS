@@ -8,10 +8,10 @@
 //
 //   flutter test --update-goldens test/usage/usage_ui_test.dart
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/ui/onboarding/welcome_page.dart';
-import 'package:dsh_app/ui/settings/privacy_page.dart';
-import 'package:dsh_app/usage/usage_stats.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/ui/onboarding/welcome_page.dart';
+import 'package:xagent/ui/settings/privacy_page.dart';
+import 'package:xagent/usage/usage_stats.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';

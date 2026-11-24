@@ -6,15 +6,15 @@
 // ✕ takes the +'s: all four are the same 36 circle in the same two seats. A new
 // line grows the capsule from its bottom edge, and a pinned list follows it.
 
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/composer.dart';
-import 'package:dsh_app/ui/chat/mention/mention_text_controller.dart';
-import 'package:dsh_app/ui/chat/voice/voice_controller.dart';
-import 'package:dsh_app/ui/chat/voice/voice_widgets.dart';
-import 'package:dsh_app/ui/chat/widgets/attachments.dart';
-import 'package:dsh_app/ui/theme/app_icons.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/composer.dart';
+import 'package:xagent/ui/chat/mention/mention_text_controller.dart';
+import 'package:xagent/ui/chat/voice/voice_controller.dart';
+import 'package:xagent/ui/chat/voice/voice_widgets.dart';
+import 'package:xagent/ui/chat/widgets/attachments.dart';
+import 'package:xagent/ui/theme/app_icons.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

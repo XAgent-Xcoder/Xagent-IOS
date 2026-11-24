@@ -5,7 +5,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:dsh_app/share_code/conversation_share.dart';
+import 'package:xagent/share_code/conversation_share.dart';
 
 final richStart = DateTime.utc(2026, 10, 24, 14, 2);
 

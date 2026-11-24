@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:dsh_app/voice/voice_model_assets.dart';
+import 'package:xagent/voice/voice_model_assets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// `runtime/assets.json` of @deepseek-ai/dsh-experimental-speech-to-text-sensevoice 0.2.1-rc.2.

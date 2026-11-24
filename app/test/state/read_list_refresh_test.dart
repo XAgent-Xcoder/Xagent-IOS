@@ -1,16 +1,16 @@
 import 'dart:async';
 
-import 'package:dsh_app/state/bots_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/drawer_view_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/models_state.dart';
-import 'package:dsh_app/state/plugins_state.dart';
-import 'package:dsh_app/state/providers_state.dart';
-import 'package:dsh_app/state/read_list_cache.dart';
-import 'package:dsh_app/state/read_list_identity.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/state/workspaces_state.dart';
+import 'package:xagent/state/bots_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/drawer_view_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/models_state.dart';
+import 'package:xagent/state/plugins_state.dart';
+import 'package:xagent/state/providers_state.dart';
+import 'package:xagent/state/read_list_cache.dart';
+import 'package:xagent/state/read_list_identity.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/state/workspaces_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;

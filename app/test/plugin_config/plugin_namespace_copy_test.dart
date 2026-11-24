@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/state/engine_settings_state.dart';
-import 'package:dsh_app/ui/engine_settings/namespace_copy.dart';
-import 'package:dsh_app/ui/engine_settings/plugin_namespace_copy_zh.dart';
-import 'package:dsh_app/ui/engine_settings/schema_fields.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/state/engine_settings_state.dart';
+import 'package:xagent/ui/engine_settings/namespace_copy.dart';
+import 'package:xagent/ui/engine_settings/plugin_namespace_copy_zh.dart';
+import 'package:xagent/ui/engine_settings/schema_fields.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

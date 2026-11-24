@@ -4,21 +4,21 @@
 // early waits on its own page; a sign-in waits for the runtime; failures,
 // resuming after the app went away, and the remote way.
 
-import 'package:dsh_app/performance/performance_state.dart';
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/appearance_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/onboarding_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/onboarding/access_step.dart';
-import 'package:dsh_app/ui/onboarding/appearance_step.dart';
-import 'package:dsh_app/ui/onboarding/connect_page.dart';
-import 'package:dsh_app/ui/onboarding/onboarding_flow.dart';
-import 'package:dsh_app/ui/onboarding/runtime_setup_page.dart';
-import 'package:dsh_app/ui/onboarding/setup_progress.dart';
-import 'package:dsh_app/ui/remote/remote_screen.dart';
-import 'package:dsh_app/ui/shell/root_gate.dart';
+import 'package:xagent/performance/performance_state.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/appearance_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/onboarding_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/onboarding/access_step.dart';
+import 'package:xagent/ui/onboarding/appearance_step.dart';
+import 'package:xagent/ui/onboarding/connect_page.dart';
+import 'package:xagent/ui/onboarding/onboarding_flow.dart';
+import 'package:xagent/ui/onboarding/runtime_setup_page.dart';
+import 'package:xagent/ui/onboarding/setup_progress.dart';
+import 'package:xagent/ui/remote/remote_screen.dart';
+import 'package:xagent/ui/shell/root_gate.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

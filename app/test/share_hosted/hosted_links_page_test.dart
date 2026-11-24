@@ -2,12 +2,12 @@
 // geometry, and light / dark goldens. Regenerate the goldens with
 // `flutter test --update-goldens test/share_hosted/hosted_links_page_test.dart`.
 
-import 'package:dsh_app/share_hosted/hosted_client.dart';
-import 'package:dsh_app/share_hosted/hosted_crypto.dart';
-import 'package:dsh_app/share_hosted/hosted_link.dart';
-import 'package:dsh_app/share_hosted/hosted_links_state.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
-import 'package:dsh_app/ui/share_hosted/hosted_links_page.dart';
+import 'package:xagent/share_hosted/hosted_client.dart';
+import 'package:xagent/share_hosted/hosted_crypto.dart';
+import 'package:xagent/share_hosted/hosted_link.dart';
+import 'package:xagent/share_hosted/hosted_links_state.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
+import 'package:xagent/ui/share_hosted/hosted_links_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';

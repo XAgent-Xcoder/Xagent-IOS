@@ -10,14 +10,14 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:dsh_app/share_code/conversation_export.dart';
-import 'package:dsh_app/share_code/conversation_share.dart';
-import 'package:dsh_app/ui/replay/replay_frame.dart';
-import 'package:dsh_app/ui/replay/replay_timeline.dart';
+import 'package:xagent/share_code/conversation_export.dart';
+import 'package:xagent/share_code/conversation_share.dart';
+import 'package:xagent/ui/replay/replay_frame.dart';
+import 'package:xagent/ui/replay/replay_timeline.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:dsh_app/share_code/conversation_html.dart';
+import 'package:xagent/share_code/conversation_html.dart';
 
 import 'support/conversation_fixture.dart';
 import 'support/rich_conversation.dart';

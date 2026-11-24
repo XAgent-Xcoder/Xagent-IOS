@@ -9,17 +9,17 @@
 
 import 'dart:async';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/settings/index/spot_anchor.dart';
-import 'package:dsh_app/ui/settings/privacy_page.dart';
-import 'package:dsh_app/ui/shell/root_gate.dart';
-import 'package:dsh_app/ui/shell/usage_upgrade_notice.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
-import 'package:dsh_app/usage/usage_net.dart';
-import 'package:dsh_app/usage/usage_stats.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/settings/index/spot_anchor.dart';
+import 'package:xagent/ui/settings/privacy_page.dart';
+import 'package:xagent/ui/shell/root_gate.dart';
+import 'package:xagent/ui/shell/usage_upgrade_notice.dart';
+import 'package:xagent/ui/theme/theme.dart';
+import 'package:xagent/usage/usage_net.dart';
+import 'package:xagent/usage/usage_stats.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

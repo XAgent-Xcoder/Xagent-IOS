@@ -3,12 +3,12 @@
 //
 //   flutter test --update-goldens test/forum/forum_golden_test.dart
 
-import 'package:dsh_app/forum/forum_models.dart';
-import 'package:dsh_app/ui/forum/forum_account_sheet.dart';
-import 'package:dsh_app/ui/forum/forum_composer_sheet.dart';
-import 'package:dsh_app/ui/forum/forum_home_page.dart';
-import 'package:dsh_app/ui/forum/forum_notifications_page.dart';
-import 'package:dsh_app/ui/forum/forum_topic_page.dart';
+import 'package:xagent/forum/forum_models.dart';
+import 'package:xagent/ui/forum/forum_account_sheet.dart';
+import 'package:xagent/ui/forum/forum_composer_sheet.dart';
+import 'package:xagent/ui/forum/forum_home_page.dart';
+import 'package:xagent/ui/forum/forum_notifications_page.dart';
+import 'package:xagent/ui/forum/forum_topic_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

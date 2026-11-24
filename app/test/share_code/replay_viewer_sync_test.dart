@@ -8,8 +8,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:crypto/crypto.dart';
-import 'package:dsh_app/share_code/conversation_html.dart';
-import 'package:dsh_app/share_code/replay_viewer.g.dart';
+import 'package:xagent/share_code/conversation_html.dart';
+import 'package:xagent/share_code/replay_viewer.g.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

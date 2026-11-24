@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:dsh_app/phone/phone_approval.dart';
+import 'package:xagent/phone/phone_approval.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 

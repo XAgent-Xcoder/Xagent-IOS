@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:dsh_app/state/phone_state.dart';
-import 'package:dsh_app/ui/phone/phone_control_screen.dart';
+import 'package:xagent/state/phone_state.dart';
+import 'package:xagent/ui/phone/phone_control_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

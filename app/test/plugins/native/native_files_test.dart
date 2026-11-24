@@ -1,15 +1,15 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/plugins/native/native_capabilities.dart';
-import 'package:dsh_app/plugins/native/native_effects.dart';
-import 'package:dsh_app/plugins/native/native_file_platform.dart';
-import 'package:dsh_app/plugins/native/native_files.dart';
-import 'package:dsh_app/plugins/native/native_model.dart';
-import 'package:dsh_app/plugins/native/native_platform.dart';
-import 'package:dsh_app/plugins/native/native_state.dart';
-import 'package:dsh_app/ui/plugins/native/native_taps.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/plugins/native/native_capabilities.dart';
+import 'package:xagent/plugins/native/native_effects.dart';
+import 'package:xagent/plugins/native/native_file_platform.dart';
+import 'package:xagent/plugins/native/native_files.dart';
+import 'package:xagent/plugins/native/native_model.dart';
+import 'package:xagent/plugins/native/native_platform.dart';
+import 'package:xagent/plugins/native/native_state.dart';
+import 'package:xagent/ui/plugins/native/native_taps.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

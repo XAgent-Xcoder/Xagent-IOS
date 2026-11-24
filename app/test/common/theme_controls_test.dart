@@ -1,7 +1,7 @@
-import 'package:dsh_app/ui/common/capsule_chip.dart';
-import 'package:dsh_app/ui/common/status_chip.dart';
-import 'package:dsh_app/ui/common/streaming_cursor.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/ui/common/capsule_chip.dart';
+import 'package:xagent/ui/common/status_chip.dart';
+import 'package:xagent/ui/common/streaming_cursor.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

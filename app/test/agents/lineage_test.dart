@@ -5,21 +5,21 @@
 //
 //   flutter test --update-goldens test/agents/lineage_test.dart
 
-import 'package:dsh_app/state/agents_state.dart';
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/state/workspace_state.dart';
-import 'package:dsh_app/ui/agents/agent_widgets.dart';
-import 'package:dsh_app/ui/agents/header_agents.dart';
-import 'package:dsh_app/ui/agents/lineage_sheet.dart';
-import 'package:dsh_app/ui/chat/chat_header.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/empty_state.dart';
-import 'package:dsh_app/ui/chat/model_sheet.dart';
-import 'package:dsh_app/ui/chat/widgets/live_clock.dart';
-import 'package:dsh_app/ui/session/session_detail_page.dart';
-import 'package:dsh_app/ui/theme/app_icons.dart';
-import 'package:dsh_app/ui/theme/theme.dart' show GlassSurface;
+import 'package:xagent/state/agents_state.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/state/workspace_state.dart';
+import 'package:xagent/ui/agents/agent_widgets.dart';
+import 'package:xagent/ui/agents/header_agents.dart';
+import 'package:xagent/ui/agents/lineage_sheet.dart';
+import 'package:xagent/ui/chat/chat_header.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/empty_state.dart';
+import 'package:xagent/ui/chat/model_sheet.dart';
+import 'package:xagent/ui/chat/widgets/live_clock.dart';
+import 'package:xagent/ui/session/session_detail_page.dart';
+import 'package:xagent/ui/theme/app_icons.dart';
+import 'package:xagent/ui/theme/theme.dart' show GlassSurface;
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

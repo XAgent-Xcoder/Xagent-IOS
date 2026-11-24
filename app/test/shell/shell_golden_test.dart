@@ -5,20 +5,20 @@
 // Platform channels don't exist here, so every provider that would touch the
 // native runtime, secure storage or the network is replaced by a fake.
 
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/engine/engine_screen.dart';
-import 'package:dsh_app/ui/onboarding/api_key_page.dart';
-import 'package:dsh_app/ui/onboarding/onboarding_scaffold.dart';
-import 'package:dsh_app/ui/onboarding/runtime_setup_page.dart';
-import 'package:dsh_app/ui/onboarding/welcome_page.dart';
-import 'package:dsh_app/ui/remote/remote_screen.dart';
-import 'package:dsh_app/ui/settings/settings_screen.dart';
-import 'package:dsh_app/ui/shell/home_shell.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
-import 'package:dsh_app/ui/web/local_web_screen.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/engine/engine_screen.dart';
+import 'package:xagent/ui/onboarding/api_key_page.dart';
+import 'package:xagent/ui/onboarding/onboarding_scaffold.dart';
+import 'package:xagent/ui/onboarding/runtime_setup_page.dart';
+import 'package:xagent/ui/onboarding/welcome_page.dart';
+import 'package:xagent/ui/remote/remote_screen.dart';
+import 'package:xagent/ui/settings/settings_screen.dart';
+import 'package:xagent/ui/shell/home_shell.dart';
+import 'package:xagent/ui/theme/theme.dart';
+import 'package:xagent/ui/web/local_web_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

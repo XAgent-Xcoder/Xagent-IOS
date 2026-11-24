@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:dsh_app/state/plugins_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
+import 'package:xagent/state/plugins_state.dart';
+import 'package:xagent/state/hosts_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/widgets.dart';

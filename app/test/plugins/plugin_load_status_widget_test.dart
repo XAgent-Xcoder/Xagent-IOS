@@ -1,14 +1,14 @@
 import 'dart:async';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/compose_inbox.dart';
-import 'package:dsh_app/state/engine_settings_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
-import 'package:dsh_app/ui/engine/log_view.dart';
-import 'package:dsh_app/ui/plugins/plugin_load_status.dart';
-import 'package:dsh_app/ui/plugins/plugins_screen.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/compose_inbox.dart';
+import 'package:xagent/state/engine_settings_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
+import 'package:xagent/ui/engine/log_view.dart';
+import 'package:xagent/ui/plugins/plugin_load_status.dart';
+import 'package:xagent/ui/plugins/plugins_screen.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

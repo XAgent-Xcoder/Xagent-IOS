@@ -3,9 +3,9 @@
 //
 //   flutter test --update-goldens test/settings/voice_model_card_test.dart
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/state/voice_model_state.dart';
-import 'package:dsh_app/ui/settings/voice_settings_page.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/state/voice_model_state.dart';
+import 'package:xagent/ui/settings/voice_settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';

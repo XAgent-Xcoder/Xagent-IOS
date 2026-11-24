@@ -5,7 +5,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/update/update_http.dart';
+import 'package:xagent/update/update_http.dart';
 
 /// Everything filled in (example values, not the shipped ones).
 String sampleFeed({int revision = 7, String tagline = '开源项目，欢迎点星'}) => jsonEncode({

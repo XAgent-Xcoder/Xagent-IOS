@@ -6,18 +6,18 @@
 //
 //   flutter test --update-goldens test/landscape/landscape_golden_test.dart
 
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/session_search.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/session/session_detail_page.dart';
-import 'package:dsh_app/ui/settings/settings_screen.dart';
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/ui/share/share_image_page.dart';
-import 'package:dsh_app/ui/share/share_panel.dart';
-import 'package:dsh_app/ui/shell/session_search_page.dart';
-import 'package:dsh_app/ui/terminal/terminal_page.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/session_search.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/session/session_detail_page.dart';
+import 'package:xagent/ui/settings/settings_screen.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/ui/share/share_image_page.dart';
+import 'package:xagent/ui/share/share_panel.dart';
+import 'package:xagent/ui/shell/session_search_page.dart';
+import 'package:xagent/ui/terminal/terminal_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;
 import 'package:flutter_test/flutter_test.dart';

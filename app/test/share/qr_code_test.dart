@@ -8,7 +8,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/ui/share/qr_code.dart';
+import 'package:xagent/ui/share/qr_code.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 QrEcc _level(String l) => switch (l) {

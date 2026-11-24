@@ -1,7 +1,7 @@
-import 'package:dsh_app/forum/render/cooked.dart';
-import 'package:dsh_app/share_code/share_codec.dart';
-import 'package:dsh_app/share_code/share_link.dart';
-import 'package:dsh_app/share_code/share_models.dart';
+import 'package:xagent/forum/render/cooked.dart';
+import 'package:xagent/share_code/share_codec.dart';
+import 'package:xagent/share_code/share_link.dart';
+import 'package:xagent/share_code/share_models.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

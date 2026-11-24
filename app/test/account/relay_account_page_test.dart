@@ -5,11 +5,11 @@
 //
 //   flutter test test/account/relay_account_page_test.dart
 
-import 'package:dsh_app/remote/relay/relay_backend.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/platform_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/account/relay_account_page.dart';
+import 'package:xagent/remote/relay/relay_backend.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/platform_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/account/relay_account_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;
 import 'package:flutter_test/flutter_test.dart';

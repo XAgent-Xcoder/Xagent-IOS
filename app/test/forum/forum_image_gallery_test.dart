@@ -1,5 +1,5 @@
-import 'package:dsh_app/forum/render/cooked.dart';
-import 'package:dsh_app/ui/forum/forum_post_body.dart';
+import 'package:xagent/forum/render/cooked.dart';
+import 'package:xagent/ui/forum/forum_post_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

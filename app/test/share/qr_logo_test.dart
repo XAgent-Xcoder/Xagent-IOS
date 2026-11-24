@@ -15,8 +15,8 @@
 
 import 'dart:convert';
 
-import 'package:dsh_app/ui/share/qr_code.dart';
-import 'package:dsh_app/ui/shell/brand_mark.dart';
+import 'package:xagent/ui/share/qr_code.dart';
+import 'package:xagent/ui/shell/brand_mark.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

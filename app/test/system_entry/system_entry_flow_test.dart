@@ -6,16 +6,16 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/links/app_links.dart';
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/state/draft_store.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/state/voice_state.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/composer.dart';
-import 'package:dsh_app/ui/chat/widgets/attachments.dart';
-import 'package:dsh_app/ui/shell/system_entry_host.dart';
+import 'package:xagent/links/app_links.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/state/draft_store.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/state/voice_state.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/chat/composer.dart';
+import 'package:xagent/ui/chat/widgets/attachments.dart';
+import 'package:xagent/ui/shell/system_entry_host.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

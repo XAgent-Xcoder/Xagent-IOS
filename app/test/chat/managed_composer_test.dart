@@ -1,7 +1,7 @@
-import 'package:dsh_app/state/models_state.dart';
-import 'package:dsh_app/state/read_list_cache.dart';
-import 'package:dsh_app/ui/chat/composer.dart';
-import 'package:dsh_app/ui/chat/model_sheet.dart';
+import 'package:xagent/state/models_state.dart';
+import 'package:xagent/state/read_list_cache.dart';
+import 'package:xagent/ui/chat/composer.dart';
+import 'package:xagent/ui/chat/model_sheet.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

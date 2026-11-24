@@ -4,17 +4,17 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/companion/companion_keeper.dart';
-import 'package:dsh_app/companion/companion_pack.dart';
-import 'package:dsh_app/companion/companion_voice.dart';
-import 'package:dsh_app/ui/companion/companion_voice_page.dart';
+import 'package:xagent/companion/companion_keeper.dart';
+import 'package:xagent/companion/companion_pack.dart';
+import 'package:xagent/companion/companion_voice.dart';
+import 'package:xagent/ui/companion/companion_voice_page.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
-import 'package:dsh_app/l10n/gen/app_localizations.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/ui/companion/companion_page.dart';
-import 'package:dsh_app/ui/companion/companion_stage.dart';
-import 'package:dsh_app/ui/theme/app_theme.dart';
+import 'package:xagent/l10n/gen/app_localizations.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/ui/companion/companion_page.dart';
+import 'package:xagent/ui/companion/companion_stage.dart';
+import 'package:xagent/ui/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

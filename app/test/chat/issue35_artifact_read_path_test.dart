@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:dsh_app/state/artifact_files.dart';
-import 'package:dsh_app/state/artifacts.dart';
+import 'package:xagent/state/artifact_files.dart';
+import 'package:xagent/state/artifacts.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';

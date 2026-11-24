@@ -4,21 +4,21 @@
 //
 //   flutter test test/ios_review_fixes_test.dart
 
-import 'package:dsh_app/runtime/runtime_bridge.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/onboarding_state.dart';
-import 'package:dsh_app/state/platform_state.dart';
-import 'package:dsh_app/state/settings_state.dart';
-import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/shell/page_frame.dart';
-import 'package:dsh_app/ui/engine/engine_screen.dart';
-import 'package:dsh_app/ui/features/permission_page.dart';
-import 'package:dsh_app/ui/remote/remote_screen.dart';
-import 'package:dsh_app/ui/shell/home_shell.dart';
-import 'package:dsh_app/ui/shell/quick_panel.dart';
-import 'package:dsh_app/ui/settings/blocked_page.dart';
+import 'package:xagent/runtime/runtime_bridge.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/onboarding_state.dart';
+import 'package:xagent/state/platform_state.dart';
+import 'package:xagent/state/settings_state.dart';
+import 'package:xagent/ui/chat/chat_screen.dart';
+import 'package:xagent/ui/shell/page_frame.dart';
+import 'package:xagent/ui/engine/engine_screen.dart';
+import 'package:xagent/ui/features/permission_page.dart';
+import 'package:xagent/ui/remote/remote_screen.dart';
+import 'package:xagent/ui/shell/home_shell.dart';
+import 'package:xagent/ui/shell/quick_panel.dart';
+import 'package:xagent/ui/settings/blocked_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;

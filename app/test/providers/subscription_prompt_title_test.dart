@@ -1,5 +1,5 @@
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/ui/providers/subscription_sheet.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/ui/providers/subscription_sheet.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

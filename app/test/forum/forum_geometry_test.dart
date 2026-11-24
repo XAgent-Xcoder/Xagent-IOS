@@ -8,14 +8,14 @@
 // - 「发帖」 floats 12 from the right and bottom (above the gesture bar);
 // - a share card: the glyph's left inset equals the button's right inset.
 
-import 'package:dsh_app/ui/common/app_sheet.dart' show kSheetGutter;
-import 'package:dsh_app/ui/forum/forum_composer_sheet.dart';
-import 'package:dsh_app/ui/forum/forum_home_page.dart';
-import 'package:dsh_app/ui/forum/forum_post_body.dart';
-import 'package:dsh_app/ui/forum/forum_topic_page.dart';
-import 'package:dsh_app/ui/shell/page_frame.dart' show GlassIconButton;
-import 'package:dsh_app/ui/theme/app_icons.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/ui/common/app_sheet.dart' show kSheetGutter;
+import 'package:xagent/ui/forum/forum_composer_sheet.dart';
+import 'package:xagent/ui/forum/forum_home_page.dart';
+import 'package:xagent/ui/forum/forum_post_body.dart';
+import 'package:xagent/ui/forum/forum_topic_page.dart';
+import 'package:xagent/ui/shell/page_frame.dart' show GlassIconButton;
+import 'package:xagent/ui/theme/app_icons.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

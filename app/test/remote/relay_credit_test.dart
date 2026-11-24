@@ -2,15 +2,15 @@
 // github.com/liguobao/ds-harness-remote; its tap area reaches 48dp tall into
 // the empty space around the line and stays clear of every control near it.
 
-import 'package:dsh_app/remote/relay/relay_backend.dart';
-import 'package:dsh_app/remote/secret_store.dart';
-import 'package:dsh_app/runtime/runtime_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/state/star_prompt.dart' show starLinkOpenerProvider;
-import 'package:dsh_app/ui/common/app_sheet.dart' show SheetGroup;
-import 'package:dsh_app/ui/remote/relay_credit.dart';
-import 'package:dsh_app/ui/remote/remote_screen.dart';
+import 'package:xagent/remote/relay/relay_backend.dart';
+import 'package:xagent/remote/secret_store.dart';
+import 'package:xagent/runtime/runtime_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/state/star_prompt.dart' show starLinkOpenerProvider;
+import 'package:xagent/ui/common/app_sheet.dart' show SheetGroup;
+import 'package:xagent/ui/remote/relay_credit.dart';
+import 'package:xagent/ui/remote/remote_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';

@@ -1,4 +1,4 @@
-import 'package:dsh_app/companion/companion_state.dart';
+import 'package:xagent/companion/companion_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 

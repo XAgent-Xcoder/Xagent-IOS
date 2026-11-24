@@ -5,12 +5,12 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/state/media_generation.dart';
-import 'package:dsh_app/ui/engine_settings/engine_settings_page.dart' show curatedNamespaces;
-import 'package:dsh_app/ui/settings/index/spots.dart';
-import 'package:dsh_app/ui/settings/media_settings_page.dart';
-import 'package:dsh_app/ui/settings/search/settings_search.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/state/media_generation.dart';
+import 'package:xagent/ui/engine_settings/engine_settings_page.dart' show curatedNamespaces;
+import 'package:xagent/ui/settings/index/spots.dart';
+import 'package:xagent/ui/settings/media_settings_page.dart';
+import 'package:xagent/ui/settings/search/settings_search.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../engine_settings/support.dart';

@@ -1,13 +1,13 @@
 // Exercise the public archive flow during a synchronous selection notification.
 import 'dart:async';
 
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/drawer_view_state.dart';
-import 'package:dsh_app/state/sessions_state.dart';
-import 'package:dsh_app/state/workspaces_state.dart';
-import 'package:dsh_app/ui/shell/drawer/archive_notice.dart';
-import 'package:dsh_app/ui/shell/drawer/selection_bars.dart';
-import 'package:dsh_app/ui/shell/home_shell.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/drawer_view_state.dart';
+import 'package:xagent/state/sessions_state.dart';
+import 'package:xagent/state/workspaces_state.dart';
+import 'package:xagent/ui/shell/drawer/archive_notice.dart';
+import 'package:xagent/ui/shell/drawer/selection_bars.dart';
+import 'package:xagent/ui/shell/home_shell.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

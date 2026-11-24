@@ -2,13 +2,13 @@
 import 'dart:async';
 import 'dart:collection';
 
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/ui/chat/chat_list.dart';
-import 'package:dsh_app/ui/chat/chat_rows.dart';
-import 'package:dsh_app/ui/chat/render/markdown_body.dart';
-import 'package:dsh_app/ui/chat/widgets/assistant_message.dart';
-import 'package:dsh_app/ui/chat/widgets/turn_process.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/ui/chat/chat_list.dart';
+import 'package:xagent/ui/chat/chat_rows.dart';
+import 'package:xagent/ui/chat/render/markdown_body.dart';
+import 'package:xagent/ui/chat/widgets/assistant_message.dart';
+import 'package:xagent/ui/chat/widgets/turn_process.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

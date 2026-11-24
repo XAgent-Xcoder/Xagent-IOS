@@ -4,8 +4,8 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:dsh_app/share_code/guest_fs.dart';
-import 'package:dsh_app/share_code/share_net.dart';
+import 'package:xagent/share_code/guest_fs.dart';
+import 'package:xagent/share_code/share_net.dart';
 import 'package:dsh_client/dsh_client.dart';
 
 class FakeEngine extends DshCarrier {

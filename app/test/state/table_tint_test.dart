@@ -1,6 +1,6 @@
 import 'dart:ui' show Color;
 
-import 'package:dsh_app/state/table_tint_state.dart';
+import 'package:xagent/state/table_tint_state.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

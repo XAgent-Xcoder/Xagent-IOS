@@ -12,8 +12,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/state/engine_settings_state.dart' show credentialRefsOf;
-import 'package:dsh_app/state/media_generation.dart';
+import 'package:xagent/state/engine_settings_state.dart' show credentialRefsOf;
+import 'package:xagent/state/media_generation.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 

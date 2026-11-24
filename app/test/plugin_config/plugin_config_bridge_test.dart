@@ -8,11 +8,11 @@
 // the scope: DSH's own entries, listed and configurable on the Host, are
 // never read or written from here.
 
-import 'package:dsh_app/state/engine_settings_state.dart';
-import 'package:dsh_app/state/plugin_config/plugin_config_memory.dart';
-import 'package:dsh_app/state/plugin_config/plugin_config_state.dart';
-import 'package:dsh_app/state/plugins_state.dart' show installedPluginsProvider;
-import 'package:dsh_app/ui/plugins/config/plugin_config_entries.dart';
+import 'package:xagent/state/engine_settings_state.dart';
+import 'package:xagent/state/plugin_config/plugin_config_memory.dart';
+import 'package:xagent/state/plugin_config/plugin_config_state.dart';
+import 'package:xagent/state/plugins_state.dart' show installedPluginsProvider;
+import 'package:xagent/ui/plugins/config/plugin_config_entries.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;

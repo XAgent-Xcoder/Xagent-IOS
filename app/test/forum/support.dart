@@ -4,13 +4,13 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/forum/discourse_client.dart';
-import 'package:dsh_app/forum/forum_auth.dart';
-import 'package:dsh_app/forum/forum_models.dart';
-import 'package:dsh_app/forum/forum_state.dart';
-import 'package:dsh_app/share_code/share_codec.dart';
-import 'package:dsh_app/share_code/share_link.dart';
-import 'package:dsh_app/share_code/share_models.dart';
+import 'package:xagent/forum/discourse_client.dart';
+import 'package:xagent/forum/forum_auth.dart';
+import 'package:xagent/forum/forum_models.dart';
+import 'package:xagent/forum/forum_state.dart';
+import 'package:xagent/share_code/share_codec.dart';
+import 'package:xagent/share_code/share_link.dart';
+import 'package:xagent/share_code/share_models.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;
 
 Object? fixture(String name) => jsonDecode(File('test/forum/fixtures/$name').readAsStringSync());

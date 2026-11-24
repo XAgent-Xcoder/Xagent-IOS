@@ -1,10 +1,10 @@
 // ignore_for_file: depend_on_referenced_packages
 
-import 'package:dsh_app/plugins/seams/seams.dart';
-import 'package:dsh_app/state/hosts_state.dart';
-import 'package:dsh_app/ui/plugins/islands/islands.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
-import 'package:dsh_app/ui/web/web_view_page.dart';
+import 'package:xagent/plugins/seams/seams.dart';
+import 'package:xagent/state/hosts_state.dart';
+import 'package:xagent/ui/plugins/islands/islands.dart';
+import 'package:xagent/ui/theme/theme.dart';
+import 'package:xagent/ui/web/web_view_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

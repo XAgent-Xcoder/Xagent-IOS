@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dsh_app/state/bots_state.dart';
-import 'package:dsh_app/ui/bots/memory_card.dart';
-import 'package:dsh_app/ui/common/list_page_row.dart';
+import 'package:xagent/state/bots_state.dart';
+import 'package:xagent/ui/bots/memory_card.dart';
+import 'package:xagent/ui/common/list_page_row.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

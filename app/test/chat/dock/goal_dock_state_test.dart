@@ -5,8 +5,8 @@
 
 import 'dart:async';
 
-import 'package:dsh_app/state/chat_state.dart';
-import 'package:dsh_app/state/goal_dock_state.dart';
+import 'package:xagent/state/chat_state.dart';
+import 'package:xagent/state/goal_dock_state.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

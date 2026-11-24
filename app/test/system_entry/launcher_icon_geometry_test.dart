@@ -9,8 +9,8 @@ import 'dart:io';
 import 'dart:math' as math;
 import 'dart:ui';
 
-import 'package:dsh_app/links/launcher_entries.dart';
-import 'package:dsh_app/state/attachments.dart';
+import 'package:xagent/links/launcher_entries.dart';
+import 'package:xagent/state/attachments.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'support/vector_drawable.dart';

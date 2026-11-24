@@ -1,5 +1,5 @@
-import 'package:dsh_app/share_code/profile_export.dart';
-import 'package:dsh_app/ui/engine_settings/schema_fields.dart';
+import 'package:xagent/share_code/profile_export.dart';
+import 'package:xagent/ui/engine_settings/schema_fields.dart';
 import 'package:dsh_client/dsh_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 

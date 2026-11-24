@@ -9,11 +9,11 @@
 
 import 'dart:convert';
 
-import 'package:dsh_app/ui/chat/render/mermaid_preview.dart';
-import 'package:dsh_app/ui/common/side_insets.dart';
-import 'package:dsh_app/ui/shell/page_frame.dart';
-import 'package:dsh_app/ui/web/web_handle.dart';
-import 'package:dsh_app/ui/web/web_view_page.dart';
+import 'package:xagent/ui/chat/render/mermaid_preview.dart';
+import 'package:xagent/ui/common/side_insets.dart';
+import 'package:xagent/ui/shell/page_frame.dart';
+import 'package:xagent/ui/web/web_handle.dart';
+import 'package:xagent/ui/web/web_view_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

@@ -10,10 +10,10 @@
 //
 //   flutter test test/shell/brand_mark_test.dart
 
-import 'package:dsh_app/ui/share/share_card.dart';
-import 'package:dsh_app/ui/shell/brand_glyph.g.dart';
-import 'package:dsh_app/ui/shell/brand_mark.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/ui/share/share_card.dart';
+import 'package:xagent/ui/shell/brand_glyph.g.dart';
+import 'package:xagent/ui/shell/brand_mark.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

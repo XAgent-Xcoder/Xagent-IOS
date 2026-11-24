@@ -7,8 +7,8 @@
 
 import 'dart:convert';
 
-import 'package:dsh_app/ui/web/web_target.dart';
-import 'package:dsh_app/ui/web/web_view_page.dart';
+import 'package:xagent/ui/web/web_target.dart';
+import 'package:xagent/ui/web/web_view_page.dart';
 import 'package:dsh_client/dsh_client.dart' show PluginBundle;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';

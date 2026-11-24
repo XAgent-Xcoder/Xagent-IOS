@@ -1,4 +1,4 @@
-import 'package:dsh_app/companion/companion_initiative.dart';
+import 'package:xagent/companion/companion_initiative.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 typedef C = CompanionInitiativeController;

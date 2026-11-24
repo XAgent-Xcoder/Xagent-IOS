@@ -5,19 +5,19 @@
 // marks line up; and every page of the walk at 320 dp with 1.3× and 2× text,
 // in both languages, has nothing overflowing or cut short.
 
-import 'package:dsh_app/l10n/l10n.dart';
-import 'package:dsh_app/phone/phone_channel.dart';
-import 'package:dsh_app/state/access_state.dart';
-import 'package:dsh_app/state/connection_state.dart';
-import 'package:dsh_app/state/onboarding_state.dart';
-import 'package:dsh_app/ui/access/access_pick_page.dart';
-import 'package:dsh_app/ui/access/access_summary_page.dart';
-import 'package:dsh_app/ui/access/access_walk.dart';
-import 'package:dsh_app/ui/access/access_widgets.dart';
-import 'package:dsh_app/ui/common/side_insets.dart';
-import 'package:dsh_app/ui/settings/settings_widgets.dart';
-import 'package:dsh_app/ui/settings/system_access_page.dart';
-import 'package:dsh_app/ui/theme/theme.dart';
+import 'package:xagent/l10n/l10n.dart';
+import 'package:xagent/phone/phone_channel.dart';
+import 'package:xagent/state/access_state.dart';
+import 'package:xagent/state/connection_state.dart';
+import 'package:xagent/state/onboarding_state.dart';
+import 'package:xagent/ui/access/access_pick_page.dart';
+import 'package:xagent/ui/access/access_summary_page.dart';
+import 'package:xagent/ui/access/access_walk.dart';
+import 'package:xagent/ui/access/access_widgets.dart';
+import 'package:xagent/ui/common/side_insets.dart';
+import 'package:xagent/ui/settings/settings_widgets.dart';
+import 'package:xagent/ui/settings/system_access_page.dart';
+import 'package:xagent/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
