@@ -28,9 +28,14 @@ import 'package:flutter_test/flutter_test.dart';
 
 export '../chat/support/harness.dart' show testApp, usePhoneView, testTheme;
 
-/// A shipped pack, from `assets/pets/<id>/pack.json`.
+/// A test pack from `test/pets/fixtures/<id>/`: the pack's real geometry (canvas,
+/// baseline, hit boxes — brand-neutral numbers) plus synthetic solid-colour
+/// sprite sheets. The built-in art (the DSH-TUI mascots) is gone with the
+/// copyright cleanup, but the engine tests need sheets that decode, not the
+/// original pixels (the pixel-art test that checked their colours is deleted).
+/// Named [diskPack] because many tests call it directly by id.
 PetPack diskPack(String id) =>
-    PetPack.parse(jsonDecode(File('assets/pets/$id/pack.json').readAsStringSync()) as Map<String, Object?>);
+    PetPack.parse(jsonDecode(File('test/pets/fixtures/$id/pack.json').readAsStringSync()) as Map<String, Object?>, dir: 'test/pets/fixtures/$id');
 
 final deepy = diskPack('deepy-whale');
 final girl = diskPack('whale-girl');

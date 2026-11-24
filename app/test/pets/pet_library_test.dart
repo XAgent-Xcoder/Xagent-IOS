@@ -143,7 +143,7 @@ void main() {
 
   test('the shipped packs pass every check an import makes', () {
     for (final id in ['deepy-whale', 'whale-girl']) {
-      final dir = 'assets/pets/$id';
+      final dir = 'test/pets/fixtures/$id';
       final json = jsonDecode(File('$dir/pack.json').readAsStringSync()) as Map<String, Object?>;
       expect(overlayPackProblem(json), isNull, reason: id);
       final sheets = {for (final a in (json['animations']! as Map).values) (a as Map)['sheet'] as String};
