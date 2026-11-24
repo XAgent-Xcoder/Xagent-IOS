@@ -32,7 +32,7 @@ assistant revision 防丢）。缺的是移动端系统级能力。
 - `ConnectionDiagnostics` 已记录 phase/step/attempt/attempt/network（RTT、
   connectDurationMs、fallbackReason、iceProtocol），缺的是各阶段耗时分解。
 - 增量同步的 gap repair 与 resync 机制完整，缺的是把 `_lastSeq` 游标从内存
-  搬到本地存储。
+  搬到本地存储，并在跨进程恢复复用前确认本地历史与 Host 日志能够衔接。
 
 ## 设计原则
 
@@ -119,7 +119,8 @@ assistant revision 防丢）。缺的是移动端系统级能力。
 ## 三、持久化增量同步（Sync Engine）
 
 不新增协议参数。现有 `session/follow`（snapshot + 事件流）+ `session/page`
-（throughSeq/beforeSeq 分页）+ gap repair 逻辑正确，缺的是游标持久化。
+（throughSeq/beforeSeq 分页）+ gap repair 逻辑正确，缺的是游标持久化，
+以及跨进程恢复时先确认本地历史与 Host 日志能够衔接再复用游标。
 
 流程与现有实现对齐（不是先补页再订阅，那样补页期间产生的事件会落在两者之间）：
 
