@@ -62,6 +62,14 @@ Future<(double, double)> inkBand(WidgetTester tester, TextStyle style, TextScale
 Future<Rect> expectBrandLockup(WidgetTester tester, Finder lockup) async {
   final label = tester.widget<BrandLockup>(lockup).label;
   final glyph = tester.getRect(find.descendant(of: lockup, matching: find.byType(BrandMark)));
+  final outlined = find.descendant(of: lockup, matching: find.byType(BrandWordmark));
+  if (outlined.evaluate().isNotEmpty) {
+    final word = tester.getRect(outlined);
+    expect(word.width / word.height, closeTo(735 / 165, 0.001));
+    expect(glyph.height, closeTo(word.height * BrandLockup.glyphScale, 0.01));
+    expect(word.left - glyph.right, closeTo(word.height * BrandLockup.gapScale, 0.01));
+    return word;
+  }
   final wordFinder = find.descendant(of: lockup, matching: find.text(label));
   final word = tester.getRect(wordFinder);
   final paragraph = tester.renderObject<RenderParagraph>(wordFinder);

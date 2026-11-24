@@ -29,16 +29,7 @@ class WelcomePage extends StatelessWidget {
         const SizedBox(height: 36),
         FadeSlideIn(
           delay: const Duration(milliseconds: 180),
-          // Letter spacing also trails the last letter: pad the leading side
-          // by the same amount so the word sits on the centre line.
-          child: Padding(
-            padding: const EdgeInsets.only(left: 3),
-            child: Text(
-              AppInfo.wordmark,
-              textAlign: TextAlign.center,
-              style: AppType.wordmark(size: 15, color: colors.textTertiary).copyWith(letterSpacing: 3),
-            ),
-          ),
+          child: const Center(child: BrandWordmark(height: 20)),
         ),
         const SizedBox(height: 10),
         FadeSlideIn(

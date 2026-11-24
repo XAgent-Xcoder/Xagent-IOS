@@ -36,12 +36,18 @@ void main() {
     var cy = 0.0;
     var box = Rect.zero;
     var first = true;
-    for (final path in [BrandGlyph.body, BrandGlyph.bubble]) {
+    for (final path in [BrandGlyph.face0, BrandGlyph.face1]) {
       for (final poly in _outline(path)) {
+        var signedArea = 0.0;
         for (var i = 0; i < poly.length; i++) {
           final a = poly[i];
           final b = poly[(i + 1) % poly.length];
-          final k = a.dx * b.dy - b.dx * a.dy;
+          signedArea += a.dx * b.dy - b.dx * a.dy;
+        }
+        for (var i = 0; i < poly.length; i++) {
+          final a = poly[i];
+          final b = poly[(i + 1) % poly.length];
+          final k = signedArea.sign * (a.dx * b.dy - b.dx * a.dy);
           area += k;
           cx += (a.dx + b.dx) * k;
           cy += (a.dy + b.dy) * k;
@@ -59,19 +65,7 @@ void main() {
     expect(box.right, closeTo(BrandGlyph.box.right, 0.01));
     expect(box.bottom, closeTo(BrandGlyph.box.bottom, 0.01));
     expect(BrandGlyph.aspect, closeTo(BrandGlyph.box.width / BrandGlyph.box.height, 1e-5));
-    // The fin and the belly lie on the silhouette.
-    final body = BrandGlyph.body.getBounds();
-    for (final layer in [BrandGlyph.fin, BrandGlyph.belly]) {
-      final b = layer.getBounds();
-      expect(b.left >= body.left - 1e-3 && b.right <= body.right + 1e-3, isTrue);
-      expect(b.top >= body.top - 1e-3 && b.bottom <= body.bottom + 1e-3, isTrue);
-    }
-    // The glyph sits in the tile's visible square like the launcher's glyph.
-    expect(BrandGlyph.tileBox.contains(BrandGlyph.box.topLeft), isTrue);
-    expect(BrandGlyph.tileBox.contains(BrandGlyph.box.bottomRight), isTrue);
-    // Visual centre: a little below the box's middle, near the middle across.
-    expect(BrandMark.visualCentre.dy, inInclusiveRange(0.5, 0.65));
-    expect((BrandMark.visualCentre.dx - 0.5).abs(), lessThan(0.05));
+    expect(BrandGlyph.aspect, closeTo(357 / 280, 1e-5));
   });
 
   testWidgets('sizes: the glyph keeps its aspect, the tile is square', (tester) async {
@@ -92,8 +86,8 @@ void main() {
     expect(tester.getSize(find.byKey(const ValueKey('mono'))), Size(18 * BrandMark.aspect, 18));
     expect(tester.getSize(find.byKey(const ValueKey('tile'))), const Size(52, 52));
     final shift = BrandMark.opticalShift(40);
-    expect(shift.dy, lessThan(0));
-    expect(shift.dx.abs(), lessThan(40 * BrandMark.aspect * 0.05));
+    expect(shift.dx + BrandMark.visualCentre.dx * 40 * BrandMark.aspect, closeTo(20 * BrandMark.aspect, 0.01));
+    expect(shift.dy + BrandMark.visualCentre.dy * 40, closeTo(20, 0.01));
   });
 
   group('lockup', () {
