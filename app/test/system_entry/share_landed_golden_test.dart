@@ -37,7 +37,6 @@ Future<Uint8List> _photo(Color top, Color bottom) async {
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
     chatClock = () => DateTime(2026, 10, 24, 15, 20);
   });
   setUp(() => SharedPreferences.setMockInitialValues({}));

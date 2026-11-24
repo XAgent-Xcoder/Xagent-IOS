@@ -103,7 +103,6 @@ void main() {
     // Stored preferences answer at once, so nothing lands after a screen is gone.
     SharedPreferences.setMockInitialValues({});
     await tester.runAsync(loadTestFonts);
-    await tester.runAsync(WhaleSprites.load);
     chatClock = () => DateTime(2026, 10, 23, 15, 20);
     runClock = () => DateTime(2026, 10, 23, 15, 20);
     usePhoneSurface(tester);

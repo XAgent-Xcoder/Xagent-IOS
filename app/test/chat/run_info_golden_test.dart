@@ -33,7 +33,6 @@ Future<void> _pumpChat(WidgetTester tester, ChatHarness harness, Brightness brig
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
     chatClock = () => DateTime(2026, 10, 23, 15, 20);
   });
 

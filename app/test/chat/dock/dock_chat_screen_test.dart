@@ -70,7 +70,6 @@ Future<void> _framesWithoutSeam(WidgetTester tester, {int frames = 24}) async {
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
   });
 
   testWidgets('in the composer column: above the strip, same side edges', (tester) async {

@@ -19,7 +19,6 @@ import 'package:dsh_app/state/settings_state.dart';
 import 'package:dsh_app/ui/chat/chat_screen.dart';
 import 'package:dsh_app/ui/chat/model_sheet.dart' show ModelChip;
 import 'package:dsh_app/ui/chat/usage_sheet.dart' show ContextRing;
-import 'package:dsh_app/ui/chat/widgets/whale_tail.dart' show WhaleSprites;
 import 'package:dsh_app/ui/cordis/cordis_page.dart';
 import 'package:dsh_app/ui/engine/engine_screen.dart';
 import 'package:dsh_app/ui/features/all_features_page.dart';
@@ -116,7 +115,6 @@ Widget _golden(Widget home, {List<Override> overrides = const []}) =>
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
   });
   setUp(() {
     SharedPreferences.setMockInitialValues({});

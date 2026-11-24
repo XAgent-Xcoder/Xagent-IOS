@@ -154,7 +154,6 @@ ModelSelection? _picked(WidgetTester tester, ChatHarness harness) {
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
     chatClock = () => DateTime(2026, 10, 23, 15, 20);
   });
 

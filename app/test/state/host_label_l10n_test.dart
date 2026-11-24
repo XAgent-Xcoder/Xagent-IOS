@@ -49,7 +49,6 @@ void _useChinese() {
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  setUpAll(WhaleSprites.load);
   setUp(() => SharedPreferences.setMockInitialValues({}));
 
   test('本机 connected in Chinese reads "This phone" after switching to English', () async {

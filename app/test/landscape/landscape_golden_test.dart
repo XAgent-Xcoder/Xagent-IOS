@@ -11,7 +11,6 @@ import 'package:dsh_app/state/session_search.dart';
 import 'package:dsh_app/state/sessions_state.dart';
 import 'package:dsh_app/state/settings_state.dart';
 import 'package:dsh_app/ui/chat/chat_screen.dart';
-import 'package:dsh_app/ui/chat/widgets/whale_tail.dart' show WhaleSprites;
 import 'package:dsh_app/ui/session/session_detail_page.dart';
 import 'package:dsh_app/ui/settings/settings_screen.dart';
 import 'package:dsh_app/state/chat_state.dart';
@@ -78,7 +77,6 @@ class _Launcher extends StatelessWidget {
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
   });
   setUp(() {
     SharedPreferences.setMockInitialValues({});

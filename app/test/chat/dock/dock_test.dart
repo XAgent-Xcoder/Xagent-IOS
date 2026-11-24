@@ -29,7 +29,6 @@ double _dockHeight(WidgetTester tester) =>
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
   });
 
   group('todo bar', () {

@@ -93,7 +93,6 @@ TextEditingController _draft(WidgetTester tester) => tester.widget<TextField>(fi
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
   });
 
   testWidgets('a bare @: files, then subagents, then conversations', (tester) async {

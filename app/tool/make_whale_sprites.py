@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# DEPRECATED — the whale tail became the Xagent X (a vector in
+# brand_glyph.g.dart, drawn by whale_tail.dart's CustomPaint). The sprite
+# sheets in assets/whale/ are gone with the copyright cleanup; this script is
+# no longer used and is kept only for reference.
+
 """Builds the whale-tail activity sprites (app/assets/whale/) from the drawn
 originals in tool/whale_src/ (1.webp still, 2-4.gif loops; blue line art on a
 white, non-transparent background).

@@ -36,7 +36,6 @@ BackdropPicture? pictureUnder(WidgetTester tester, Finder under) {
 
 void main() {
   setUpAll(() async {
-    await WhaleSprites.load();
     chatClock = () => DateTime(2026, 10, 23, 15, 20);
     runClock = () => DateTime(2026, 10, 23, 15, 20);
   });

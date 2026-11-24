@@ -19,7 +19,6 @@ import 'support/sample_chat.dart';
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
     chatClock = () => DateTime(2026, 10, 23, 15, 20);
     // The activity pill's copy follows the date (holidays, weekends).
     runClock = () => DateTime(2026, 10, 23, 15, 20);

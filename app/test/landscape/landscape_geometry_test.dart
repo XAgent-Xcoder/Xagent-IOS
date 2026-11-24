@@ -18,7 +18,6 @@ import 'package:dsh_app/ui/chat/composer.dart';
 import 'package:dsh_app/ui/chat/dock/dock_stack.dart';
 import 'package:dsh_app/ui/chat/model_sheet.dart' show ModelChip;
 import 'package:dsh_app/ui/chat/widgets/approval_card.dart';
-import 'package:dsh_app/ui/chat/widgets/whale_tail.dart' show WhaleSprites;
 import 'package:dsh_app/ui/common/app_sheet.dart' show SheetDragHandle;
 import 'package:dsh_app/ui/session/session_detail_page.dart';
 import 'package:dsh_app/ui/settings/settings_screen.dart';
@@ -80,7 +79,6 @@ class _Launcher extends StatelessWidget {
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
   });
   setUp(() {
     SharedPreferences.setMockInitialValues({});

@@ -34,7 +34,6 @@ Future<void> _pumpFull(WidgetTester tester, {double textScale = 1}) => DockHarne
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
   });
   setUp(() => runClock = () => dockNow);
   tearDown(() => runClock = DateTime.now);

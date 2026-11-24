@@ -94,7 +94,6 @@ Future<void> _pumpStates(WidgetTester tester, Brightness brightness) async {
 void main() {
   setUpAll(() async {
     await loadTestFonts();
-    await WhaleSprites.load();
   });
   setUp(() => runClock = () => dockNow);
   tearDown(() => runClock = DateTime.now);
