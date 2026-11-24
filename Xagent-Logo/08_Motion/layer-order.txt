@@ -1,0 +1,1 @@
+画板 357 × 280，四张均保留原始坐标。由后向前：rear-lower、rear-upper、front-fold、lower-fold。叠加时位置设为一致。
