@@ -63,27 +63,6 @@ class AboutPage extends ConsumerWidget {
           ],
         ),
         SettingsSection(
-          title: l10n.hubAboutUpstream,
-          children: [
-            _authorLink(
-              context,
-              ref,
-              'about-upstream-author',
-              l10n.hubAboutUpstreamAuthor,
-              AppInfo.upstreamAuthor,
-              'https://github.com/${AppInfo.upstreamAuthor}',
-            ),
-            _authorLink(
-              context,
-              ref,
-              'about-fork',
-              l10n.hubAboutFork,
-              AppInfo.forkRepo,
-              AppInfo.forkRepoUrl,
-            ),
-          ],
-        ),
-        SettingsSection(
           title: l10n.hubAboutAuthor,
           children: [
             const SettingsTile(title: AppInfo.author),
@@ -94,6 +73,14 @@ class AboutPage extends ConsumerWidget {
               l10n.hubAboutGithub,
               '@${AppInfo.author}',
               AppInfo.authorGithubUrl,
+            ),
+            _authorLink(
+              context,
+              ref,
+              'about-fork',
+              l10n.hubAboutFork,
+              AppInfo.forkRepo,
+              AppInfo.forkRepoUrl,
             ),
           ],
         ),

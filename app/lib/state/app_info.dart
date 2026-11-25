@@ -33,11 +33,6 @@ abstract final class AppInfo {
   static const author = 'XAgent-Xcoder';
   static const authorGithubUrl = 'https://github.com/XAgent-Xcoder';
 
-  /// The upstream this fork is built from (the about page credits it).
-  static const upstreamAuthor = 'ccch1mneyyy';
-  static const upstreamRepo = 'ccch1mneyyy/dsh-go';
-  static const upstreamRepoUrl = 'https://github.com/$upstreamRepo';
-
   /// This fork's repository.
   static const forkRepo = 'XAgent-Xcoder/Xagent-IOS';
   static const forkRepoUrl = 'https://github.com/$forkRepo';
