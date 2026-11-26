@@ -28,6 +28,10 @@
 	<true/>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>voip</string>
+	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>用于在对话中拍照并作为附件发送</string>
 	<key>NSPhotoLibraryUsageDescription</key>

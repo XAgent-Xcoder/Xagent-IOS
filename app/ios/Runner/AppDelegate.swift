@@ -32,4 +32,16 @@ import UIKit
     dshGoChannels?.emitTap(payload: payload)
     completion()
   }
+
+  // 后台保活：切后台时上报 CallKit 外呼锁定后台执行时间，让 Dart 侧 WebRTC / Control WS
+  // 持续运行（根治锁屏/切后台断连）；回前台结束呼叫归还额度。
+  override func applicationDidEnterBackground(_ notification: Notification) {
+    super.applicationDidEnterBackground(notification)
+    VoIPKeepAlive.shared.requestKeepAlive()
+  }
+
+  override func applicationWillEnterForeground(_ notification: Notification) {
+    super.applicationWillEnterForeground(notification)
+    VoIPKeepAlive.shared.releaseKeepAlive()
+  }
 }
